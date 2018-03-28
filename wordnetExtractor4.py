@@ -1,3 +1,4 @@
+import operator
 from nltk.corpus import wordnet as wn
 
 
@@ -26,18 +27,30 @@ def clean_wordList(a,b):
 
 activities = readFile('activities01.csv')
 # print(activities)
+size = 5
 print ('Starting list...')
 for activity in activities:
     activity_words = activity.split(' ')
     activity_words = clean_wordList(activity_words,useless_words)
     print (activity," = ",activity_words)
-
+    freq = dict()
     similarities = set()
     for word in activity_words:
         for my_syn in syn(word):
-            my_syn2 = my_syn[0].lemma_names(lang='eng')
-            my_syn3 = my_syn[1].lemma_names(lang='eng')
-            similarities.update([x.lower() for x in my_syn2])
-            similarities.update([x.lower() for x in my_syn3])
+            my_syn2 = my_syn[0].lemmas(lang='eng')
+            my_syn3 = my_syn[1].lemmas(lang='eng')
+            for x in my_syn2:
+                name = x.name().lower()
+                if (name not in freq or freq[name] < x.count()):
+                    freq[name] = x.count()
+                similarities.add(name)
 
+            for y in my_syn3:
+                name = y.name().lower()
+                if (name not in freq or freq[name] < y.count()):
+                    freq[name] = y.count()
+                similarities.add(name)
+
+    freq_sorted = sorted(freq.items(), key=operator.itemgetter(1), reverse=True)
+    similarities = freq_sorted[0:size]
     print("--",len(similarities),"--",similarities)

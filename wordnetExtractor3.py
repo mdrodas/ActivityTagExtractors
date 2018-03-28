@@ -1,3 +1,6 @@
+"""
+Implementation for wordnet extractor using directly the synsets of wordnet.
+"""
 import operator
 from nltk.corpus import wordnet as wn
 
