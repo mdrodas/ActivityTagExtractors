@@ -1,0 +1,258 @@
+Theater acting  =  ['Theater', 'acting']
+-- 7 -- {'performing', 'theater', 'acting', 'theatre', 'playacting', 'playing', 'house'}
+Animal care  =  ['care', 'Animal']
+-- 10 -- {'aid', 'care', 'brute', 'animal', 'tending', 'creature', 'attention', 'fauna', 'beast', 'animate_being'}
+Playing arcade games  =  ['games', 'arcade', 'Playing']
+-- 3 -- {'playing', 'arcade', 'game'}
+Visiting art shows and galleries  =  ['art', 'shows', 'galleries', 'Visiting']
+-- 5 -- {'gallery', 'visiting', 'show', 'art', 'fine_art'}
+Engaging in arts and crafts  =  ['crafts', 'arts', 'Engaging']
+-- 9 -- {'humanities', 'engage', 'craft', 'prosecute', 'trade', 'arts', 'liberal_arts', 'humanistic_discipline', 'pursue'}
+Attending religious services  =  ['services', 'Attending', 'religious']
+-- 4 -- {'services', 'attending', 'religious', 'attention'}
+Attending a theatre play  =  ['play', 'Attending', 'theatre']
+-- 8 -- {'theater', 'theatre', 'drama', 'dramatic_play', 'play', 'attention', 'attending', 'house'}
+Attending musical performances  =  ['performances', 'musical', 'Attending']
+-- 7 -- {'public_presentation', 'musical_theater', 'performance', 'attention', 'attending', 'musical', 'musical_comedy'}
+Attending social group meetings  =  ['meetings', 'group', 'Attending', 'social']
+-- 9 -- {'grouping', 'group_meeting', 'group', 'attention', 'meeting', 'social', 'attending', 'mixer', 'sociable'}
+Watching movies in a theater  =  ['movies', 'Watching', 'theater']
+-- 16 -- {'moving_picture', 'motion_picture', 'watching', 'theater', 'theatre', 'picture', 'observation', 'movie', 'pic', 'flick', 'observance', 'film', 'picture_show', 'house', 'moving-picture_show', 'motion-picture_show'}
+Attending a sports event  =  ['Attending', 'event', 'sports']
+-- 5 -- {'event', 'sport', 'attention', 'athletics', 'attending'}
+Attending the University of the Third Age  =  ['Third', 'Attending', 'University', 'Age']
+-- 7 -- {'age', 'third', 'tierce', 'one-third', 'attention', 'attending', 'university'}
+Backpacking  =  ['Backpacking']
+-- 2 -- {'packing', 'backpacking'}
+Playing baseball  =  ['baseball', 'Playing']
+-- 3 -- {'baseball_game', 'baseball', 'playing'}
+Bicycling  =  ['Bicycling']
+-- 1 -- {'bicycling'}
+Playing bingo  =  ['bingo', 'Playing']
+-- 5 -- {'lotto', 'bingo', 'keno', 'playing', 'beano'}
+Playing bocce  =  ['bocce', 'Playing']
+-- 4 -- {'bocce', 'bocci', 'playing', 'boccie'}
+Bowling  =  ['Bowling']
+-- 1 -- {'bowling'}
+Playing bridge  =  ['bridge', 'Playing']
+-- 3 -- {'bridge', 'playing', 'span'}
+Camping  =  ['Camping']
+-- 4 -- {'tenting', 'camping', 'bivouacking', 'encampment'}
+Canoeing  =  ['Canoeing']
+-- 1 -- {'canoe'}
+Playing cards  =  ['Playing', 'cards']
+-- 3 -- {'cards', 'playing', 'card_game'}
+Decorating the house  =  ['Decorating', 'house']
+-- 7 -- {'adorn', 'grace', 'ornament', 'beautify', 'embellish', 'decorate', 'house'}
+Doing ceramics  =  ['Doing', 'ceramics']
+-- 3 -- {'make', 'do', 'ceramics'}
+Playing checkers  =  ['checkers', 'Playing']
+-- 3 -- {'playing', 'draughts', 'checkers'}
+Playing chess  =  ['chess', 'Playing']
+-- 4 -- {'cheat', 'playing', 'chess', 'Bromus_secalinus'}
+Collecting antiques  =  ['Collecting', 'antiques']
+-- 9 -- {'old-timer', 'antique', 'oldtimer', 'collecting', 'old_geezer', 'gaffer', 'collection', 'assembling', 'aggregation'}
+Collecting autographs  =  ['Collecting', 'autographs']
+-- 5 -- {'collecting', 'collection', 'autograph', 'assembling', 'aggregation'}
+Collecting books  =  ['Collecting', 'books']
+-- 5 -- {'collecting', 'book', 'collection', 'assembling', 'aggregation'}
+Collecting bottles  =  ['Collecting', 'bottles']
+-- 5 -- {'collecting', 'bottle', 'collection', 'assembling', 'aggregation'}
+Collecting coins  =  ['coins', 'Collecting']
+-- 5 -- {'coin', 'collecting', 'collection', 'assembling', 'aggregation'}
+Collecting photographs  =  ['Collecting', 'photographs']
+-- 9 -- {'collecting', 'picture', 'photo', 'photograph', 'collection', 'exposure', 'pic', 'assembling', 'aggregation'}
+Collecting stamps  =  ['stamps', 'Collecting']
+-- 8 -- {'cast', 'collecting', 'aggregation', 'collection', 'mold', 'mould', 'assembling', 'stamp'}
+Playing video games  =  ['games', 'video', 'Playing']
+-- 4 -- {'picture', 'video', 'playing', 'game'}
+Playing croquet  =  ['croquet', 'Playing']
+-- 2 -- {'playing', 'croquet'}
+Dancing  =  ['Dancing']
+-- 4 -- {'dance', 'dancing', 'terpsichore', 'saltation'}
+Eating out  =  ['out', 'Eating']
+-- 3 -- {'feeding', 'eating', 'out'}
+Drawing  =  ['Drawing']
+-- 1 -- {'drawing'}
+Drinking and socializing  =  ['Drinking', 'socializing']
+-- 7 -- {'socializing', 'imbibition', 'drinking', 'socialisation', 'imbibing', 'socialization', 'socialising'}
+Exercising in gym  =  ['gym', 'Exercising']
+-- 7 -- {'gym', 'physical_exercise', 'physical_exertion', 'workout', 'gymnasium', 'exercising', 'exercise'}
+Fishing  =  ['Fishing']
+-- 2 -- {'fishing', 'sportfishing'}
+Playing frisbee  =  ['Playing', 'frisbee']
+-- 2 -- {'playing', 'Frisbee'}
+Cooking  =  ['Cooking']
+-- 3 -- {'preparation', 'cookery', 'cooking'}
+Caring for house plants  =  ['Caring', 'plants', 'house']
+-- 6 -- {'industrial_plant', 'works', 'plant', 'lovingness', 'caring', 'house'}
+Cultivating vegetables  =  ['Cultivating', 'vegetables']
+-- 4 -- {'vegetable', 'veggie', 'veg', 'cultivate'}
+Playing golf  =  ['golf', 'Playing']
+-- 3 -- {'playing', 'golf', 'golf_game'}
+Hiking  =  ['Hiking']
+-- 3 -- {'hiking', 'hike', 'tramp'}
+Hunting  =  ['Hunting']
+-- 2 -- {'hunting', 'hunt'}
+Household cleaning  =  ['Household', 'cleaning']
+-- 8 -- {'household', 'cleansing', 'cleanup', 'cleaning', 'family', 'menage', 'house', 'home'}
+Jogging  =  ['Jogging']
+-- 1 -- {'jogging'}
+Doing macrame  =  ['Doing', 'macrame']
+-- 3 -- {'make', 'macrame', 'do'}
+Playing mahjong  =  ['mahjong', 'Playing']
+-- 3 -- {'Mah-Jongg', 'mahjong', 'playing'}
+Doing embroidery  =  ['embroidery', 'Doing']
+-- 4 -- {'embellishment', 'embroidery', 'make', 'do'}
+Painting  =  ['Painting']
+-- 2 -- {'painting', 'picture'}
+Participating in research  =  ['research', 'Participating']
+-- 3 -- {'take_part', 'research', 'participate'}
+Doing photography  =  ['photography', 'Doing']
+-- 4 -- {'photography', 'make', 'picture_taking', 'do'}
+Picnicking  =  ['Picnicking']
+-- 1 -- {'picnic'}
+Doing pilates  =  ['pilates', 'Doing']
+-- 4 -- {'make', 'Pilate', 'Pontius_Pilate', 'do'}
+Playing a musical instrument  =  ['musical', 'instrument', 'Playing']
+-- 5 -- {'instrument', 'musical_theater', 'musical', 'musical_comedy', 'playing'}
+Playing poker  =  ['poker', 'Playing']
+-- 5 -- {'poker', 'fire_hook', 'stove_poker', 'salamander', 'playing'}
+Quilting  =  ['Quilting']
+-- 1 -- {'quilting'}
+Playing racquetball  =  ['racquetball', 'Playing']
+-- 2 -- {'racquetball', 'playing'}
+Radio listening  =  ['Radio', 'listening']
+-- 5 -- {'listening', 'radiocommunication', 'radio', 'hearing', 'wireless'}
+Reading fiction  =  ['Reading', 'fiction']
+-- 2 -- {'fiction', 'reading'}
+Reading newspapers and magazines  =  ['magazines', 'Reading', 'newspapers']
+-- 5 -- {'mag', 'magazine', 'reading', 'newspaper', 'paper'}
+Reading nonfiction  =  ['Reading', 'nonfiction']
+-- 3 -- {'nonfictional_prose', 'nonfiction', 'reading'}
+Restoration of art works  =  ['Restoration', 'art', 'works']
+-- 6 -- {'industrial_plant', 'works', 'plant', 'Restoration', 'art', 'fine_art'}
+Restoration of buildings  =  ['Restoration', 'buildings']
+-- 3 -- {'Restoration', 'edifice', 'building'}
+Restoration of furniture  =  ['Restoration', 'furniture']
+-- 4 -- {'Restoration', 'furniture', 'piece_of_furniture', 'article_of_furniture'}
+Horseriding  =  ['Horseriding']
+-- 0 -- set()
+Rollerskating  =  ['Rollerskating']
+-- 0 -- set()
+Sailing  =  ['Sailing']
+-- 3 -- {'seafaring', 'sailing', 'navigation'}
+Shopping  =  ['Shopping']
+-- 1 -- {'shopping'}
+Playing billiard  =  ['billiard', 'Playing']
+-- 2 -- {'playing', 'billiard'}
+Skiing downhill  =  ['downhill', 'Skiing']
+-- 2 -- {'downhill', 'skiing'}
+Skiing cross-country  =  ['cross-country', 'Skiing']
+-- 2 -- {'skiing', 'cross-country'}
+Skiing on water  =  ['water', 'Skiing']
+-- 3 -- {'skiing', 'H2O', 'water'}
+Playing soccer  =  ['soccer', 'Playing']
+-- 3 -- {'soccer', 'playing', 'association_football'}
+Swimming  =  ['Swimming']
+-- 2 -- {'swim', 'swimming'}
+Playing tennis  =  ['tennis', 'Playing']
+-- 3 -- {'playing', 'tennis', 'lawn_tennis'}
+Traveling for leisure  =  ['leisure', 'Traveling']
+-- 5 -- {'travel', 'leisure_time', 'traveling', 'travelling', 'leisure'}
+Visiting friends and relatives  =  ['Visiting', 'relatives', 'friends']
+-- 4 -- {'relation', 'relative', 'visiting', 'friend'}
+Playing volleyball  =  ['volleyball', 'Playing']
+-- 3 -- {'volleyball', 'playing', 'volleyball_game'}
+Volunteering: political activism  =  ['Volunteering:', 'activism', 'political']
+-- 2 -- {'activism', 'political'}
+Volunteering: care giving  =  ['care', 'giving', 'Volunteering:']
+-- 6 -- {'aid', 'care', 'giving', 'tending', 'attention', 'gift'}
+Volunteering in an emergency  =  ['emergency', 'Volunteering']
+-- 4 -- {'volunteer', 'emergency', 'pinch', 'exigency'}
+Volunteering for scout movements  =  ['Volunteering', 'scout', 'movements']
+-- 13 -- {'lookout_man', 'picket', 'volunteer', 'motion', 'scout', 'move', 'motility', 'movement', 'lookout', 'watch', 'sentry', 'sentinel', 'spotter'}
+Walking  =  ['Walking']
+-- 2 -- {'walk', 'walking'}
+Walking pets  =  ['Walking', 'pets']
+-- 3 -- {'walk', 'walking', 'pet'}
+Watching sports  =  ['Watching', 'sports']
+-- 5 -- {'watching', 'observation', 'sport', 'athletics', 'observance'}
+Watching movies  =  ['movies', 'Watching']
+-- 13 -- {'moving_picture', 'motion_picture', 'watching', 'picture', 'observation', 'movie', 'pic', 'flick', 'observance', 'film', 'picture_show', 'moving-picture_show', 'motion-picture_show'}
+Watching television  =  ['television', 'Watching']
+-- 7 -- {'watching', 'observation', 'observance', 'TV', 'television', 'telecasting', 'video'}
+Weight lifting  =  ['Weight', 'lifting']
+-- 6 -- {'weight', 'raise', 'bring_up', 'lift', 'get_up', 'elevate'}
+Woodworking  =  ['Woodworking']
+-- 3 -- {'woodworking', 'woodwork', 'carpentry'}
+Solving jigsaw puzzles  =  ['puzzles', 'Solving', 'jigsaw']
+-- 9 -- {'reciprocating_saw', 'resolution', 'solving', 'mystifier', 'puzzler', 'teaser', 'saber_saw', 'puzzle', 'jigsaw'}
+Doing yardwork  =  ['Doing', 'yardwork']
+-- 2 -- {'make', 'do'}
+Doing yoga  =  ['Doing', 'yoga']
+-- 3 -- {'make', 'yoga', 'do'}
+Playing with a pet  =  ['pet', 'Playing']
+-- 2 -- {'playing', 'pet'}
+Attending a meet-up  =  ['Attending', 'meet-up']
+-- 2 -- {'attention', 'attending'}
+Engaging in lifelong learning  =  ['lifelong', 'Engaging', 'learning']
+-- 7 -- {'womb-to-tomb', 'engage', 'prosecute', 'learning', 'lifelong', 'acquisition', 'pursue'}
+Gardening  =  ['Gardening']
+-- 2 -- {'horticulture', 'gardening'}
+Chatting with friends  =  ['Chatting', 'friends']
+-- 15 -- {'chat', 'confab', 'shoot_the_breeze', 'confabulate', 'chatter', 'visit', 'chaffer', 'gossip', 'chit-chat', 'friend', 'natter', 'claver', 'chitchat', 'jaw', 'chew_the_fat'}
+Mentoring others  =  ['others', 'Mentoring']
+-- 1 -- {'mentor'}
+Environmental volunteering  =  ['Environmental', 'volunteering']
+-- 2 -- {'volunteer', 'environmental'}
+Volunteering in developing countries  =  ['developing', 'Volunteering', 'countries']
+-- 10 -- {'commonwealth', 'volunteer', 'land', 'res_publica', 'development', 'state', 'developing', 'country', 'nation', 'body_politic'}
+Attending a political rally  =  ['rally', 'political', 'Attending']
+-- 5 -- {'mass_meeting', 'rally', 'attention', 'attending', 'political'}
+Having a night out  =  ['night', 'out', 'Having']
+-- 7 -- {'have', 'dark', 'out', 'hold', 'night', 'have_got', 'nighttime'}
+Playing golf  =  ['golf', 'Playing']
+-- 3 -- {'playing', 'golf', 'golf_game'}
+Speed dating  =  ['Speed', 'dating']
+-- 4 -- {'geological_dating', 'speed', 'velocity', 'dating'}
+Going to a flea market  =  ['market', 'Going', 'flea']
+-- 8 -- {'going', 'leaving', 'going_away', 'marketplace', 'departure', 'market', 'market_place', 'flea'}
+Organizing photo albums  =  ['Organizing', 'photo', 'albums']
+-- 10 -- {'form', 'organize', 'picture', 'photo', 'album', 'photograph', 'organise', 'exposure', 'pic', 'record_album'}
+Feeding birds  =  ['Feeding', 'birds']
+-- 3 -- {'bird', 'feeding', 'eating'}
+Calling someone on the phone  =  ['phone', 'someone', 'Calling']
+-- 12 -- {'soul', 'calling', 'phone', 'telephone', 'career', 'vocation', 'mortal', 'telephone_set', 'person', 'someone', 'individual', 'somebody'}
+Sun-bathing  =  ['Sun-bathing']
+-- 0 -- set()
+Storytelling  =  ['Storytelling']
+-- 0 -- set()
+Chatting up  =  ['up', 'Chatting']
+-- 15 -- {'chat', 'confab', 'shoot_the_breeze', 'confabulate', 'chatter', 'visit', 'chaffer', 'gossip', 'chit-chat', 'natter', 'jaw', 'chitchat', 'claver', 'up', 'chew_the_fat'}
+Chatting online  =  ['online', 'Chatting']
+-- 16 -- {'on-line', 'chat', 'online', 'shoot_the_breeze', 'confabulate', 'confab', 'chatter', 'visit', 'chaffer', 'gossip', 'chit-chat', 'natter', 'claver', 'chitchat', 'jaw', 'chew_the_fat'}
+Playing board games  =  ['games', 'board', 'Playing']
+-- 3 -- {'playing', 'game', 'board'}
+Learning a craft  =  ['craft', 'Learning']
+-- 4 -- {'trade', 'craft', 'learning', 'acquisition'}
+Learning a language  =  ['language', 'Learning']
+-- 4 -- {'linguistic_communication', 'language', 'learning', 'acquisition'}
+Car racing  =  ['racing', 'Car']
+-- 6 -- {'automobile', 'machine', 'motorcar', 'car', 'auto', 'racing'}
+Boxing  =  ['Boxing']
+-- 3 -- {'boxing', 'fisticuffs', 'pugilism'}
+Sitting on a bench  =  ['Sitting', 'bench']
+-- 3 -- {'posing', 'sitting', 'bench'}
+Climbing  =  ['Climbing']
+-- 3 -- {'climbing', 'mounting', 'climb'}
+Volunteering: psychological support  =  ['support', 'psychological', 'Volunteering:']
+-- 2 -- {'support', 'psychological'}
+Driving cars  =  ['Driving', 'cars']
+-- 7 -- {'automobile', 'machine', 'motorcar', 'drive', 'car', 'auto', 'driving'}
+Riding a motorcycle  =  ['motorcycle', 'Riding']
+-- 5 -- {'motorcycle', 'equitation', 'bike', 'horseback_riding', 'riding'}
+Visiting a museum  =  ['Visiting', 'museum']
+-- 2 -- {'visiting', 'museum'}
+Meditating  =  ['Meditating']
+-- 12 -- {'contemplate', 'chew_over', 'reflect', 'mull', 'speculate', 'think_over', 'mull_over', 'meditate', 'ponder', 'ruminate', 'excogitate', 'muse'}

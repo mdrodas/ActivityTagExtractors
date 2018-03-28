@@ -1,0 +1,258 @@
+Theater acting  =  ['acting', 'Theater']
+-- 26 -- {'roleplay', 'behave', 'dissemble', 'work', 'playacting', 'do', 'theatre_of_operations', 'represent', 'performing', 'play', 'move', 'playact', 'field_of_operations', 'dramaturgy', 'theater_of_operations', 'theatre', 'dramatics', 'act', 'dramatic_art', 'acting', 'act_as', 'field', 'playing', 'pretend', 'house', 'theater'}
+Animal care  =  ['Animal', 'care']
+-- 30 -- {'animate_being', 'guardianship', 'tutelage', 'caution', 'beast', 'fear', 'creature', 'aid', 'give_care', 'handle', 'charge', 'sensual', 'carnal', 'like', 'tending', 'deal', 'worry', 'animal', 'upkeep', 'wish', 'manage', 'fauna', 'fleshly', 'precaution', 'concern', 'care', 'maintenance', 'attention', 'forethought', 'brute'}
+Playing arcade games  =  ['Playing', 'arcade', 'games']
+-- 39 -- {'roleplay', 'colonnade', 'make_for', 'bet', 'punt', 'flirt', 'recreate', 'plot', 'dally', 'meet', 'work', 'wager', 'playacting', 'secret_plan', 'run', 'spiel', 'take_on', 'represent', 'performing', 'arcade', 'play', 'playact', 'bet_on', 'diddle', 'toy', 'bring', 'wreak', 'act', 'encounter', 'back', 'fiddle', 'acting', 'act_as', 'stake', 'gage', 'game', 'playing', 'biz', 'trifle'}
+Visiting art shows and galleries  =  ['art', 'shows', 'Visiting', 'galleries']
+-- 65 -- {'verandah', 'drift', 'confabulate', 'fine_art', 'shew', 'establish', 'exhibit', 'demonstrate', 'read', 'display', 'inspect', 'artistic_production', 'present', 'jaw', 'testify', 'register', 'visit', 'bring_down', 'point', 'art_gallery', 'bear_witness', 'chat', 'natter', 'impose', 'veranda', 'heading', 'appearance', 'prowess', 'art', 'indicate', 'gallery', 'usher', 'show_up', 'chew_the_fat', 'depict', 'chatter', 'prove', 'show', 'evince', 'render', 'confab', 'visiting', 'shoot_the_breeze', 'picture', 'claver', 'call', 'see', 'artwork', 'picture_gallery', 'call_in', 'designate', 'demo', 'travel_to', 'chit-chat', 'evidence', 'express', 'chaffer', 'gossip', 'nontextual_matter', 'artistry', 'graphics', 'artistic_creation', 'inflict', 'chitchat', 'record'}
+Engaging in arts and crafts  =  ['arts', 'crafts', 'Engaging']
+-- 45 -- {'employ', 'trade', 'craft', 'rent', 'piquant', 'fine_art', 'guile', 'prosecute', 'operate', 'mesh', 'artistic_production', 'occupy', 'foxiness', 'plight', 'craftsmanship', 'charter', 'pursue', 'enlist', 'cunning', 'absorb', 'liberal_arts', 'engaging', 'engage', 'prowess', 'art', 'affiance', 'workmanship', 'betroth', 'craftiness', 'arts', 'hire', 'take', 'artwork', 'slyness', 'wage', 'lease', 'lock', 'engross', 'nontextual_matter', 'artistry', 'graphics', 'wiliness', 'artistic_creation', 'humanities', 'humanistic_discipline'}
+Attending religious services  =  ['Attending', 'services', 'religious']
+-- 34 -- {'pay_heed', 'table_service', 'hang', 'service', 'look', 'advert', 'wait_on', 'go_to', 'help', 'armed_service', 'religious', 'Robert_William_Service', 'serve', 'divine_service', 'spiritual', 'services', 'overhaul', 'Service', 'give_ear', 'attend', 'see', 'religious_service', 'attending', 'serving', 'attendance', 'inspection_and_repair', 'servicing', 'service_of_process', 'take_care', 'attend_to', 'assist', 'attention', 'avail', 'military_service'}
+Attending a theatre play  =  ['theatre', 'Attending', 'play']
+-- 71 -- {'pay_heed', 'roleplay', 'hang', 'gambling', 'look', 'fun', 'looseness', 'gambol', 'gaming', 'swordplay', 'flirt', 'turn', 'recreate', 'bid', 'make_for', 'bet', 'dally', 'advert', 'wait_on', 'go_to', 'drama', 'work', 'wager', 'meet', 'run', 'theatre_of_operations', 'spiel', 'take_on', 'represent', 'serve', 'playing_period', 'play', 'frolic', 'playact', 'manoeuvre', 'diddle', 'field_of_operations', 'dramaturgy', 'theater_of_operations', 'shimmer', 'toy', 'theatre', 'caper', 'sport', 'dramatics', 'give_ear', 'attend', 'see', 'bring', 'wreak', 'attending', 'act', 'attendance', 'dramatic_art', 'dramatic_play', 'maneuver', 'fiddle', 'encounter', 'period_of_play', 'take_care', 'act_as', 'trifle', 'attend_to', 'assist', "child's_play", 'romp', 'attention', 'field', 'free_rein', 'house', 'theater'}
+Attending musical performances  =  ['Attending', 'musical', 'performances']
+-- 28 -- {'pay_heed', 'melodic', 'hang', 'public_presentation', 'performance', 'look', 'advert', 'wait_on', 'go_to', 'musical_theater', 'functioning', 'serve', 'musical_comedy', 'carrying_out', 'execution', 'musical', 'melodious', 'carrying_into_action', 'give_ear', 'attend', 'see', 'attending', 'attendance', 'take_care', 'operation', 'attend_to', 'assist', 'attention'}
+Attending social group meetings  =  ['Attending', 'social', 'group', 'meetings']
+-- 57 -- {'pay_heed', 'run_into', 'aggroup', 'hang', 'social', 'come_across', 'fit', 'suffer', 'look', 'foregather', 'meeting', 'meet', 'advert', 'wait_on', 'go_to', 'gather', 'coming_together', 'chemical_group', 'confluence', 'conform_to', 'fulfill', 'fulfil', 'take_on', 'serve', 'mixer', 'touch', 'play', 'forgather', 'adjoin', 'match', 'satisfy', 'sociable', 'get_together', 'contact', 'societal', 'converge', 'give_ear', 'attend', 'grouping', 'mathematical_group', 'see', 'group_meeting', 'group', 'attending', 'attendance', 'encounter', 'radical', 'take_care', 'run_across', 'attend_to', 'assist', 'merging', 'fill', 'receive', 'attention', 'cope_with', 'assemble'}
+Watching movies in a theater  =  ['Watching', 'movies', 'theater']
+-- 40 -- {'keep_an_eye_on', 'learn', 'watch_out', 'motion-picture_show', 'picture_show', 'watching', 'observance', 'film', 'take_in', 'find_out', 'check', 'moving-picture_show', 'pic', 'look_on', 'motion_picture', 'view', 'theatre_of_operations', 'moving_picture', 'movie', 'field_of_operations', 'dramaturgy', 'theater_of_operations', 'theatre', 'dramatics', 'catch', 'watch', 'observe', 'observation', 'picture', 'see', 'look_out', 'follow', 'dramatic_art', 'determine', 'watch_over', 'field', 'ascertain', 'flick', 'house', 'theater'}
+Attending a sports event  =  ['Attending', 'event', 'sports']
+-- 47 -- {'pay_heed', 'hang', 'lark', 'look', 'fun', 'gambol', 'run_around', 'lark_about', 'event', 'consequence', 'advert', 'wait_on', 'go_to', 'issue', 'result', 'effect', 'disport', 'serve', 'case', 'play', 'frolic', 'rollick', 'sportswoman', 'mutant', 'skylark', 'cavort', 'variation', 'sport', 'summercater', 'give_ear', 'outcome', 'frisk', 'attend', 'see', 'upshot', 'attending', 'attendance', 'mutation', 'boast', 'take_care', 'attend_to', 'assist', 'feature', 'romp', 'attention', 'sportsman', 'athletics'}
+Attending the University of the Third Age  =  ['Age', 'Attending', 'Third', 'University']
+-- 36 -- {'pay_heed', 'hang', 'look', 'third_gear', 'years', 'senesce', 'advert', 'wait_on', 'go_to', 'historic_period', 'third_base', 'serve', 'geezerhood', 'old_age', 'mature', 'thirdly', 'tierce', '3rd', 'age', 'give_ear', 'third', 'maturate', 'attend', 'eld', 'see', 'tertiary', 'attending', 'attendance', 'get_on', 'take_care', 'attend_to', 'assist', 'attention', 'one-third', 'university', 'long_time'}
+Backpacking  =  ['Backpacking']
+-- 4 -- {'backpack', 'pack', 'backpacking', 'packing'}
+Playing baseball  =  ['Playing', 'baseball']
+-- 30 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'baseball_game', 'bring', 'wreak', 'act', 'encounter', 'baseball', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Bicycling  =  ['Bicycling']
+-- 6 -- {'bicycling', 'cycle', 'pedal', 'wheel', 'bicycle', 'bike'}
+Playing bingo  =  ['Playing', 'bingo']
+-- 32 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'lotto', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'keno', 'diddle', 'toy', 'bring', 'wreak', 'beano', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'bingo', 'playing', 'trifle'}
+Playing bocce  =  ['Playing', 'bocce']
+-- 31 -- {'roleplay', 'bocci', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'boccie', 'bocce', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Bowling  =  ['Bowling']
+-- 2 -- {'bowl', 'bowling'}
+Playing bridge  =  ['Playing', 'bridge']
+-- 35 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'nosepiece', 'represent', 'bridge_over', 'performing', 'play', 'playact', 'bridgework', 'diddle', 'toy', 'span', 'bridge', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'bridge_circuit', 'acting', 'act_as', 'bridge_deck', 'playing', 'trifle'}
+Camping  =  ['Camping']
+-- 10 -- {'tenting', 'camp_down', 'bivouacking', 'encampment', 'encamp', 'camp_out', 'tent', 'camping', 'bivouac', 'camp'}
+Canoeing  =  ['Canoeing']
+-- 1 -- {'canoe'}
+Playing cards  =  ['Playing', 'cards']
+-- 54 -- {'roleplay', 'notice', 'circuit_card', 'wit', 'card_game', 'make_for', 'bet', 'flirt', 'cards', 'bill_of_fare', 'recreate', 'identity_card', 'add-in', 'posting', 'dally', 'meet', 'board', 'work', 'wager', 'playacting', 'wag', 'run', 'spiel', 'take_on', 'circuit_board', 'represent', 'poster', 'performing', 'play', 'playact', 'placard', 'plug-in', 'batting_order', 'lineup', 'diddle', 'toy', 'calling_card', 'tease', 'bill', 'carte_du_jour', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'visiting_card', 'scorecard', 'acting', 'act_as', 'playing', 'carte', 'menu', 'trifle', 'card'}
+Decorating the house  =  ['house', 'Decorating']
+-- 24 -- {'home', 'adorn', 'sign', 'household', 'family', 'menage', 'firm', 'beautify', 'domiciliate', 'planetary_house', 'put_up', 'embellish', 'ornament', 'theatre', 'decorate', 'deck', 'dress', 'sign_of_the_zodiac', 'star_sign', 'business_firm', 'grace', 'mansion', 'house', 'theater'}
+Doing ceramics  =  ['Doing', 'ceramics']
+-- 26 -- {'answer', 'fare', 'do', 'practise', 'perform', 'practice', 'serve', 'come', 'arrange', 'set', 'execute', 'coiffure', 'ceramic', 'ceramics', 'make_out', 'suffice', 'coiffe', 'get_along', 'dress', 'act', 'manage', 'cause', 'exercise', 'coif', 'make', 'behave'}
+Playing checkers  =  ['Playing', 'checkers']
+-- 33 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'check', 'run', 'spiel', 'take_on', 'draughts', 'represent', 'performing', 'play', 'checkers', 'playact', 'diddle', 'toy', 'chequer', 'checker', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Playing chess  =  ['Playing', 'chess']
+-- 32 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'cheat', 'bring', 'wreak', 'act', 'encounter', 'chess', 'chess_game', 'fiddle', 'acting', 'act_as', 'playing', 'Bromus_secalinus', 'trifle'}
+Collecting antiques  =  ['Collecting', 'antiques']
+-- 25 -- {'collecting', 'oldtimer', 'collect', 'take_in', 'garner', 'pick_up', 'gather', 'pull_in', 'old-timer', 'amass', 'old_geezer', 'accumulate', 'hoard', 'gather_up', 'assembling', 'aggregation', 'pull_together', 'call_for', 'pile_up', 'roll_up', 'gaffer', 'compile', 'antique', 'collection', 'antiquate'}
+Collecting autographs  =  ['autographs', 'Collecting']
+-- 22 -- {'collecting', 'collect', 'John_Hancock', 'take_in', 'garner', 'pick_up', 'gather', 'pull_in', 'amass', 'accumulate', 'hoard', 'gather_up', 'assembling', 'aggregation', 'pull_together', 'inscribe', 'pile_up', 'call_for', 'roll_up', 'compile', 'collection', 'autograph'}
+Collecting books  =  ['books', 'Collecting']
+-- 44 -- {'collecting', 'leger', 'Quran', 'Word_of_God', 'collect', 'take_in', 'garner', 'record_book', 'pick_up', 'gather', 'volume', 'pull_in', 'book', 'Word', 'amass', 'account_book', 'Koran', 'script', 'Book', 'Bible', 'hold', 'accumulate', 'hoard', 'gather_up', 'assembling', 'Holy_Scripture', 'aggregation', 'book_of_account', 'Good_Book', 'reserve', 'pile_up', 'pull_together', 'call_for', 'playscript', 'roll_up', 'Scripture', 'ledger', 'compile', 'collection', 'rule_book', 'Holy_Writ', "al-Qur'an", 'record', 'Christian_Bible'}
+Collecting bottles  =  ['Collecting', 'bottles']
+-- 23 -- {'collecting', 'collect', 'take_in', 'garner', 'pick_up', 'gather', 'pull_in', 'amass', 'accumulate', 'hoard', 'gather_up', 'assembling', 'aggregation', 'pull_together', 'call_for', 'pile_up', 'feeding_bottle', 'roll_up', 'bottle', 'compile', 'collection', 'bottleful', 'nursing_bottle'}
+Collecting coins  =  ['Collecting', 'coins']
+-- 22 -- {'collecting', 'collect', 'take_in', 'garner', 'pick_up', 'strike', 'gather', 'pull_in', 'amass', 'accumulate', 'hoard', 'gather_up', 'assembling', 'aggregation', 'pull_together', 'call_for', 'pile_up', 'roll_up', 'coin', 'compile', 'collection', 'mint'}
+Collecting photographs  =  ['Collecting', 'photographs']
+-- 26 -- {'collecting', 'collect', 'take_in', 'garner', 'pick_up', 'gather', 'snap', 'pull_in', 'amass', 'pic', 'accumulate', 'hoard', 'gather_up', 'assembling', 'aggregation', 'pull_together', 'call_for', 'pile_up', 'roll_up', 'shoot', 'photograph', 'photo', 'picture', 'compile', 'collection', 'exposure'}
+Collecting stamps  =  ['Collecting', 'stamps']
+-- 37 -- {'seal', 'collecting', 'postage', 'stump', 'postage_stamp', 'collect', 'take_in', 'garner', 'pick_up', 'gather', 'boss', 'pull_in', 'amass', 'stomp', 'stereotype', 'accumulate', 'hoard', 'gather_up', 'mold', 'tender', 'assembling', 'revenue_stamp', 'aggregation', 'pull_together', 'call_for', 'pile_up', 'roll_up', 'cast', 'stamp', 'compile', 'collection', 'mould', 'emboss', 'pestle', 'legal_tender', 'pigeonhole', 'impression'}
+Playing video games  =  ['Playing', 'games', 'video']
+-- 43 -- {'roleplay', 'make_for', 'bet', 'punt', 'flirt', 'recreate', 'plot', 'dally', 'meet', 'work', 'wager', 'playacting', 'secret_plan', 'run', 'video_recording', 'spiel', 'take_on', 'represent', 'TV', 'performing', 'play', 'playact', 'bet_on', 'video', 'diddle', 'toy', 'television', 'telecasting', 'picture', 'bring', 'wreak', 'act', 'encounter', 'back', 'fiddle', 'acting', 'act_as', 'stake', 'gage', 'game', 'playing', 'biz', 'trifle'}
+Playing croquet  =  ['Playing', 'croquet']
+-- 29 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'croquet', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Dancing  =  ['Dancing']
+-- 6 -- {'trip_the_light_fantastic', 'terpsichore', 'dancing', 'dance', 'trip_the_light_fantastic_toe', 'saltation'}
+Eating out  =  ['Eating', 'out']
+-- 29 -- {'run_through', 'eat_on', 'forbidden', 'exhaust', 'come_out_of_the_closet', 'corrode', 'taboo', 'feeding', 'wipe_out', 'out', 'proscribed', 'knocked_out', 'eat_up', 'extinct', 'kayoed', 'eat', 'verboten', 'feed', 'use_up', 'prohibited', 'rust', 'away', 'tabu', 'eating', 'consume', 'deplete', 'come_out', "KO'd", 'stunned'}
+Drawing  =  ['Drawing']
+-- 48 -- {'drag', 'line', 'drafting', 'sop_up', 'quarter', 'take_in', 'get', 'imbibe', 'draw', 'take_up', 'draftsmanship', 'pull_in', 'run', 'attract', 'draft', 'pull_out', 'draw_off', 'thread', 'puff', 'force', 'describe', 'absorb', 'string', 'delineate', 'trace', 'suck', 'soak_up', 'eviscerate', 'suck_up', 'tie', 'depict', 'cast', 'reap', 'pull_back', 'guide', 'take_out', 'draw_and_quarter', 'draw_in', 'pass', 'withdraw', 'lottery', 'get_out', 'make', 'draught', 'pull', 'drawing_off', 'drawing', 'disembowel'}
+Drinking and socializing  =  ['Drinking', 'socializing']
+-- 22 -- {'imbibition', 'fuddle', 'imbibe', 'drink_in', 'boozing', 'wassail', 'pledge', 'salute', 'booze', 'socialize', 'crapulence', 'socializing', 'socialise', 'drinking', 'socialisation', 'socialising', 'imbibing', 'toast', 'drunkenness', 'tope', 'drink', 'socialization'}
+Exercising in gym  =  ['gym', 'Exercising']
+-- 14 -- {'practise', 'do', 'physical_exercise', 'exercising', 'practice', 'gymnasium', 'exert', 'physical_exertion', 'work_out', 'workout', 'drill', 'exercise', 'gym', 'work'}
+Fishing  =  ['Fishing']
+-- 4 -- {'fishing', 'angle', 'sportfishing', 'fish'}
+Playing frisbee  =  ['Playing', 'frisbee']
+-- 29 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'Frisbee', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Cooking  =  ['Cooking']
+-- 14 -- {'prepare', 'cooking', 'fix', 'cook', 'preparation', 'misrepresent', 'fake', 'wangle', 'cookery', 'fudge', 'make', 'manipulate', 'ready', 'falsify'}
+Caring for house plants  =  ['Caring', 'plants', 'house']
+-- 40 -- {'plant_life', 'plant', 'home', 'works', 'establish', 'theater', 'sign', 'household', 'family', 'imbed', 'caring', 'implant', 'engraft', 'menage', 'firm', 'give_care', 'set', 'handle', 'like', 'planetary_house', 'domiciliate', 'put_up', 'deal', 'worry', 'lovingness', 'industrial_plant', 'theatre', 'wish', 'manage', 'house', 'sign_of_the_zodiac', 'star_sign', 'care', 'embed', 'flora', 'found', 'institute', 'mansion', 'constitute', 'business_firm'}
+Cultivating vegetables  =  ['Cultivating', 'vegetables']
+-- 15 -- {'train', 'vegetable', 'civilize', 'crop', 'tame', 'civilise', 'veg', 'school', 'veggie', 'naturalise', 'work', 'cultivate', 'naturalize', 'educate', 'domesticate'}
+Playing golf  =  ['Playing', 'golf']
+-- 30 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'golf_game', 'golf', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Hiking  =  ['Hiking']
+-- 5 -- {'hike', 'tramp', 'boost', 'hike_up', 'hiking'}
+Hunting  =  ['Hunting']
+-- 8 -- {'run', 'hound', 'hunting', 'track_down', 'hunt', 'search', 'trace', 'hunt_down'}
+Household cleaning  =  ['cleaning', 'Household']
+-- 16 -- {'cleanse', 'clean', 'scavenge', 'pick', 'clean_house', 'home', 'cleanup', 'make_clean', 'cleansing', 'strip', 'menage', 'cleaning', 'household', 'houseclean', 'house', 'family'}
+Jogging  =  ['Jogging']
+-- 8 -- {'ramble_on', 'square_up', 'trot', 'jog', 'ramble', 'even_up', 'jogging', 'clip'}
+Doing macrame  =  ['macrame', 'Doing']
+-- 25 -- {'answer', 'fare', 'do', 'practise', 'perform', 'practice', 'serve', 'come', 'arrange', 'set', 'execute', 'coiffure', 'make_out', 'macrame', 'suffice', 'coiffe', 'get_along', 'dress', 'act', 'manage', 'cause', 'exercise', 'coif', 'make', 'behave'}
+Playing mahjong  =  ['Playing', 'mahjong']
+-- 30 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'Mah-Jongg', 'work', 'wager', 'playacting', 'mahjong', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Doing embroidery  =  ['Doing', 'embroidery']
+-- 27 -- {'answer', 'fare', 'do', 'practise', 'perform', 'practice', 'serve', 'come', 'arrange', 'set', 'execute', 'coiffure', 'embroidery', 'make_out', 'suffice', 'coiffe', 'embellishment', 'get_along', 'fancywork', 'dress', 'act', 'manage', 'cause', 'exercise', 'coif', 'make', 'behave'}
+Painting  =  ['Painting']
+-- 4 -- {'house_painting', 'paint', 'picture', 'painting'}
+Participating in research  =  ['research', 'Participating']
+-- 10 -- {'inquiry', 'active', 'participating', 'enquiry', 'research', 'take_part', 'search', 'enter', 'explore', 'participate'}
+Doing photography  =  ['photography', 'Doing']
+-- 26 -- {'answer', 'fare', 'photography', 'do', 'practise', 'perform', 'practice', 'serve', 'come', 'arrange', 'set', 'execute', 'coiffure', 'picture_taking', 'make_out', 'suffice', 'coiffe', 'get_along', 'dress', 'act', 'manage', 'cause', 'exercise', 'coif', 'make', 'behave'}
+Picnicking  =  ['Picnicking']
+-- 1 -- {'picnic'}
+Doing pilates  =  ['pilates', 'Doing']
+-- 26 -- {'answer', 'fare', 'do', 'practise', 'perform', 'practice', 'Pilate', 'serve', 'come', 'arrange', 'set', 'execute', 'coiffure', 'make_out', 'suffice', 'coiffe', 'get_along', 'Pontius_Pilate', 'dress', 'act', 'manage', 'cause', 'exercise', 'coif', 'make', 'behave'}
+Playing a musical instrument  =  ['Playing', 'musical', 'instrument']
+-- 43 -- {'roleplay', 'melodic', "cat's-paw", 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'instrumental_role', 'instrumentate', 'work', 'wager', 'tool', 'playacting', 'musical_theater', 'run', 'musical_instrument', 'spiel', 'take_on', 'instrument', 'represent', 'legal_document', 'performing', 'play', 'pawn', 'playact', 'musical_comedy', 'diddle', 'toy', 'legal_instrument', 'musical', 'melodious', 'bring', 'wreak', 'act', 'encounter', 'official_document', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Playing poker  =  ['Playing', 'poker']
+-- 33 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'poker_game', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'salamander', 'diddle', 'toy', 'poker', 'fire_hook', 'stove_poker', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Quilting  =  ['Quilting']
+-- 2 -- {'quilting', 'quilt'}
+Playing racquetball  =  ['Playing', 'racquetball']
+-- 29 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'racquetball', 'playing', 'trifle'}
+Radio listening  =  ['Radio', 'listening']
+-- 14 -- {'hear', 'radio_receiver', 'wireless', 'radio', 'take_heed', 'mind', 'radio_set', 'listening', 'tuner', 'receiving_set', 'hearing', 'listen', 'radiocommunication', 'heed'}
+Reading fiction  =  ['Reading', 'fiction']
+-- 24 -- {'learn', 'Reading', 'reading_material', 'reading', 'say', 'indication', 'read', 'fabrication', 'fable', 'interpretation', 'version', 'register', 'understand', 'recitation', 'meter_reading', 'scan', 'show', 'take', 'fiction', 'recital', 'study', 'translate', 'interpret', 'record'}
+Reading newspapers and magazines  =  ['Reading', 'magazines', 'newspapers']
+-- 34 -- {'newsprint', 'learn', 'powder_store', 'newspaper', 'Reading', 'reading_material', 'reading', 'say', 'indication', 'newspaper_publisher', 'read', 'clip', 'paper', 'interpretation', 'version', 'register', 'understand', 'recitation', 'cartridge', 'meter_reading', 'magazine_publisher', 'scan', 'show', 'powder_magazine', 'cartridge_holder', 'mag', 'magazine', 'take', 'recital', 'study', 'translate', 'cartridge_clip', 'interpret', 'record'}
+Reading nonfiction  =  ['Reading', 'nonfiction']
+-- 23 -- {'learn', 'Reading', 'reading_material', 'reading', 'say', 'indication', 'read', 'interpretation', 'version', 'register', 'understand', 'recitation', 'meter_reading', 'scan', 'show', 'nonfiction', 'nonfictional_prose', 'take', 'recital', 'study', 'translate', 'interpret', 'record'}
+Restoration of art works  =  ['art', 'works', 'Restoration']
+-- 71 -- {'whole_kit_and_caboodle', 'body_of_work', 'whole_works', 'workings', 'influence', 'whole_kit_and_boodle', 'crop', 'make_for', 'plant', 'put_to_work', 'fine_art', 'works', 'workplace', 'turn', 'operate', 'cultivate', 'work', 'artistic_production', 'kit_and_caboodle', 'act_upon', 'process', 'run', 'whole_kit', 'full_treatment', 'piece_of_work', 'kit_and_boodle', 'form', 'mold', 'sour', 'play', 'function', 'knead', 'oeuvre', 'prowess', 'forge', 'art', 'figure_out', 'lick', 'industrial_plant', 'solve', 'restitution', 'renovation', 'go', 'ferment', 'regaining', 'refurbishment', 'bring', 'wreak', 'mould', 'artwork', 'act', 'return', 'whole_caboodle', 'work_out', 'study', 'puzzle_out', 'whole_shebang', 'exercise', 'nontextual_matter', 'artistry', 'deeds', 'graphics', 'exploit', 'Restoration', 'do_work', 'artistic_creation', 'make', 'work_on', 'shape', 'employment', 'restoration'}
+Restoration of buildings  =  ['Restoration', 'buildings']
+-- 18 -- {'building', 'return', 'build_up', 'build', 'ramp_up', 'construction', 'construct', 'work_up', 'restitution', 'establish', 'renovation', 'progress', 'Restoration', 'regaining', 'make', 'refurbishment', 'edifice', 'restoration'}
+Restoration of furniture  =  ['Restoration', 'furniture']
+-- 10 -- {'return', 'restitution', 'renovation', 'Restoration', 'piece_of_furniture', 'regaining', 'article_of_furniture', 'refurbishment', 'furniture', 'restoration'}
+Horseriding  =  ['Horseriding']
+-- 0 -- set()
+Rollerskating  =  ['Rollerskating']
+-- 0 -- set()
+Sailing  =  ['Sailing']
+-- 11 -- {'voyage', 'glide', 'sailing', 'navigate', 'navigation', 'soaring', 'sail', 'seafaring', 'sailplaning', 'sweep', 'gliding'}
+Shopping  =  ['Shopping']
+-- 18 -- {'stag', 'give_away', 'tell_on', 'patronise', 'denounce', 'shop', 'betray', 'rat', 'shit', 'frequent', 'buy_at', 'snitch', 'shopping', 'patronize', 'sponsor', 'browse', 'grass', 'shop_at'}
+Playing billiard  =  ['Playing', 'billiard']
+-- 29 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'billiard', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Skiing downhill  =  ['downhill', 'Skiing']
+-- 5 -- {'downhill', 'ski', 'declivitous', 'skiing', 'downward-sloping'}
+Skiing cross-country  =  ['Skiing', 'cross-country']
+-- 3 -- {'skiing', 'cross-country', 'ski'}
+Skiing on water  =  ['Skiing', 'water']
+-- 13 -- {'body_of_water', 'ski', 'piss', 'irrigate', 'piddle', 'water', 'skiing', 'water_supply', 'urine', 'pee', 'water_system', 'weewee', 'H2O'}
+Playing soccer  =  ['Playing', 'soccer']
+-- 30 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'soccer', 'bring', 'wreak', 'act', 'encounter', 'association_football', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Swimming  =  ['Swimming']
+-- 6 -- {'liquid', 'swim', 'float', 'naiant', 'swimming', 'drown'}
+Playing tennis  =  ['Playing', 'tennis']
+-- 30 -- {'roleplay', 'make_for', 'bet', 'flirt', 'lawn_tennis', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'represent', 'tennis', 'performing', 'play', 'playact', 'diddle', 'toy', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Traveling for leisure  =  ['Traveling', 'leisure']
+-- 12 -- {'move_around', 'trip', 'jaunt', 'leisure', 'travel', 'leisure_time', 'traveling', 'travelling', 'go', 'move', 'locomote', 'journey'}
+Visiting friends and relatives  =  ['Visiting', 'relatives', 'friends']
+-- 38 -- {'friend', 'protagonist', 'ally', 'confabulate', 'relative', 'inspect', 'jaw', 'visit', 'bring_down', 'congeneric', 'chat', 'natter', 'impose', 'acquaintance', 'admirer', 'congener', 'supporter', 'chew_the_fat', 'chatter', 'confab', 'visiting', 'shoot_the_breeze', 'claver', 'Quaker', 'call', 'see', 'call_in', 'chit-chat', 'travel_to', 'relation', 'booster', 'gossip', 'chaffer', 'congenator', 'champion', 'Friend', 'inflict', 'chitchat'}
+Playing volleyball  =  ['Playing', 'volleyball']
+-- 30 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'volleyball', 'volleyball_game', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Volunteering: political activism  =  ['Volunteering:', 'political', 'activism']
+-- 2 -- {'political', 'activism'}
+Volunteering: care giving  =  ['Volunteering:', 'giving', 'care']
+-- 71 -- {'generate', 'afford', 'guardianship', 'bounteous', 'consecrate', 'apply', 'give_way', 'establish', 'have', 'tutelage', 'collapse', 'founder', 'caution', 'leave', 'commit', 'gift', 'move_over', 'present', 'hand', 'bighearted', 'fear', 'giving', 'handsome', 'hold', 'reach', 'fall_in', 'impart', 'sacrifice', 'freehanded', 'liberal', 'dedicate', 'aid', 'openhanded', 'charge', 'give_care', 'turn_over', 'like', 'handle', 'tending', 'deal', 'cave_in', 'chip_in', 'pay', 'kick_in', 'worry', 'devote', 'contribute', 'feed', 'render', 'ease_up', 'upkeep', 'pass_on', 'yield', 'wish', 'bountiful', 'return', 'manage', 'pass', 'grant', 'precaution', 'concern', 'care', 'break', 'maintenance', 'throw', 'open', 'attention', 'big', 'give', 'make', 'forethought'}
+Volunteering in an emergency  =  ['Volunteering', 'emergency']
+-- 8 -- {'exigency', 'volunteer', 'hand_brake', 'pinch', 'offer', 'parking_brake', 'emergency_brake', 'emergency'}
+Volunteering for scout movements  =  ['scout', 'Volunteering', 'movements']
+-- 33 -- {'campaign', 'bm', 'volunteer', 'crusade', 'drift', 'spotter', 'scout', 'apparent_movement', 'pathfinder', 'sentry', 'talent_scout', 'move', 'Scout', 'drive', 'movement', 'social_movement', 'front', 'lookout', 'trend', 'sentinel', 'bowel_movement', 'watch', 'motion', 'guide', 'picket', 'reconnoitre', 'motility', 'effort', 'apparent_motion', 'cause', 'offer', 'reconnoiter', 'lookout_man'}
+Walking  =  ['Walking']
+-- 4 -- {'take_the_air', 'walk-to', 'walking', 'walk'}
+Walking pets  =  ['pets', 'Walking']
+-- 13 -- {'PET', 'ducky', 'walk', 'dearie', 'favorite', 'walking', 'take_the_air', 'walk-to', 'pet', 'deary', 'darling', 'favourite', 'positron_emission_tomography'}
+Watching sports  =  ['Watching', 'sports']
+-- 43 -- {'lark', 'keep_an_eye_on', 'learn', 'watch_out', 'watching', 'fun', 'gambol', 'observance', 'run_around', 'take_in', 'lark_about', 'find_out', 'check', 'look_on', 'view', 'disport', 'play', 'frolic', 'rollick', 'sportswoman', 'mutant', 'skylark', 'cavort', 'variation', 'sport', 'catch', 'watch', 'summercater', 'observe', 'observation', 'frisk', 'see', 'look_out', 'follow', 'determine', 'mutation', 'boast', 'feature', 'romp', 'watch_over', 'sportsman', 'ascertain', 'athletics'}
+Watching movies  =  ['Watching', 'movies']
+-- 30 -- {'keep_an_eye_on', 'learn', 'watch_out', 'motion-picture_show', 'picture_show', 'watching', 'observance', 'film', 'take_in', 'find_out', 'check', 'moving-picture_show', 'pic', 'look_on', 'motion_picture', 'view', 'moving_picture', 'movie', 'catch', 'watch', 'observe', 'observation', 'picture', 'see', 'look_out', 'follow', 'determine', 'watch_over', 'ascertain', 'flick'}
+Watching television  =  ['Watching', 'television']
+-- 33 -- {'idiot_box', 'keep_an_eye_on', 'learn', 'watch_out', 'television_system', 'watching', 'tv', 'observance', 'take_in', 'find_out', 'check', 'look_on', 'view', 'TV', 'video', 'television', 'telly', 'catch', 'watch', 'telecasting', 'observe', 'observation', 'see', 'look_out', 'follow', 'television_set', 'television_receiver', 'determine', 'watch_over', 'tv_set', 'ascertain', 'goggle_box', 'boob_tube'}
+Weight lifting  =  ['Weight', 'lifting']
+-- 50 -- {'arise', 'get_up', 'revoke', 'plagiarize', 'wind', 'weight_unit', 'pilfer', 'hook', 'swipe', 'overturn', 'weightiness', 'elevate', 'rustle', 'face-lift', 'free_weight', 'rear', 'exercising_weight', 'reverse', 'weight', 'cabbage', 'filch', 'raise', 'go_up', 'purloin', 'move_up', 'bring_up', 'hoist', 'angle', 'sneak', 'burthen', 'nobble', 'uprise', 'plagiarise', 'airlift', 'slant', 'weight_down', 'countermand', 'annul', 'abstract', 'vacate', 'pinch', 'system_of_weights', 'rise', 'come_up', 'weighting', 'lift', 'rescind', 'burden', 'repeal', 'snarf'}
+Woodworking  =  ['Woodworking']
+-- 3 -- {'woodwork', 'carpentry', 'woodworking'}
+Solving jigsaw puzzles  =  ['jigsaw', 'puzzles', 'Solving']
+-- 34 -- {'get', 'perplex', 'scroll_saw', 'work', 'gravel', 'flummox', 'fretsaw', 'stupefy', 'vex', 'nonplus', 'jigsaw', 'puzzler', 'reciprocating_saw', 'stick', 'figure_out', 'lick', 'bewilder', 'dumbfound', 'baffle', 'solve', 'beat', 'clear', 'puzzle', 'amaze', 'mystify', 'teaser', 'mystifier', 'pose', 'solving', 'work_out', 'puzzle_out', 'saber_saw', 'resolve', 'resolution'}
+Doing yardwork  =  ['yardwork', 'Doing']
+-- 24 -- {'answer', 'fare', 'do', 'practise', 'perform', 'practice', 'serve', 'come', 'arrange', 'set', 'execute', 'coiffure', 'make_out', 'suffice', 'coiffe', 'get_along', 'dress', 'act', 'manage', 'cause', 'exercise', 'coif', 'make', 'behave'}
+Doing yoga  =  ['yoga', 'Doing']
+-- 25 -- {'answer', 'fare', 'do', 'practise', 'perform', 'practice', 'serve', 'come', 'arrange', 'set', 'execute', 'coiffure', 'make_out', 'suffice', 'coiffe', 'get_along', 'dress', 'act', 'manage', 'yoga', 'cause', 'exercise', 'coif', 'make', 'behave'}
+Playing with a pet  =  ['Playing', 'pet']
+-- 41 -- {'roleplay', 'make_for', 'bet', 'flirt', 'pet', 'recreate', 'deary', 'darling', 'dally', 'meet', 'work', 'wager', 'playacting', 'run', 'ducky', 'spiel', 'take_on', 'favorite', 'represent', 'performing', 'play', 'playact', 'favourite', 'favored', 'positron_emission_tomography', 'diddle', 'toy', 'best-loved', 'dearie', 'bring', 'wreak', 'preferent', 'act', 'encounter', 'PET', 'preferred', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Attending a meet-up  =  ['Attending', 'meet-up']
+-- 16 -- {'pay_heed', 'attendance', 'hang', 'go_to', 'take_care', 'look', 'attend_to', 'assist', 'serve', 'attention', 'give_ear', 'advert', 'wait_on', 'attend', 'see', 'attending'}
+Engaging in lifelong learning  =  ['lifelong', 'Engaging', 'learning']
+-- 54 -- {'employ', 'scholarship', 'learn', 'rent', 'teach', 'piquant', 'prosecute', 'operate', 'read', 'mesh', 'pick_up', 'occupy', 'find_out', 'check', 'plight', 'encyclopaedism', 'charter', 'encyclopedism', 'memorise', 'pursue', 'enlist', 'con', 'absorb', 'get_wind', 'engaging', 'engage', 'get_word', 'hear', 'affiance', 'acquire', 'acquisition', 'betroth', 'watch', 'eruditeness', 'memorize', 'discover', 'larn', 'hire', 'take', 'learnedness', 'womb-to-tomb', 'see', 'wage', 'lease', 'determine', 'instruct', 'get_a_line', 'lock', 'study', 'engross', 'learning', 'lifelong', 'erudition', 'ascertain'}
+Gardening  =  ['Gardening']
+-- 3 -- {'gardening', 'horticulture', 'garden'}
+Chatting with friends  =  ['Chatting', 'friends']
+-- 24 -- {'friend', 'protagonist', 'ally', 'confabulate', 'jaw', 'visit', 'chat', 'natter', 'admirer', 'supporter', 'chew_the_fat', 'chatter', 'confab', 'shoot_the_breeze', 'claver', 'Quaker', 'chit-chat', 'booster', 'gossip', 'chaffer', 'champion', 'Friend', 'acquaintance', 'chitchat'}
+Mentoring others  =  ['Mentoring', 'others']
+-- 1 -- {'mentor'}
+Environmental volunteering  =  ['Environmental', 'volunteering']
+-- 3 -- {'environmental', 'offer', 'volunteer'}
+Volunteering in developing countries  =  ['countries', 'developing', 'Volunteering']
+-- 37 -- {'build_up', 'arise', 'nation', 'land', 'volunteer', 'get', 'modernize', 'res_publica', 'explicate', 'development', 'produce', 'develop', 'developing', 'make_grow', 'acquire', 'commonwealth', 'germinate', 'grow', 'spring_up', 'underdeveloped', 'uprise', 'evolve', 'train', 'prepare', 'recrudesce', 'rural_area', 'modernise', 'break', 'rise', 'offer', 'body_politic', 'state', 'area', 'educate', 'originate', 'country', 'formulate'}
+Attending a political rally  =  ['political', 'Attending', 'rally']
+-- 41 -- {'pay_heed', 'tantalise', 'hang', 'summon', 'look', 'advert', 'mass_meeting', 'go_to', 'wait_on', 'razz', 'bait', 'mobilize', 'tantalize', 'drum_up', 'serve', 'exchange', 'muster_up', 'call_up', 'taunt', 'rallying', 'tease', 'beat_up', 'rag', 'muster', 'give_ear', 'ride', 'attend', 'political', 'see', 'attending', 'attendance', 'mobilise', 'rebound', 'cod', 'take_care', 'attend_to', 'assist', 'rally', 'twit', 'attention', 'come_up'}
+Having a night out  =  ['Having', 'night', 'out']
+-- 47 -- {'birth', 'give_birth', 'come_out', 'suffer', 'forbidden', 'deliver', 'bear', 'possess', 'have', 'get', 'take_in', 'stimulate', 'sustain', 'nighttime', 'Nox', 'come_out_of_the_closet', 'induce', 'taboo', 'hold', 'out', 'proscribed', 'knocked_out', 'Night', 'kayoed', 'extinct', 'verboten', 'night', 'ingest', 'prohibited', 'let', 'own', 'experience', 'take', 'away', 'tabu', 'have_got', 'feature', 'cause', 'consume', 'dark', 'receive', 'throw', 'make', 'give', 'accept', "KO'd", 'stunned'}
+Playing golf  =  ['Playing', 'golf']
+-- 30 -- {'roleplay', 'make_for', 'bet', 'flirt', 'recreate', 'dally', 'meet', 'work', 'wager', 'playacting', 'golf_game', 'golf', 'run', 'spiel', 'take_on', 'represent', 'performing', 'play', 'playact', 'diddle', 'toy', 'bring', 'wreak', 'act', 'encounter', 'fiddle', 'acting', 'act_as', 'playing', 'trifle'}
+Speed dating  =  ['dating', 'Speed']
+-- 36 -- {'upper', 'speed', 'swiftness', 'rush', 'travel_rapidly', 'hurrying', 'pep_pill', 'hasten', 'focal_ratio', 'race', 'fastness', 'go_steady', 'f_number', 'stop_number', 'go_out', 'amphetamine', 'hurry', 'speeding', 'rush_along', 'accelerate', 'hotfoot', 'speed_up', 'step_on_it', 'dating', 'date_stamp', 'hie', 'bucket_along', 'see', 'date', 'pelt_along', 'zip', 'cannonball_along', 'quicken', 'geological_dating', 'belt_along', 'velocity'}
+Going to a flea market  =  ['Going', 'market', 'flea']
+-- 77 -- {'loss', 'fit', 'release', 'kick_the_bucket', 'give-up_the_ghost', "cash_in_one's_chips", 'live', 'market_place', 'die', 'give_way', 'conk_out', 'run_low', 'get', 'operate', 'go_bad', 'market', 'last', 'work', 'break_down', 'sledding', 'buy_the_farm', 'expire', 'grocery', 'run', 'run_short', 'plump', 'start', 'pass_away', 'snuff_it', 'move', 'function', 'extend', 'grocery_store', 'sound', 'hold_up', 'rifle', 'mart', 'lead', 'live_on', 'hold_out', 'pop_off', 'perish', 'proceed', 'go_away', 'expiration', 'become', 'blend', 'go', 'survive', 'croak', 'give_out', 'depart', 'exit', 'departure', 'leaving', 'securities_industry', 'going', 'choke', 'belong', 'commercialise', 'decease', 'endure', 'drop_dead', 'going_away', 'pass', 'travel', 'passing', 'break', 'conk', 'commercialize', 'flea', 'locomote', 'get_going', 'blend_in', 'food_market', 'fail', 'marketplace'}
+Organizing photo albums  =  ['Organizing', 'albums', 'photo']
+-- 21 -- {'devise', 'get_up', 'machinate', 'unionize', 'mastermind', 'unionise', 'organise', 'album', 'pic', 'form', 'coordinate', 'record_album', 'photograph', 'photo', 'orchestrate', 'picture', 'prepare', 'direct', 'organize', 'engineer', 'exposure'}
+Feeding birds  =  ['Feeding', 'birds']
+-- 33 -- {'fertilise', 'skirt', 'chick', 'wench', 'hoot', 'shuttle', 'Bronx_cheer', 'razz', 'dame', 'raspberry', 'doll', 'feeding', 'run', 'birdwatch', 'hiss', 'feast', 'snort', 'fowl', 'birdie', 'razzing', 'eat', 'flow', 'feed', 'boo', 'fertilize', 'alimentation', 'eating', 'prey', 'shuttlecock', 'feed_in', 'course', 'give', 'bird'}
+Calling someone on the phone  =  ['someone', 'phone', 'Calling']
+-- 41 -- {'calling', 'soul', 'earpiece', 'shout', 'someone', 'address', 'anticipate', 'speech_sound', 'bid', 'individual', 'visit', 'name', 'career', 'sound', 'hollo', 'forebode', 'call_up', 'scream', 'call_off', 'ring', 'send_for', 'predict', 'holler', 'call', 'telephone', 'phone', 'squall', 'call_in', 'mortal', 'yell', 'prognosticate', 'foretell', 'somebody', 'earphone', 'shout_out', 'person', 'telephone_set', 'cry', 'vocation', 'promise', 'headphone'}
+Sun-bathing  =  ['Sun-bathing']
+-- 0 -- set()
+Storytelling  =  ['Storytelling']
+-- 0 -- set()
+Chatting up  =  ['Chatting', 'up']
+-- 20 -- {'jaw', 'upwardly', 'chew_the_fat', 'chit-chat', 'upwards', 'visit', 'chatter', 'confabulate', 'chaffer', 'gossip', 'up', 'confab', 'chat', 'shoot_the_breeze', 'natter', 'claver', 'improving', 'chitchat', 'upward', 'astir'}
+Chatting online  =  ['Chatting', 'online']
+-- 16 -- {'jaw', 'chew_the_fat', 'chit-chat', 'visit', 'chatter', 'confabulate', 'chaffer', 'gossip', 'online', 'confab', 'chat', 'shoot_the_breeze', 'natter', 'claver', 'chitchat', 'on-line'}
+Playing board games  =  ['Playing', 'games', 'board']
+-- 55 -- {'roleplay', 'circuit_card', 'control_board', 'make_for', 'bet', 'punt', 'flirt', 'add-in', 'recreate', 'plot', 'dally', 'meet', 'board', 'work', 'wager', 'display_board', 'playacting', 'secret_plan', 'run', 'instrument_panel', 'spiel', 'take_on', 'circuit_board', 'represent', 'performing', 'play', 'playact', 'plug-in', 'bet_on', 'dining_table', 'diddle', 'toy', 'card', 'room', 'gameboard', 'plank', 'panel', 'control_panel', 'bring', 'wreak', 'act', 'encounter', 'back', 'fiddle', 'get_on', 'acting', 'act_as', 'stake', 'display_panel', 'gage', 'game', 'playing', 'biz', 'trifle', 'table'}
+Learning a craft  =  ['Learning', 'craft']
+-- 41 -- {'scholarship', 'learn', 'trade', 'craft', 'teach', 'guile', 'read', 'pick_up', 'find_out', 'check', 'foxiness', 'craftsmanship', 'encyclopaedism', 'encyclopedism', 'memorise', 'con', 'cunning', 'get_wind', 'get_word', 'hear', 'acquire', 'acquisition', 'workmanship', 'watch', 'craftiness', 'eruditeness', 'memorize', 'discover', 'larn', 'see', 'learnedness', 'take', 'slyness', 'determine', 'instruct', 'get_a_line', 'study', 'learning', 'wiliness', 'erudition', 'ascertain'}
+Learning a language  =  ['language', 'Learning']
+-- 44 -- {'scholarship', 'language', 'learn', 'teach', 'speech_communication', 'read', 'pick_up', 'nomenclature', 'find_out', 'check', 'encyclopaedism', 'voice_communication', 'encyclopedism', 'memorise', 'words', 'oral_communication', 'speech', 'get_wind', 'con', 'get_word', 'hear', 'linguistic_communication', 'linguistic_process', 'acquire', 'acquisition', 'watch', 'eruditeness', 'memorize', 'terminology', 'lyric', 'discover', 'larn', 'see', 'learnedness', 'take', 'determine', 'instruct', 'get_a_line', 'study', 'spoken_communication', 'learning', 'spoken_language', 'erudition', 'ascertain'}
+Car racing  =  ['racing', 'Car']
+-- 25 -- {'speed', 'auto', 'rush', 'hasten', 'racing', 'race', 'car', 'run', 'gondola', 'elevator_car', 'railcar', 'rush_along', 'hotfoot', 'automobile', 'step_on_it', 'cable_car', 'hie', 'bucket_along', 'motorcar', 'pelt_along', 'railway_car', 'cannonball_along', 'belt_along', 'railroad_car', 'machine'}
+Boxing  =  ['Boxing']
+-- 6 -- {'box', 'boxing', 'package', 'packing', 'fisticuffs', 'pugilism'}
+Sitting on a bench  =  ['Sitting', 'bench']
+-- 20 -- {'seance', 'terrace', 'sit', 'seat', 'bench', 'pose', 'Bench', 'session', 'model', 'sit_down', 'workbench', 'seated', 'judiciary', 'baby-sit', 'ride', 'posture', 'sitting', 'posing', 'sit_around', 'work_bench'}
+Climbing  =  ['Climbing']
+-- 8 -- {'climbing', 'mounting', 'go_up', 'wax', 'rise', 'climb', 'climb_up', 'mount'}
+Volunteering: psychological support  =  ['Volunteering:', 'psychological', 'support']
+-- 51 -- {'bear_out', 'keep', 'suffer', 'musical_accompaniment', 'living', 'tolerate', 'financial_backing', 'sustain', 'patronage', 'indorse', 'fend_for', 'financial_support', 'stand', 'patronise', 'defend', 'livelihood', 'hold', 'supporting', 'plunk_for', 'stomach', 'patronize', 'plump_for', 'sustenance', 'bread_and_butter', 'hold_up', 'funding', 'affirm', 'substantiate', 'abide', 'put_up', 'confirm', 'stick_out', 'accompaniment', 'underpin', 'documentation', 'corroborate', 'digest', 'backup', 'subscribe', 'support', 'psychological', 'back', 'endure', 'reenforcement', 'reinforcement', 'backing', 'endorse', 'keep_going', 'bear', 'back_up', 'brook'}
+Driving cars  =  ['Driving', 'cars']
+-- 30 -- {'auto', 'get', 'machine', 'aim', 'car', 'motor', 'gondola', 'elevator_car', 'force', 'repulse', 'railcar', 'drive', 'ram', 'beat_back', 'automobile', 'cable_car', 'push_back', 'repel', 'labour', 'ride', 'motorcar', 'take', 'driving', 'labor', 'railway_car', 'impulsive', 'push', 'railroad_car', 'force_back', 'tug'}
+Riding a motorcycle  =  ['motorcycle', 'Riding']
+-- 30 -- {'tantalise', 'hinge_on', 'cycle', 'disembarrass', 'razz', 'equitation', 'bait', 'riding', 'tantalize', 'motorbike', 'depend_upon', 'drive', 'mount', 'taunt', 'sit', 'tease', 'rag', 'depend_on', 'rid', 'bike', 'ride', 'devolve_on', 'hinge_upon', 'cod', 'horseback_riding', 'rally', 'twit', 'turn_on', 'motorcycle', 'free'}
+Visiting a museum  =  ['museum', 'Visiting']
+-- 24 -- {'confabulate', 'museum', 'inspect', 'jaw', 'visit', 'bring_down', 'chat', 'natter', 'impose', 'chew_the_fat', 'chatter', 'confab', 'visiting', 'shoot_the_breeze', 'claver', 'call', 'see', 'call_in', 'chit-chat', 'travel_to', 'gossip', 'chaffer', 'inflict', 'chitchat'}
+Meditating  =  ['Meditating']
+-- 13 -- {'speculate', 'ponder', 'study', 'excogitate', 'chew_over', 'contemplate', 'muse', 'think_over', 'meditate', 'mull', 'mull_over', 'reflect', 'ruminate'}

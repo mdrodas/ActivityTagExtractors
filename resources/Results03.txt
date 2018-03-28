@@ -1,0 +1,258 @@
+Theater_acting
+{'cinema', 'shooting', 'social_centre', 'social_facility', 'fishing', 'club', 'cycling', 'theatre', 'community_centre'}
+Animal_care
+set()
+Playing_arcade_games
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Visiting_art_shows_and_galleries
+{'yes', 'boutique', 'dentist', 'shooting', 'studio', 'motel', 'post_box', 'club', 'library', 'jiu-jitsu', 'museum', 'public_bath', 'community_centre', 'garden', 'second_hand', 'computer', 'clock', 'carpet', 'hotel', 'social_centre', 'karate', 'social_facility', 'kodokan', 'clothes', 'wrestling', 'camp_site', 'pitch', 'doctors', 'cycling', 'townhall', 'climbing', 'theatre', 'arts_centre', 'craft', 'gallery', 'bathroom_furnishing', 'kitchen', 'viewpoint', 'archery', 'cinema', 'hearing_aids', 'shower', 'garden_centre', 'bed', 'art', 'fishing', 'dojo', 'stadium', 'artwork', 'judo', 'sports_centre', 'boxing', 'budo', 'restaurant', 'fast_food', 'antiques', 'swimming', 'baking_oven', 'cafe', 'convenience', 'herbalist', 'fencing', 'caravan_site', 'pastry', 'embassy', 'furniture', 'hospital', 'optician', 'attraction', 'confectionery'}
+Engaging_in_arts_and_crafts
+{'tailor', 'alcohol', 'paint', 'museum', 'copyshop', 'computer', 'locksmith', 'scuba_diving', 'photo', 'craft', 'fireplace', 'window_blind', 'doityourself', 'doors', 'jewelry', 'garden_centre', 'glaziery', 'shoes', 'pottery', 'butcher', 'fuel', 'bakery', 'florist', 'fabric', 'musical_instrument', 'windows', 'pastry', 'furniture', 'optician', 'electronics', 'model', 'confectionery'}
+Attending_religious_services
+{'yes', 'waste_basket', 'bench', 'toilets', 'drinking_water', 'school', 'religion', 'place of worship', 'attraction', 'grave_yard', 'hospital', 'waste_disposal', 'vending_machine', 'theatre', 'place_of_worship', 'parking', 'computer'}
+Attending_a_theatre_play
+{'childcare', 'toilets', 'shooting', 'theme_park', 'bowls', 'club', 'museum', 'community_centre', 'kindergarten', 'garden', 'curling', 'golf_course', 'social_centre', 'social_facility', 'table_tennis', 'pitch', '10pin', 'cycling', 'planetarium', 'park', 'theatre', 'bandy', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'ice_hockey', 'fishing', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'disc_golf'}
+Attending_musical_performances
+{'yes', 'nightclub', 'shooting', 'studio', 'club', 'festival_grounds', 'community_centre', 'pub', 'computer', 'social_centre', 'social_facility', 'concert_hall', 'cycling', 'theatre', 'music_school', 'bandstand', 'cinema', 'concert', 'fishing', 'biergarten', 'music_venue', 'bar', 'restaurant', 'musical_instrument', 'music', 'cafe', 'electronics'}
+Attending_social_group_meetings
+{'pelota', 'nightclub', 'shooting', 'dairy', 'bowls', 'club', 'pharmacy', 'animal_shelter', 'swingerclub', 'community_centre', 'kindergarten', 'chemist', 'second_hand', 'charity', 'social_centre', 'social_facility', 'track', 'pitch', 'cycling', 'townhall', 'nursing_home', 'arts_centre', 'marketplace', 'place of worship', 'hospice', 'recycling', 'brothel', 'fishing', 'stadium', 'youth_centre', 'department_store', 'retirement_home', 'social facility', 'bank', 'sports_centre', 'fuel', 'marae', 'mall', 'restaurant', 'medical_supply', 'boules', 'events_venue', 'hospital', 'attraction'}
+Watching_movies_in_a_theater
+{'bakery', 'cinema', 'watches', 'craft', 'butcher', 'jewelry'}
+Attending_a_sports_event
+{'rugby_league', 'korfball', 'gaelic_games', 'bowls', 'community_centre', 'sports', 'roller_hockey', 'dog_racing', 'ice_rink', 'golf', 'volleyball', 'hotel', 'roller_skating', 'rugby', 'cycling', 'bobsleigh', 'park', 'sailing', 'ski', 'shower', 'cricket_nets', 'water_ski', 'running', 'hammer_throw', 'swimming_pool', 'slipway', 'dive', 'picnic_table', 'netball', 'basketball;soccer;volleyball', 'outdoor', 'canoe', 'boat_rental', 'discus_throw', 'attraction', 'hockey', 'pelota', 'drinking_water', 'skating', 'rink_hockey', 'curling', 'amusement_arcade', 'rental', 'scuba_diving', 'computer', 'golf_course', 'karate', 'social_facility', 'paragliding', 'clothes', 'table_tennis', 'free_flying', 'climbing', 'bandy', 'skateboard', 'taekwondo', 'australian_football', 'dive_center', 'baseball', 'horse_racing', 'long_jump', 'model_aerodrome', 'basketball', 'vehicles', 'fishing', 'fountain', 'bar', 'sports_centre', 'restaurant', 'table_soccer', 'beach_resort', 'fencing', 'swimming_area', 'adult_gaming_centre', 'sport_centre', 'boxing', 'yes', 'aikido', 'horseshoes', 'tennis', 'shooting', 'soccer', 'bleachers', 'board', 'fitness_centre', 'jiu-jitsu', 'cycle_ball', 'beachvolleyball', 'shot-put', 'paddle_tennis', 'multi', 'chess', 'social_centre', 'wrestling', 'boat', 'cycle_polo', '10pin', 'karting', 'pit', 'ice_skating', 'cricket', 'trinquet', 'stadium', 'soccer_golf', 'water_park', 'billiards', 'bmx', 'surfing', 'darts', 'american_football', 'budo', 'football', 'table_tennis_table', 'canoe_polo', 'boules', 'toilets', 'motor', 'canoe_hire', 'club', 'climbing_adventure', 'public_bath', 'gaelic_football', 'horse_riding', 'cliff_diving', 'atv', 'piste', 'pub', 'toboggan', 'trampoline', 'shelter', 'motorcycle', 'kodokan', 'handball', 'track', 'pitch', 'motocross', 'futsal', 'badminton', 'croquet', 'rugby_union', 'archery', 'dive_centre', 'ice_hockey', 'jetski', 'dojo', 'marina', 'bicycle', 'athletics', 'bowling_alley', 'judo', 'equestrian', 'snowmobile', 'diving', 'ice_stock', 'street_hockey', 'kitesurfing', 'swimming', 'canadian_football', 'field_hockey'}
+Attending_the_University_of_the_Third_Age
+{'nightclub', 'erotic', 'university', 'estate_agent', 'yes', 'school', 'college', 'travel_agency', 'stationery', 'office', 'playground', 'kindergarten', 'hospital', 'parking', 'jobcentre', 'computer'}
+Backpacking
+{'information', 'bench', 'camp_site', 'ranger_station', 'police'}
+Playing_baseball
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Bicycling
+{'cycling', 'sports_centre', 'track', 'stadium'}
+Playing_bingo
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Playing_bocce
+{'pelota', 'bowls', 'stadium', 'track', 'pitch', 'boules', 'sports_centre'}
+Bowling
+{'bowls', 'stadium', 'pitch', '10pin', 'boules', '9pin', 'sports_centre'}
+Playing_bridge
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'vending_machine', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'hospital', 'playground', 'field_hockey', 'disc_golf'}
+Camping
+{'drinking_water', 'toilets', 'canoe_hire', 'firepit', 'museum', 'sports', 'parking', 'hotel', 'camp_site', 'bbq', 'boat', 'pitch', 'sauna', 'summer_camp', 'waste_basket', 'water_ski', 'bicycle', 'surfing', 'picnic_table', 'sports_centre', 'fuel', 'picnic_site', 'outdoor', 'swimming', 'canoe', 'boat_rental', 'beach_resort', 'caravan_site', 'playground'}
+Canoeing
+{'swimming', 'canoe', 'canoe_hire', 'boat_rental', 'pitch', 'boat', 'water_ski', 'canoe_polo', 'stadium', 'swimming_pool', 'surfing', 'sports_centre'}
+Playing_cards
+{'childcare', 'theme_park', 'bowls', 'car_sharing', 'vending_machine', 'garden', 'carpet', 'hotel', 'camp_site', 'park', 'craft', 'tyres', 'waste_disposal', 'swimming_pool', '9pin', 'picnic_table', 'car_parts', 'car_pooling', 'vehicle_inspection', 'nursery', 'furniture', 'attraction', 'playground', 'disc_golf', 'drinking_water', 'motel', 'hardware', 'parking', 'curling', 'rental', 'computer', 'ferry_terminal', 'golf_course', 'social_facility', 'table_tennis', 'bandy', 'skateboard', 'model_aerodrome', 'basketball', 'parking_entrance', 'car', 'newsagent', 'butcher', 'sports_centre', 'picnic_site', 'restaurant', 'caravan_site', 'adult_gaming_centre', 'hospital', 'electronics', 'yes', 'gift', 'tennis', 'soccer', 'car_wash', 'car_rental', 'books', 'multi', '10pin', 'ice_skating', 'gambling', 'recycling', 'waste_basket', 'stadium', 'soccer_golf', 'fitness_station', 'parking_space', 'fuel', 'zoo', 'table_tennis_table', 'boules', 'toys', 'toilets', 'stationery', 'horse_riding', 'kindergarten', 'baby_care', 'baby_goods', 'motorcycle', 'car_repair', 'pitch', 'theatre', 'croquet', 'cinema', 'ice_hockey', 'bench', 'art', 'bicycle', 'sanitary_dump_station', 'miniature_golf', 'equestrian', 'nature_reserve', 'bakery', 'creche', 'casino', 'video_arcade', 'field_hockey'}
+Decorating_the_house
+set()
+Doing_ceramics
+{'ceramics', 'pottery'}
+Playing_checkers
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Playing_chess
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Collecting_antiques
+{'yes', 'antiques', 'museum', 'books', 'second_hand', 'computer'}
+Collecting_autographs
+{'yes', 'bicycle_repair_station', 'shooting', 'car_sharing', 'car_wash', 'club', 'vending_machine', 'car_rental', 'scrapyard', 'community_centre', 'parking', 'pub', 'computer', 'rental', 'social_centre', 'motorcycle', 'social_facility', 'car_repair', 'cycling', 'tyres', 'cinema', 'compressed_air', 'fishing', 'parking_entrance', 'car', 'bicycle', 'junk_yard', 'parking_space', 'fuel', 'car_parts', 'car_pooling', 'restaurant', 'hospital'}
+Collecting_books
+{'yes', 'public_bookcase', 'library', 'stationery', 'vending_machine', 'museum', 'books', 'amusement_arcade', 'computer', 'second_hand', 'craft', 'lottery', 'gambling', 'newsagent', 'mobile_library', 'butcher', 'archive', 'bookmaker', 'bakery', 'casino', 'antiques', 'adult_gaming_centre'}
+Collecting_bottles
+{'recycling', 'waste_basket', 'waste_transfer_station', 'waste_disposal', 'vending_machine', 'second_hand'}
+Collecting_coins
+set()
+Collecting_photographs
+{'camera', 'yes', 'bakery', 'shooting', 'social_centre', 'photo', 'social_facility', 'fishing', 'printer', 'club', 'cycling', 'craft', 'butcher', 'photo_booth', 'community_centre', 'copyshop', 'electronics', 'computer'}
+Collecting_stamps
+{'collector', 'florist', 'kiosk', 'post_box', 'convenience', 'vending_machine', 'newsagent', 'lottery'}
+Playing_video_games
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Playing_croquet
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Dancing
+{'nightclub', '...', 'dance', 'stripclub', 'music_venue', 'bar', 'pub'}
+Eating_out
+{'food_court', 'radiotechnics', 'paint', 'pharmacy', 'vending_machine', 'museum', 'sports', 'religion', 'garden', 'wilderness_hut', 'carpet', 'seafood', 'hotel', 'courthouse', 'police', 'craft', 'fireplace', 'gallery', 'tyres', 'window_blind', 'ticket', 'compressed_air', 'ski', 'variety_store', 'shoes', 'video_games', 'picnic_table', 'car_parts', 'university', 'outdoor', 'veterinary', 'musical_instrument', 'travel_agency', 'herbalist', 'games', 'pastry', 'furniture', 'playground', 'model', 'confectionery', 'tailor', 'bicycle_repair_station', 'bathroom furnishing', 'drinking_water', 'supermarket', 'motel', 'crematorium', 'dairy', 'alpine_hut', 'hardware', 'library', 'equipment_hire', 'firepit', 'animal_shelter', 'insurance', 'chemist', 'parking', 'vacuum_cleaner', 'washing_machine', 'computer', 'rental', 'collector', 'amusement_arcade', 'charity', 'scuba_diving', 'photo', 'social_facility', 'clothes', 'frame', 'charging_station', 'chocolate', 'funeral_directors', 'houseware', 'doityourself', 'greengrocer', 'marketplace', 'jewelry', 'animal_boarding', 'curtain', 'garden_centre', 'internet_cafe', 'glaziery', 'cheese', 'vehicles', 'massage', 'beverages', 'car', 'wine_cellar', 'bicycle_parking', 'newsagent', 'tool_hire', 'butcher', 'bar', 'audiologist', 'sports_centre', 'bicycle_rental', 'general', 'pawnbroker', 'restaurant', 'kiosk', 'wholesale', 'antiques', 'public_building', 'windows', 'adult_gaming_centre', 'fashion', 'hospital', 'bathroom_furnishing', 'electronics', 'leather', 'yes', 'gift', 'shooting', 'hairdresser', 'alcohol', 'board', 'hostel', 'cosmetics', 'wine', 'laundry', 'robot', 'copyshop', 'books', 'second_hand', 'erotic', 'trade', 'boat', 'bbq', 'townhall', 'tanning_salon', 'place_of_worship', 'hifi', 'beauty', 'lottery', 'interior_decoration', 'gambling', 'outdoor_seating', 'hearing_aids', 'waste_basket', 'farm', 'appliance', 'department_store', 'dryer', 'fuel', 'tattoo', 'mall', 'florist', 'fabric', 'watches', 'video', 'dry_cleaning', 'toys', 'electrical', 'fishmonger', 'boutique', 'toilets', 'stationery', 'tea', 'horse_riding', 'kindergarten', 'ice_cream', 'weapons', 'atv', 'pub', 'mobile_phone', 'locksmith', 'camera', 'shelter', 'baby_goods', 'trampoline', 'plant_hire', 'lamps', 'motorcycle', 'college', 'bag', 'car_repair', 'guest_house', 'pitch', 'anime', 'kitchen', 'bed', 'perfumery', 'dive_centre', 'archery', 'school', 'pet', 'art', 'jetski', 'tobacco', 'marina', 'bicycle', 'biergarten', 'bookmaker', 'e-cigarette', 'snowmobile', 'bakery', 'lighting', 'sewing', 'cafeteria', 'casino', 'fast_food', 'music', 'cafe', 'convenience', 'medical_supply', 'money_lender', 'optician', 'deli'}
+Drawing
+set()
+Drinking_and_socializing
+{'drinking_water', 'toilets', 'shooting', 'dairy', 'club', 'vending_machine', 'animal_shelter', 'community_centre', 'kindergarten', 'wilderness_hut', 'second_hand', 'water_point', 'water', 'shelter', 'charity', 'social_centre', 'social_facility', 'watering_place', 'camp_site', 'cycling', 'nursing_home', 'Drinking_water', 'place of worship', 'hospice', 'recycling', 'fishing', 'marina', 'fountain', 'retirement_home', 'social facility', 'drinking water', 'caravan_site', 'hospital'}
+Exercising_in_gym
+{'toilets', 'tennis', 'soccer', 'theme_park', 'fitness_centre', 'public_bath', 'community_centre', 'rental', 'multi', 'pitch', '10pin', 'climbing', 'park', 'horse_racing', 'waste_basket', 'bench', 'dojo', 'stadium', 'water_park', 'fitness_station', 'swimming_pool', 'picnic_table', 'equestrian', 'sports_centre', 'picnic_site', 'swimming', 'playground'}
+Fishing
+{'shooting', 'social_centre', 'outdoor', 'social_facility', 'fishing', 'club', 'cycling', 'community_centre', 'sports', 'hunting'}
+Playing_frisbee
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Cooking
+{'shooting', 'social_centre', 'motel', 'social_facility', 'hotel', 'fishing', 'alpine_hut', 'guest_house', 'club', 'hostel', 'cycling', 'apartment', 'community_centre', 'wilderness_hut', 'chalet'}
+Caring_for_house_plants
+{'yes', 'bathroom furnishing', 'toilets', 'drinking_water', 'gift', 'motel', 'alpine_hut', 'car_sharing', 'hostel', 'car_wash', 'hardware', 'stationery', 'vending_machine', 'apartment', 'car_rental', 'museum', 'pharmacy', 'kindergarten', 'parking', 'garden', 'wilderness_hut', 'carpet', 'rental', 'baby_care', 'baby_goods', 'computer', 'ferry_terminal', 'books', 'hotel', 'golf_course', 'motorcycle', 'social_facility', 'car_repair', 'guest_house', 'camp_site', 'pitch', 'courthouse', 'planetarium', 'townhall', 'police', 'theatre', 'craft', 'park', 'houseware', 'tyres', 'place_of_worship', 'sauna', 'kitchen', 'model_aerodrome', 'recycling', 'garden_centre', 'art', 'parking_entrance', 'car', 'bicycle', 'waste_disposal', 'sanitary_dump_station', 'newsagent', 'swimming_pool', 'butcher', 'parking_space', 'sports_centre', 'fuel', 'car_parts', 'chalet', 'car_pooling', 'bakery', 'cafeteria', 'florist', 'fast_food', 'restaurant', 'zoo', 'grave_yard', 'public_building', 'medical_supply', 'caravan_site', 'vehicle_inspection', 'toys', 'furniture', 'hospital', 'attraction', 'electronics'}
+Cultivating_vegetables
+{'general', 'supermarket', 'farm', 'kiosk', 'convenience', 'newsagent', 'greengrocer'}
+Playing_golf
+{'soccer_golf', 'miniature_golf', 'golf_course'}
+Hiking
+{'information', 'outdoor', 'boat', 'bicycle', 'sports'}
+Hunting
+{'wildlife_hide', 'shooting', 'social_centre', 'bird_hide', 'social_facility', 'fishing', 'club', 'cycling', 'community_centre', 'hunting_stand', 'hunting', 'weapons'}
+Household_cleaning
+{'chemist', 'pharmacy'}
+Jogging
+set()
+Doing_macrame
+set()
+Playing_mahjong
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Doing_embroidery
+set()
+Painting
+set()
+Participating_in_research
+{'research_institute', 'university', 'hotel', 'fast_food', 'car', 'office', 'stationery', 'convenience', 'sports', 'fuel'}
+Doing_photography
+{'camera', 'yes', 'bakery', 'shooting', 'social_centre', 'photo', 'social_facility', 'fishing', 'club', 'cycling', 'craft', 'butcher', 'community_centre', 'copyshop', 'electronics', 'computer'}
+Picnicking
+{'shelter', 'waste_basket', 'bench', 'drinking_water', 'picnic_table', 'toilets', 'picnic_site', 'table', 'alpine_hut', 'bbq', 'firepit', 'museum', 'playground', 'wilderness_hut'}
+Doing_pilates
+set()
+Playing_a_musical_instrument
+{'childcare', 'yes', 'nightclub', 'toilets', 'shooting', 'tennis', 'soccer', 'studio', 'theme_park', 'bowls', 'club', 'festival_grounds', 'community_centre', 'kindergarten', 'horse_riding', 'garden', 'pub', 'curling', 'computer', 'multi', 'golf_course', 'social_centre', 'social_facility', 'concert_hall', 'table_tennis', 'pitch', '10pin', 'cycling', 'park', 'theatre', 'skateboard', 'bandy', 'music_school', 'bandstand', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'concert', 'basketball', 'ice_hockey', 'fishing', 'stadium', 'soccer_golf', 'fitness_station', 'biergarten', 'miniature_golf', 'music_venue', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'bar', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'restaurant', 'video_arcade', 'musical_instrument', 'zoo', 'music', 'table_tennis_table', 'cafe', 'field_hockey', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'electronics', 'disc_golf'}
+Playing_poker
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Quilting
+set()
+Playing_racquetball
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Radio_listening
+{'model_aerodrome', 'yes', 'bicycle_repair_station', 'sports_centre', 'studio', 'radiotechnics', 'pitch', 'bicycle_parking', 'community_centre', 'hifi', 'electronics', 'computer'}
+Reading_fiction
+set()
+Reading_newspapers_and_magazines
+{'yes', 'erotic', 'florist', 'kiosk', 'convenience', 'stationery', 'vending_machine', 'office', 'newsagent', 'lottery', 'computer'}
+Reading_nonfiction
+{'hairdresser', 'alcohol', 'kindergarten', 'cliff_diving', 'dog_racing', 'toboggan', 'social_facility', 'track', 'cycling', 'atm', 'tanning_salon', 'payment_centre', 'climbing', 'money_transfer', 'beauty', 'viewpoint', 'horse_racing', 'massage', 'beverages', 'running', 'athletics', 'bank', 'equestrian', 'swimming', 'payment_terminal', 'payment_center'}
+Restoration_of_art_works
+{'yes', 'boutique', 'dentist', 'drinking_water', 'toilets', 'shooting', 'studio', 'motel', 'post_box', 'club', 'library', 'jiu-jitsu', 'museum', 'community_centre', 'pub', 'garden', 'second_hand', 'computer', 'clock', 'shelter', 'carpet', 'hotel', 'social_centre', 'coworking_space', 'social_facility', 'karate', 'clothes', 'kodokan', 'wrestling', 'camp_site', 'pitch', 'doctors', 'cycling', 'townhall', 'climbing', 'theatre', 'arts_centre', 'craft', 'gallery', 'bathroom_furnishing', 'kitchen', 'viewpoint', 'outdoor_seating', 'archery', 'hearing_aids', 'garden_centre', 'information', 'bench', 'bed', 'art', 'fishing', 'dojo', 'stadium', 'biergarten', 'artwork', 'judo', 'bar', 'picnic_table', 'sports_centre', 'fuel', 'picnic_site', 'boxing', 'cafeteria', 'restaurant', 'fast_food', 'antiques', 'swimming', 'table', 'budo', 'cafe', 'baking_oven', 'convenience', 'herbalist', 'fencing', 'caravan_site', 'pastry', 'embassy', 'furniture', 'hospital', 'optician', 'confectionery'}
+Restoration_of_buildings
+{'toilets', 'supermarket', 'drinking_water', 'alpine_hut', 'hardware', 'library', 'museum', 'animal_shelter', 'community_centre', 'kindergarten', 'horse_riding', 'parking', 'pub', 'wilderness_hut', 'locksmith', 'shelter', 'hotel', 'college', 'trade', 'pitch', 'courthouse', 'townhall', 'police', 'ranger_station', 'exhibition_centre', 'craft', 'gallery', 'place_of_worship', 'doityourself', 'marketplace', 'ticket', 'viewpoint', 'outdoor_seating', 'animal_boarding', 'monastery', 'information', 'bench', 'electrical', 'school', 'farm', 'shower', 'art', 'variety_store', 'tobacco', 'stadium', 'rescue_station', 'emergency_phone', 'biergarten', 'bicycle_parking', 'swimming_pool', 'department_store', 'bar', 'equestrian', 'sports_centre', 'fuel', 'picnic_table', 'chalet', 'bakery', 'lighting', 'picnic_site', 'university', 'mall', 'cafeteria', 'restaurant', 'fast_food', 'kiosk', 'baking_oven', 'table', 'cafe', 'public_building', 'furniture', 'hospital', 'attraction', 'electronics'}
+Restoration_of_furniture
+{'yes', 'garden_furniture', 'drinking_water', 'toilets', 'public_bookcase', 'pub', 'carpet', 'second_hand', 'computer', 'shelter', 'lamps', 'kitchen', 'outdoor_seating', 'bed', 'garden_centre', 'information', 'bench', 'biergarten', 'bar', 'picnic_table', 'fuel', 'picnic_site', 'cafeteria', 'restaurant', 'fast_food', 'antiques', 'table', 'cafe', 'furniture', 'bathroom_furnishing'}
+Horseriding
+set()
+Rollerskating
+{'ice_skating', 'skateboard'}
+Sailing
+{'marina', 'boat_rental', 'boat', 'rental', 'slipway', 'sailing'}
+Shopping
+{'fashion', 'boutique', 'clothes', 'mall'}
+Playing_billiard
+{'childcare', 'toilets', 'horseshoes', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'sports', 'kindergarten', 'pub', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'billiards', 'miniature_golf', 'bowling_alley', 'darts', 'bar', 'picnic_table', 'sports_centre', 'equestrian', '9pin', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'restaurant', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Skiing_downhill
+{'food_court', 'board', 'library', 'sports', 'ice_cream', 'atv', 'pub', 'books', 'rental', 'toboggan', 'track', 'bobsleigh', 'skiing', 'outdoor_seating', 'internet_cafe', 'ski', 'shoes', 'biergarten', 'bar', 'sports_centre', 'snowmobile', 'restaurant', 'fast_food', 'cafe', 'pastry', 'confectionery'}
+Skiing_cross-country
+{'ski', 'board', 'shoes', 'rental', 'sports', 'atv', 'skiing', 'snowmobile'}
+Skiing_on_water
+{'ski', 'board'}
+Playing_soccer
+{'soccer_golf', 'miniature_golf', 'golf_course'}
+Swimming
+{'shower', 'toilets', 'hotel', 'restaurant', 'resort', 'swimming', 'beach_resort', 'fitness_centre', 'library', 'pitch', 'water_park', 'public_bath', 'swimming_pool', 'townhall', 'community_centre', 'swimming_area', 'shop', 'bar', 'sports_centre', 'chalet'}
+Playing_tennis
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Traveling_for_leisure
+{'food_court', 'theme_park', 'pharmacy', 'boat_storage', 'community_centre', 'sports', 'garden', 'dog_racing', 'golf', 'hotel', 'disc_golf_course', 'camp_site', 'cycling', 'sauna', 'atm', 'park', 'bandstand', 'shower', 'water_ski', 'running', 'swimming_pool', 'slipway', '9pin', 'picnic_table', 'boat_rental', 'travel_agency', 'playground', 'disc_golf', 'escape_game', 'motel', 'office', 'firepit', 'curling', 'amusement_arcade', 'rental', 'computer', 'golf_course', 'social_facility', 'shooting_ground', 'table_tennis', 'boat_sharing', 'climbing', 'bandy', 'skateboard', 'shop', 'common', 'horse_racing', 'garden_centre', 'basketball', 'fishing', 'music_venue', 'bar', 'sports_centre', 'picnic_site', 'restaurant', 'beach_resort', 'swimming_area', 'adult_gaming_centre', 'yes', 'tennis', 'shooting', 'soccer', 'bleachers', 'alcohol', 'hostel', 'fitness_centre', 'hackerspace', 'multi', 'bird_hide', 'bbq', '10pin', 'tanning_salon', 'beauty', 'ice_skating', 'lottery', 'gambling', 'dog_waste_bin', 'outdoor_seating', 'waste_basket', 'wildlife_hide', 'stadium', 'fitness', 'soccer_golf', 'water_park', 'fitness_station', 'surfing', 'exercise', 'table', 'table_tennis_table', '...', 'toilets', 'resort', 'post_box', 'stationery', 'public_bath', 'horse_riding', 'ice_cream', 'pub', 'toboggan', 'shelter', 'dance', 'watering_place', 'track', 'pitch', 'guest_house', 'croquet', 'ice_hockey', 'bench', 'dog_park', 'dojo', 'marina', 'miniature_golf', 'biergarten', 'athletics', 'bookmaker', 'bank', 'equestrian', 'chalet', 'nature_reserve', 'casino', 'video_arcade', 'fast_food', 'swimming', 'cafe'}
+Visiting_friends_and_relatives
+{'social_facility', 'attraction', 'viewpoint'}
+Playing_volleyball
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Volunteering:_political_activism
+{'shooting', 'social_centre', 'social_facility', 'fishing', 'club', 'office', 'stationery', 'cycling', 'community_centre'}
+Volunteering:_care_giving
+{'childcare', 'yes', 'toilets', 'drinking_water', 'gift', 'motel', 'preschool', 'car_sharing', 'car_wash', 'hardware', 'stationery', 'vending_machine', 'car_rental', 'animal_shelter', 'kindergarten', 'parking', 'books', 'carpet', 'rental', 'baby_care', 'baby_goods', 'computer', 'ferry_terminal', 'golf_course', 'hotel', 'motorcycle', 'social_facility', 'car_repair', 'camp_site', 'pitch', 'craft', 'tyres', 'animal_boarding', 'model_aerodrome', 'recycling', 'school', 'art', 'animal_breeding', 'parking_entrance', 'car', 'bicycle', 'waste_disposal', 'sanitary_dump_station', 'newsagent', 'swimming_pool', 'butcher', 'playground', 'retirement_home', 'parking_space', 'sports_centre', 'fuel', 'car_parts', 'car_pooling', 'bakery', 'restaurant', 'zoo', 'veterinary', 'caravan_site', 'vehicle_inspection', 'toys', 'furniture', 'hospital', 'attraction', 'electronics'}
+Volunteering_in_an_emergency
+{'fire_hydrant', 'clinic', 'telephone', 'coast_guard', 'social_facility', 'lifeboat_station', 'doctors', 'hospital', 'life_ring'}
+Volunteering_for_scout_movements
+{'climbing_adventure', 'climbing', 'sports_centre'}
+Walking
+{'atm', 'bicycle_rental'}
+Walking_pets
+{'yes', 'toilets', 'car_wash', 'climbing_adventure', 'animal_shelter', 'water_point', 'computer', 'hotel', 'dog_grooming', 'charging_station', 'atm', 'climbing', 'animal_boarding', 'compressed_air', 'pet', 'animal_breeding', 'sanitary_dump_station', 'sports_centre', 'fuel', 'bicycle_rental', 'zoo', 'veterinary', 'kiosk', 'convenience', 'attraction', 'pet_grooming'}
+Watching_sports
+{'rugby_league', 'korfball', 'gaelic_games', 'bowls', 'community_centre', 'sports', 'roller_hockey', 'dog_racing', 'ice_rink', 'golf', 'volleyball', 'hotel', 'roller_skating', 'rugby', 'cycling', 'bobsleigh', 'park', 'craft', 'sailing', 'ski', 'shower', 'cricket_nets', 'water_ski', 'running', 'hammer_throw', 'swimming_pool', 'slipway', 'dive', 'picnic_table', 'netball', 'basketball;soccer;volleyball', 'outdoor', 'canoe', 'boat_rental', 'discus_throw', 'attraction', 'hockey', 'pelota', 'drinking_water', 'skating', 'rink_hockey', 'curling', 'amusement_arcade', 'rental', 'scuba_diving', 'computer', 'golf_course', 'karate', 'social_facility', 'paragliding', 'clothes', 'table_tennis', 'free_flying', 'climbing', 'bandy', 'skateboard', 'taekwondo', 'australian_football', 'dive_center', 'baseball', 'jewelry', 'horse_racing', 'long_jump', 'model_aerodrome', 'basketball', 'vehicles', 'fishing', 'fountain', 'butcher', 'bar', 'sports_centre', 'restaurant', 'table_soccer', 'beach_resort', 'fencing', 'swimming_area', 'adult_gaming_centre', 'sport_centre', 'boxing', 'yes', 'aikido', 'horseshoes', 'tennis', 'shooting', 'soccer', 'bleachers', 'board', 'fitness_centre', 'jiu-jitsu', 'cycle_ball', 'beachvolleyball', 'shot-put', 'paddle_tennis', 'multi', 'chess', 'social_centre', 'wrestling', 'boat', 'cycle_polo', '10pin', 'karting', 'pit', 'ice_skating', 'cricket', 'trinquet', 'stadium', 'soccer_golf', 'water_park', 'billiards', 'bmx', 'surfing', 'darts', 'american_football', 'budo', 'football', 'table_tennis_table', 'watches', 'canoe_polo', 'boules', 'toilets', 'motor', 'canoe_hire', 'club', 'climbing_adventure', 'public_bath', 'gaelic_football', 'horse_riding', 'cliff_diving', 'atv', 'piste', 'pub', 'toboggan', 'trampoline', 'shelter', 'motorcycle', 'kodokan', 'handball', 'track', 'pitch', 'motocross', 'futsal', 'badminton', 'croquet', 'rugby_union', 'archery', 'dive_centre', 'ice_hockey', 'jetski', 'dojo', 'marina', 'bicycle', 'athletics', 'bowling_alley', 'judo', 'equestrian', 'snowmobile', 'bakery', 'diving', 'ice_stock', 'street_hockey', 'kitesurfing', 'swimming', 'canadian_football', 'field_hockey'}
+Watching_movies
+{'bakery', 'cinema', 'watches', 'craft', 'butcher', 'jewelry'}
+Watching_television
+{'bakery', 'studio', 'watches', 'craft', 'butcher', 'jewelry', 'television'}
+Weight_lifting
+set()
+Woodworking
+{'nature_reserve', 'bakery', 'theme_park', 'track', 'pitch', 'park', 'craft', 'butcher', 'furniture', 'garden'}
+Solving_jigsaw_puzzles
+{'escape_game'}
+Doing_yardwork
+set()
+Doing_yoga
+set()
+Playing_with_a_pet
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Attending_a_meet-up
+set()
+Engaging_in_lifelong_learning
+{'university', 'school', 'college', 'hospital', 'parking'}
+Gardening
+{'yes', 'garden_furniture', 'toilets', 'drinking_water', 'gift', 'theme_park', 'vending_machine', 'garden', 'computer', 'shelter', 'attraction', 'pitch', 'aquarium', 'park', 'craft', 'garden_centre', 'bench', 'butcher', 'nature_reserve', 'bakery', 'florist', 'restaurant', 'zoo', 'fast_food', 'cafe', 'playground'}
+Chatting_with_friends
+set()
+Mentoring_others
+set()
+Environmental_volunteering
+{'social_facility', 'recycling'}
+Volunteering_in_developing_countries
+{'variety_store', 'hardware', 'embassy', 'country_store'}
+Attending_a_political_rally
+{'stationery', 'office'}
+Having_a_night_out
+{'nightclub', 'food_court', 'radiotechnics', 'paint', 'pharmacy', 'vending_machine', 'museum', 'sports', 'religion', 'garden', 'wilderness_hut', 'carpet', 'seafood', 'hotel', 'courthouse', 'police', 'craft', 'fireplace', 'gallery', 'tyres', 'window_blind', 'ticket', 'compressed_air', 'ski', 'variety_store', 'shoes', 'video_games', 'car_parts', 'university', 'outdoor', 'veterinary', 'musical_instrument', 'travel_agency', 'herbalist', 'games', 'pastry', 'furniture', 'attraction', 'model', 'confectionery', 'tailor', 'bicycle_repair_station', 'bathroom furnishing', 'drinking_water', 'supermarket', 'motel', 'crematorium', 'dairy', 'alpine_hut', 'hardware', 'library', 'equipment_hire', 'firepit', 'animal_shelter', 'insurance', 'chemist', 'parking', 'vacuum_cleaner', 'washing_machine', 'computer', 'rental', 'collector', 'amusement_arcade', 'charity', 'scuba_diving', 'photo', 'social_facility', 'clothes', 'frame', 'charging_station', 'planetarium', 'chocolate', 'funeral_directors', 'houseware', 'doityourself', 'greengrocer', 'marketplace', 'jewelry', 'animal_boarding', 'curtain', 'garden_centre', 'internet_cafe', 'glaziery', 'cheese', 'vehicles', 'massage', 'beverages', 'car', 'wine_cellar', 'bicycle_parking', 'newsagent', 'tool_hire', 'butcher', 'bar', 'audiologist', 'sports_centre', 'bicycle_rental', 'picnic_site', 'general', 'pawnbroker', 'restaurant', 'kiosk', 'wholesale', 'antiques', 'public_building', 'windows', 'adult_gaming_centre', 'fashion', 'hospital', 'bathroom_furnishing', 'electronics', 'leather', 'yes', 'gift', 'shooting', 'hairdresser', 'alcohol', 'board', 'hostel', 'cosmetics', 'wine', 'laundry', 'robot', 'copyshop', 'books', 'second_hand', 'erotic', 'trade', 'boat', 'bbq', 'townhall', 'tanning_salon', 'place_of_worship', 'hifi', 'beauty', 'lottery', 'interior_decoration', 'gambling', 'outdoor_seating', 'hearing_aids', 'farm', 'appliance', 'department_store', 'stripclub', 'dryer', 'fuel', 'tattoo', 'mall', 'florist', 'fabric', 'watches', 'video', 'dry_cleaning', 'toys', 'electrical', 'fishmonger', 'boutique', 'toilets', 'stationery', 'tea', 'horse_riding', 'kindergarten', 'ice_cream', 'weapons', 'atv', 'pub', 'mobile_phone', 'locksmith', 'camera', 'shelter', 'baby_goods', 'trampoline', 'plant_hire', 'lamps', 'motorcycle', 'college', 'bag', 'car_repair', 'guest_house', 'pitch', 'anime', 'kitchen', 'bed', 'perfumery', 'dive_centre', 'archery', 'school', 'pet', 'art', 'jetski', 'tobacco', 'marina', 'bicycle', 'biergarten', 'bookmaker', 'e-cigarette', 'snowmobile', 'bakery', 'lighting', 'sewing', 'casino', 'fast_food', 'music', 'cafe', 'convenience', 'medical_supply', 'money_lender', 'optician', 'deli'}
+Playing_golf
+{'soccer_golf', 'miniature_golf', 'golf_course'}
+Speed_dating
+{'aikido', 'wrestling', 'stadium', 'pitch', 'fencing', 'athletics', 'taekwondo', 'judo', 'sports_centre', 'boxing'}
+Going_to_a_flea_market
+{'studio', 'shooting', 'crematorium', 'library', 'sports', 'scuba_diving', 'hotel', 'track', 'boat', 'dive_center', 'marketplace', 'greengrocer', 'dive_centre', 'archery', 'information', 'farm', 'national_reserve', 'parking_entrance', 'car', 'running', 'junk_yard', 'dive', 'fuel', 'nature_reserve', 'diving', 'fast_food', 'kitesurfing', 'grave_yard', 'beach_resort', 'convenience', 'sloped_curb', 'hospital', 'attraction'}
+Organizing_photo_albums
+{'camera', 'yes', 'bakery', 'shooting', 'social_centre', 'photo', 'social_facility', 'fishing', 'printer', 'club', 'cycling', 'craft', 'butcher', 'photo_booth', 'community_centre', 'copyshop', 'electronics', 'computer'}
+Feeding_birds
+{'watering_place', 'game_feeding', 'cratch', 'feeding_place', 'deer_feeding', 'wildlife_feeding', 'manger', 'feeding_rack'}
+Calling_someone_on_the_phone
+{'car_pooling', 'internet_cafe', 'yes', 'glaziery', 'telephone', 'hotel', 'fast_food', 'doors', 'fuel', 'car', 'car_sharing', 'convenience', 'car_rental', 'sports', 'window_blind', 'parking', 'electronics', 'mobile_phone', 'second_hand', 'computer'}
+Sun-bathing
+{'yes', 'toilets', 'drinking_water', 'public_bath', 'swimming_area', 'computer', 'hotel', 'pitch', 'sauna', 'window_blind', 'baseball', 'cricket', 'glaziery', 'shower', 'information', 'cricket_nets', 'stadium', 'swimming_pool', 'sports_centre', 'fuel', 'windows', 'furniture', 'bathroom_furnishing'}
+Storytelling
+{'shooting', 'social_centre', 'social_facility', 'fishing', 'club', 'cycling', 'community_centre'}
+Chatting_up
+set()
+Chatting_online
+set()
+Playing_board_games
+{'childcare', 'toilets', 'tennis', 'soccer', 'theme_park', 'bowls', 'horse_riding', 'kindergarten', 'garden', 'curling', 'multi', 'golf_course', 'table_tennis', 'pitch', '10pin', 'park', 'theatre', 'skateboard', 'bandy', 'croquet', 'ice_skating', 'gambling', 'cinema', 'waste_basket', 'bench', 'basketball', 'ice_hockey', 'stadium', 'soccer_golf', 'fitness_station', 'miniature_golf', '9pin', 'picnic_table', 'equestrian', 'sports_centre', 'nature_reserve', 'picnic_site', 'creche', 'casino', 'video_arcade', 'zoo', 'table_tennis_table', 'boules', 'nursery', 'adult_gaming_centre', 'playground', 'field_hockey', 'disc_golf'}
+Learning_a_craft
+{'tailor', 'alcohol', 'paint', 'museum', 'parking', 'copyshop', 'computer', 'locksmith', 'scuba_diving', 'photo', 'college', 'craft', 'fireplace', 'window_blind', 'doityourself', 'doors', 'jewelry', 'garden_centre', 'glaziery', 'school', 'shoes', 'pottery', 'butcher', 'fuel', 'bakery', 'university', 'florist', 'fabric', 'musical_instrument', 'windows', 'pastry', 'furniture', 'hospital', 'optician', 'electronics', 'model', 'confectionery'}
+Learning_a_language
+{'university', 'language_school', 'school', 'college', 'hospital', 'parking'}
+Car_racing
+{'yes', 'toilets', 'drinking_water', 'gift', 'motel', 'car_sharing', 'car_wash', 'hardware', 'stationery', 'vending_machine', 'car_rental', 'kindergarten', 'parking', 'books', 'carpet', 'rental', 'baby_care', 'baby_goods', 'computer', 'ferry_terminal', 'golf_course', 'hotel', 'motorcycle', 'social_facility', 'car_repair', 'camp_site', 'pitch', 'craft', 'tyres', 'model_aerodrome', 'recycling', 'art', 'parking_entrance', 'car', 'bicycle', 'waste_disposal', 'sanitary_dump_station', 'newsagent', 'swimming_pool', 'butcher', 'parking_space', 'sports_centre', 'fuel', 'car_parts', 'car_pooling', 'bakery', 'restaurant', 'zoo', 'caravan_site', 'vehicle_inspection', 'toys', 'furniture', 'hospital', 'attraction', 'electronics'}
+Boxing
+{'aikido', 'wrestling', 'stadium', 'pitch', 'fencing', 'athletics', 'taekwondo', 'judo', 'sports_centre', 'boxing'}
+Sitting_on_a_bench
+{'drinking_water', 'toilets', 'food_court', 'bleachers', 'library', 'firepit', 'museum', 'ice_cream', 'pub', 'books', 'shelter', 'camp_site', 'bbq', 'place_of_worship', 'summer_camp', 'outdoor_seating', 'recycling', 'waste_basket', 'bench', 'information', 'place of worship', 'internet_cafe', 'waste_disposal', 'sanitary_dump_station', 'artwork', 'biergarten', 'playground', 'picnic_table', 'bar', 'picnic_site', 'restaurant', 'fast_food', 'table', 'cafe', 'caravan_site', 'pastry', 'attraction', 'confectionery'}
+Climbing
+{'outdoor', 'boat', 'bicycle', 'climbing_adventure', 'climbing', 'sports', 'sports_centre'}
+Volunteering:_psychological_support
+{'social_facility', 'post_box', 'computer', 'clock'}
+Driving_cars
+{'driving_school', 'golf_course'}
+Riding_a_motorcycle
+{'yes', 'toilets', 'supermarket', 'motor', 'stables', 'hardware', 'motorcycle_repair', 'boat_storage', 'car_rental', 'horse_riding', 'sports', 'parking', 'atv', 'racetrack', 'dog_racing', 'rental', 'car repair', 'toboggan', 'computer', 'hotel', 'motorcycle', 'car_repair', 'track', 'pitch', 'boat_sharing', 'charging_station', 'cycling', 'motocross', 'karting', 'tyres', 'horse_racing', 'vehicles', 'motorcycle_parking', 'marina', 'car', 'stadium', 'running', 'bicycle', 'bicycle_parking', 'athletics', 'slipway', 'equestrian', 'sports_centre', 'car_parts', 'bicycle_rental', 'restaurant', 'boat_rental', 'trail_riding_station'}
+Visiting_a_museum
+{'attraction', 'viewpoint'}
+Meditating
+set()
