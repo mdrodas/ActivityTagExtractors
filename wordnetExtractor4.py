@@ -1,8 +1,11 @@
+"""
+Implementation for wordnet extractor using directly the synsets of wordnet and calculating the path_similarity and the frequency number to order and limiting the amount of tags.
+"""
 import operator
 from nltk.corpus import wordnet as wn
 
+useless_words = ['a', 'an', 'of', 'in', 'the', 'and', 'on', 'for', 'with', 'to']
 
-useless_words = ['a','an','of','in','the','and','on','for','with','to']
 
 def syn(word, lch_threshold=0.8):
     for net1 in wn.synsets(word):
@@ -15,24 +18,27 @@ def syn(word, lch_threshold=0.8):
             if lch is not None and lch >= lch_threshold:
                 yield (net1, net2, lch)
 
+
 def readFile(filename):
     response = []
-    with open('resources/'+filename) as fp:
+    with open('resources/' + filename) as fp:
         for line in fp:
             response.append(line.strip('\n'))
     return response
 
-def clean_wordList(a,b):
-    return list(set(a)-set(b))
+
+def clean_wordList(a, b):
+    return list(set(a) - set(b))
+
 
 activities = readFile('activities01.csv')
 # print(activities)
 size = 5
-print ('Starting list...')
+print('Starting list...')
 for activity in activities:
     activity_words = activity.split(' ')
-    activity_words = clean_wordList(activity_words,useless_words)
-    print (activity," = ",activity_words)
+    activity_words = clean_wordList(activity_words, useless_words)
+    print(activity, " = ", activity_words)
     freq = dict()
     similarities = set()
     for word in activity_words:
@@ -53,4 +59,4 @@ for activity in activities:
 
     freq_sorted = sorted(freq.items(), key=operator.itemgetter(1), reverse=True)
     similarities = freq_sorted[0:size]
-    print("--",len(similarities),"--",similarities)
+    print("--", len(similarities), "--", similarities)

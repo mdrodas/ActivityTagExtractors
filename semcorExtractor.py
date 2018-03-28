@@ -1,3 +1,6 @@
+"""
+Implementation for wordnet extractor using directly the synsets of semcor.
+"""
 from nltk.corpus import semcor as wn
 
 useless_words = ['a','an','of','in','the','and','on','for','with','to']
