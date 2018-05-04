@@ -31,7 +31,7 @@ def clean_wordList(a, b):
     return list(set(a) - set(b))
 
 
-activities = readFile('activities01.csv')
+activities = readFile('activities03.csv')
 # print(activities)
 size = 5
 print('Starting list...')
