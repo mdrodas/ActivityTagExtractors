@@ -9,14 +9,14 @@ useless_words = ['its', 'an', 'of', 'in', 'the', 'and', 'on', 'for', 'with', 'to
 
 def readFile(filename):
     response = []
-    with open('resources/' + filename) as fp:
+    with open('../resources/' + filename) as fp:
         for line in fp:
             response.append(line.strip('\n'))
     return response
 
 
 def writeFile(value, outfilename):
-    fp = open('resources/' + outfilename, "a+")
+    fp = open('../resources/' + outfilename, "a+")
     fp.write(value + "\n")
     fp.close()
 

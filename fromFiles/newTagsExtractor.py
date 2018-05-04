@@ -9,7 +9,7 @@ useless_words = ['its', 'an', 'of', 'in', 'the', 'and', 'on', 'for', 'with', 'to
 
 def readFile(filename):
     response = []
-    with open('resources/tagsOnly/' + filename) as fp:
+    with open('../resources/tagsOnly/' + filename) as fp:
         for line in fp:
             response.append(line.strip('\n'))
     return response
@@ -19,7 +19,7 @@ def clean_wordList(a, b):
     return list(set(a) - set(b))
 
 
-for root, dirs, files in os.walk("resources/tagsOnly/", topdown=False):
+for root, dirs, files in os.walk("../resources/tagsOnly/", topdown=False):
     activity_tags = dict()
     all_tags = dict()
     for fileName in files:

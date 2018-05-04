@@ -1,6 +1,7 @@
 """
-Implementation for tagFinder extractor using the service api/term using chopped activity name.
+Implementation for tagFinder extractor using the service api/search using chopped activity name.
 """
+# http://tagfinder.herokuapp.com/api/search?query=eating%20out&format=json_pretty&lang=en
 # http://tagfinder.herokuapp.com/api/terms?term=camping&format=json_pretty
 import requests
 import json
@@ -14,26 +15,31 @@ def clean_wordList(a, b):
 
 
 def readTagFinder(word):
-    response = requests.get('http://tagfinder.herokuapp.com/api/terms?term=' + word + '&format=json_pretty')
+    response = requests.get('http://tagfinder.herokuapp.com/api/search?query=' + word + '&format=json_pretty&lang=en')
     assert response.status_code == 200
 
     similarities = set()
-    data = response.json()
-    termBroader = data['termBroader']['en']
-    if (len(termBroader) > 0):
-        similarities.update(termBroader)
-    termNarrower = data['termNarrower']['en']
-    if (len(termNarrower) > 0):
-        similarities.update(termNarrower)
-    termRelated = data['termRelated']['en']
-    if (len(termRelated) > 0):
-        similarities.update(termRelated)
+    for data in response.json():
+        # print(data['combines'])
+        for data2 in data['combines']:
+            values = data2['label'].split('=')
+            if (values[0] in keys and values[1] != '*'):
+                # print (values[0],'=',values[1])
+                similarities.add(values[1])
+
+        # print ('------')
+        for data3 in data['links']:
+            values = data3['label'].split('=')
+            if (values[0] in keys and values[1] != '*'):
+                # print (values[0],'=',values[1])
+                similarities.add(values[1])
+        # print ('#####')
     return similarities
 
 
 def readFile(filename):
     response = []
-    with open('resources/' + filename) as fp:
+    with open('../resources/' + filename) as fp:
         for line in fp:
             response.append(line.strip('\n'))
     return response

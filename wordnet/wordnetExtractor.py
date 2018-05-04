@@ -20,7 +20,7 @@ def syn(word, lch_threshold=0.8):
 
 def readFile(filename):
     response = []
-    with open('resources/' + filename) as fp:
+    with open('../resources/' + filename) as fp:
         for line in fp:
             response.append(line.strip('\n'))
     return response

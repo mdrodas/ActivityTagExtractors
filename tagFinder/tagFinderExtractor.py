@@ -1,17 +1,13 @@
 """
-Implementation for tagFinder extractor using the service api/search using chopped activity name.
+Implementation for tagFinder extractor using the service api/search using full activity name.
 """
 # http://tagfinder.herokuapp.com/api/search?query=eating%20out&format=json_pretty&lang=en
-# http://tagfinder.herokuapp.com/api/terms?term=camping&format=json_pretty
 import requests
 import json
 
-useless_words = ['a', 'an', 'of', 'in', 'the', 'and', 'on', 'for', 'with', 'to']
+word = 'eating_out'
+word2 = 'running'
 keys = ['leisure', 'amenity', 'tourism', 'sport', 'shop']
-
-
-def clean_wordList(a, b):
-    return list(set(a) - set(b))
 
 
 def readTagFinder(word):
@@ -39,20 +35,16 @@ def readTagFinder(word):
 
 def readFile(filename):
     response = []
-    with open('resources/' + filename) as fp:
+    with open('../resources/' + filename) as fp:
         for line in fp:
             response.append(line.strip('\n'))
     return response
 
 
-activities = readFile('activities03.csv')
+activities = readFile('activities01.csv')
 print('Starting list...')
 for activity in activities:
-    # activity_words = activity.replace(' ','_')
-    activity_words = activity.split(' ')
-    activity_words = clean_wordList(activity_words, useless_words)
-    print(activity, " = ", activity_words)
-    similarities = set()
-    for word in activity_words:
-        similarities.update(readTagFinder(word))
-    print('--', len(similarities), '--', similarities)
+    activity_words = activity.replace(' ', '_')
+    print(activity_words);
+    similarities = readTagFinder(activity)
+    print(similarities)

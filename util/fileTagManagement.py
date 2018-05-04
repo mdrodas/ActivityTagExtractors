@@ -7,19 +7,19 @@ import os
 
 def readFile(filename):
     response = []
-    with open('resources/tagsOnly/' + filename) as fp:
+    with open('../resources/tagsOnly/' + filename) as fp:
         for line in fp:
             response.append(line.lower().strip('\n'))
     return response
 
 def writeFile(infilename, outfilename):
-    fp = open('resources/' + outfilename, "a+")
+    fp = open('../resources/' + outfilename, "a+")
     myFile = readFile(infilename)
     toWrite = '\n'.join(myFile[1:]) + "\n"
     fp.write(toWrite)
     fp.close()
 
-for root, dirs, files in os.walk("resources/tagsOnly/", topdown=False):
+for root, dirs, files in os.walk("../resources/tagsOnly/", topdown=False):
     activity_tags = dict()
     all_tags = dict()
     for fileName in files:
