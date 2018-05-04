@@ -3,9 +3,9 @@ import pyorient
 
 class KnowledgeBase:
 
-    def __init__(self)
+    def __init__(self):
         self.db = pyorient.OrientDB("localhost", 2424)
-        self.kb = db.db_open("KB_Trento", "admin", "admin")
+        self.kb = self.db.db_open("KB_Trento", "admin", "admin")
 
     # returns list of cluster ids for UserProfile class
     def getClusterIds(db):
