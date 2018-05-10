@@ -8,7 +8,6 @@ class Activity:
 
     def __init__(self, name, description, longdescription, location, starts, duration, tags, admissioncostperperson,
                  friwalkprovided, groupsuitable, bringfriends, isequipped, tenancy):
-
         self.name = name  # mandatory
         self.description = description  # mandatory
         self.longdescription = longdescription
@@ -38,6 +37,17 @@ class Activity:
             bringfriends=self.bringfriends,
             isequipped=self.isequipped,
             tenancy=self.tenancy,
+        )
+        return activity
+
+    def toDictMandatory(self):
+        activity = dict(
+            name=self.name,
+            description=self.description,
+            location=self.location,
+            isequipped=self.isequipped,
+            tenancy=self.tenancy,
+            tags=self.tags,
         )
         return activity
 

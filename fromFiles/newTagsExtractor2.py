@@ -25,7 +25,7 @@ if __name__ == "__main__":
         # print(activity_words[0], "--")
         # similarities = set()
         freq = dict()
-        activity = activity_words[0].lower()
+        activity = activity_words[0].lower().strip()
         if (activity == '_id'):
             continue
         for i in range(3, 6):
