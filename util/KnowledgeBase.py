@@ -4,13 +4,42 @@ import pyorient
 class KnowledgeBase:
 
     def __init__(self):
-        self.db = pyorient.OrientDB("localhost", 2424)
-        self.kb = self.db.db_open("KB_Trento", "admin", "admin")
+        self.server = "localhost"
+        self.port = 2424
+        self.user = "admin"
+        self.password = "admin"
+        self.DBName = "KB_Trento"
+
+        self.db = pyorient.OrientDB(self.server, self.port)
+        self.kb = self.db.db_open(self.DBName, self.user, self.password)
+
+    def set_server(self, server):
+        self.server = server
+
+    def set_user(self, user):
+        self.user = user
+
+    def set_pass(self, password):
+        self.password = password
+
+    def getDB(self):
+        return self.db
+
+    def getKB(self):
+        return self.kb
+
+    def open_connection(self):
+        self.db = pyorient.OrientDB(self.server, self.port)
+        self.kb = self.db.db_open(self.DBName, self.user, self.password)
+
+    def close_connection(self):
+        self.db.close()
 
     # returns list of cluster ids for UserProfile class
     def getClusterIds(db):
         clusterid_query = "SELECT name, clusterIds FROM (SELECT EXPAND(classes) FROM metadata:schema) WHERE name = 'UserProfile'"
         result = db.query(clusterid_query)
+
         return result[0].oRecordData['clusterIds']
 
 

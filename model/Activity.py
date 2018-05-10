@@ -7,11 +7,12 @@ import loremipsum
 class Activity:
 
     def __init__(self, name, description, longdescription, location, starts, duration, tags, admissioncostperperson,
-                 friwalkprovided, groupsuitable, bringfriends, isequipped):
-        self.name = name
-        self.description = description
+                 friwalkprovided, groupsuitable, bringfriends, isequipped, tenancy):
+
+        self.name = name  # mandatory
+        self.description = description  # mandatory
         self.longdescription = longdescription
-        self.location = location
+        self.location = location  # mandatory
         self.starts = starts
         self.duration = duration
         self.tags = tags
@@ -19,7 +20,8 @@ class Activity:
         self.friwalkprovided = friwalkprovided
         self.groupsuitable = groupsuitable
         self.bringfriends = bringfriends
-        self.isequipped = isequipped
+        self.isequipped = isequipped  # Mandatory
+        self.tenancy = tenancy  # Mandatory
 
     def toDict(self):
         activity = dict(
@@ -35,6 +37,7 @@ class Activity:
             groupsuitable=self.groupsuitable,
             bringfriends=self.bringfriends,
             isequipped=self.isequipped,
+            tenancy=self.tenancy,
         )
         return activity
 
