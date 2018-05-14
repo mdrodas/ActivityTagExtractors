@@ -22,9 +22,9 @@ class ActivityDao:
 
     def getByName(self, name):
         query = "SELECT * FROM Activity WHERE name = \"{0}\"".format(name.replace('"', ''))
-        print(query)
+        #print(query)
         result = self.connection.query(query)
-        print("getByLabel:" + str(result))
+        #print("getByLabel:" + str(result))
         return result
 
     def getById(self, id):

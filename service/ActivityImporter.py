@@ -64,4 +64,4 @@ if __name__ == "__main__":
             result = myDao.add(activity.toDictMandatory())
             print("CREATE:", result[0])
         else:
-            print("Activity Already Exist.")
+            print("Activity Already Exist. Name:"+activityName+" ID:"+id)
