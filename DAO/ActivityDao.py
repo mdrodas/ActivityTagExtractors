@@ -14,6 +14,19 @@ class ActivityDao:
         result = self.connection.query(query)
         return result
 
+    def exist(self, name):
+        result = self.getByName(name)
+        if (result):
+            return result[0]._rid
+        return result
+
+    def getByName(self, name):
+        query = "SELECT * FROM Activity WHERE name = \"{0}\"".format(name.replace('"', ''))
+        print(query)
+        result = self.connection.query(query)
+        print("getByLabel:" + str(result))
+        return result
+
     def getById(self, id):
         query = "SELECT * FROM Activity WHERE @rid = {0}".format(id)
         print(query)
@@ -43,12 +56,12 @@ if __name__ == "__main__":
 
     if (rid0):
         result = myDao.getById(rid0)
-        print("READ:",result[0])
+        print("READ:", result[0])
 
     result2 = myDao.add(activity.toDict())
-    print("CREATE:",result2[0])
+    print("CREATE:", result2[0])
 
     activity.name = "newActivityName5"
     rid = result2[0]._rid
     result3 = myDao.update(activity.toDict(), rid)
-    print("UPDATE:",result3[0])
+    print("UPDATE:", result3[0])

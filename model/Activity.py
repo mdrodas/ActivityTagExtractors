@@ -47,7 +47,7 @@ class Activity:
             location=self.location,
             isequipped=self.isequipped,
             tenancy=self.tenancy,
-            tags=self.tags,
+            tags=list(self.tags),
         )
         return activity
 
