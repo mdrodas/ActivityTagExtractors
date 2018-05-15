@@ -6,13 +6,36 @@ from DAO.TagDao import TagDao
 import json
 
 
-def createActivity(name, description, location, isEquiped, tenancy, tags):
+def create_activity(name, description, location, isEquiped, tenancy, tags):
     activity = Activity(name, description, "", location, "2018-01-01", 0, tags, 0,
                         False, False, False, isEquiped, tenancy)
+    myDao = ActivityDao()
+    id = myDao.exist(name)
+    if (not id):
+        result = myDao.add(activity.toDictMandatory())
+        print("CREATE:", result[0])
+    else:
+        print("Activity Already Exist. Name:" + name + " ID:" + id)
     return activity
 
 
-def save(tag):
+def update_activity(name, description, location, isEquiped, tenancy, tags):
+    activity = Activity(name, description, "", location, "2018-01-01", 0, tags, 0,
+                        False, False, False, isEquiped, tenancy)
+    myDao = ActivityDao()
+    activity_id = myDao.exist(name)
+    result = myDao.update(activity_id, activity.toDictMandatory())
+    print("Create/Update:", result[0])
+    return activity
+
+
+def activity_hastag(activity_id, tag_id):
+    myDao = ActivityDao()
+    result = myDao.has_tag(activity_id, tag_id)
+    return result
+
+
+def create_tag(tag):
     tagDao = TagDao()
     id = tagDao.exist(tag)
     if (not id):
@@ -23,23 +46,19 @@ def save(tag):
     return id
 
 
-if __name__ == "__main__":
+def create_activities():
     activity_tags = dict()
     all_tags = dict()
-    allTagsName = "allTags.txt"
     cleanAllTagsName = "allTagsClean.txt"
-    tagsFrequencyName = "tagsFrequency.txt"
     fileManager = FileManager()
-
     activityName = ""
     description = ""
     location = "#57:0"  # existing dummy location
-    isEquiped = False  # asumption is False
+    isEquiped = False  # assumption is False
     tenancy = "#25:0"  # existing dummy tenancy
-    tags = list()
-
     myFile = fileManager.readResource(cleanAllTagsName)
     for line in myFile[0:-2]:
+        tags = list()
         print(line)
         words = line.split('\t')
         activityName = words[0].lower().strip()
@@ -48,20 +67,50 @@ if __name__ == "__main__":
         for i in range(1, length):
             tag = words[i].lower().strip()
 
-            id = save(tag.replace('"', ''))
+            id = create_tag(tag.replace('"', ''))
             if (id):
                 tags.append(id)
             else:
-                print("errorTag: ", tag)
-
-        activity = createActivity(activityName, description, location, isEquiped, tenancy, tags)
+                print("error creating tag: ", tag)
+        activity = create_activity(activityName, description, location, isEquiped, tenancy, tags)
         # print(activity.toDictMandatory())
 
-        myDao = ActivityDao()
-        activity = False
-        id = myDao.exist(activityName)
-        if (not id):
-            result = myDao.add(activity.toDictMandatory())
-            print("CREATE:", result[0])
-        else:
-            print("Activity Already Exist. Name:"+activityName+" ID:"+id)
+
+def update_activities():
+    activity_tags = dict()
+    all_tags = dict()
+    cleanAllTagsName = "allTagsClean.txt"
+    fileManager = FileManager()
+    activityName = ""
+    description = ""
+    location = "#57:0"  # existing dummy location
+    isEquiped = False  # assumption is False
+    tenancy = "#25:0"  # existing dummy tenancy
+
+    myFile = fileManager.readResource(cleanAllTagsName)
+    for line in myFile[0:-2]:
+        tags = list()
+        print(line)
+        words = line.split('\t')
+        activityName = words[0].lower().strip()
+        description = "-".join(words[1:4])
+        length = len(words) - 1
+        for i in range(1, length):
+            tag = words[i].lower().strip()
+
+            id = create_tag(tag.replace('"', ''))
+            if (id):
+                tags.append(id)
+            else:
+                print("error creating tag: ", tag)
+
+        activity = update_activity(activityName, description, location, isEquiped, tenancy, tags)
+        # print(activity.toDictMandatory())
+
+
+if __name__ == "__main__":
+    create = False
+    if (create):
+        create_activities()
+    else:
+        update_activities()

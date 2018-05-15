@@ -8,6 +8,12 @@ class ActivityDao:
         kb = KnowledgeBase()
         self.connection = kb.getDB()
 
+    def has_tag(self, activity_id, tag_id):
+        query = "select * from activity where @rid = {0} and tags contains (@rid = {1})".format(activity_id, tag_id)
+        print(query)
+        result = self.connection.query(query)
+        return result
+
     def getAll(self):
         query = "SELECT * FROM Activity"
         print(query)
@@ -22,9 +28,9 @@ class ActivityDao:
 
     def getByName(self, name):
         query = "SELECT * FROM Activity WHERE name = \"{0}\"".format(name.replace('"', ''))
-        #print(query)
+        # print(query)
         result = self.connection.query(query)
-        #print("getByLabel:" + str(result))
+        # print("getByLabel:" + str(result))
         return result
 
     def getById(self, id):
@@ -34,7 +40,7 @@ class ActivityDao:
         return result
 
     def update(self, rid, activity):
-        cmd = "UPDATE Activity CONTENT {0} WHERE @rid= {1}".format(rid, activity)
+        cmd = "UPDATE Activity MERGE {1} WHERE @rid= {0}".format(rid, activity)
         print(cmd)
         result = self.connection.command(cmd)
         return result
