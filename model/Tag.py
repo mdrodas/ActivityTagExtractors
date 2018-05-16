@@ -1,6 +1,7 @@
 class Tag:
 
     def __init__(self, label, description_activity, description_prescription, domain, lang, Includes, synonyms):
+        self.rid = "#0:0"
         self.label = label  # string,mandatory
         self.description_activity = description_activity  # string
         self.description_prescription = description_prescription  # string

@@ -7,24 +7,28 @@ import json
 
 
 def create_activity(name, description, location, isEquiped, tenancy, tags):
-    activity = Activity(name, description, "", location, "2018-01-01", 0, tags, 0,
-                        False, False, False, isEquiped, tenancy)
+    activity = Activity(name)
+    activity.new(name, description, "", location, "2018-01-01", 0, tags, 0,
+                 False, False, False, isEquiped, tenancy)
     myDao = ActivityDao()
     id = myDao.exist(name)
+    activity._rid = id
     if (not id):
-        result = myDao.add(activity.toDictMandatory())
-        print("CREATE:", result[0])
+        result = myDao.add(activity)
+        # print("CREATE:", result[0])
     else:
         print("Activity Already Exist. Name:" + name + " ID:" + id)
     return activity
 
 
 def update_activity(name, description, location, isEquiped, tenancy, tags):
-    activity = Activity(name, description, "", location, "2018-01-01", 0, tags, 0,
-                        False, False, False, isEquiped, tenancy)
+    activity = Activity(name)
+    activity.new(name, description, "", location, "2018-01-01", 0, tags, 0,
+                 False, False, False, isEquiped, tenancy)
     myDao = ActivityDao()
     activity_id = myDao.exist(name)
-    result = myDao.update(activity_id, activity.toDictMandatory())
+    activity.rid = activity_id
+    result = myDao.update(activity)
     print("Create/Update:", result[0])
     return activity
 
@@ -40,9 +44,9 @@ def create_tag(tag):
     id = tagDao.exist(tag)
     if (not id):
         tag = Tag(tag, "description_" + tag, "", "crowd", "en", list(), list())
-        newTag = tagDao.add(tag.toDictMandatory())
+        newTag = tagDao.add(tag)
         print(newTag)
-        id = newTag[0]._rid
+        id = newTag[0].rid
     return id
 
 
@@ -109,7 +113,7 @@ def update_activities():
 
 
 if __name__ == "__main__":
-    create = False
+    create = True
     if (create):
         create_activities()
     else:

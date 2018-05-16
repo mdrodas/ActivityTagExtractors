@@ -6,7 +6,11 @@ import loremipsum
 
 class Activity:
 
-    def __init__(self, name, description, longdescription, location, starts, duration, tags, admissioncostperperson,
+    def __init__(self, name):
+        self.name = name  # mandatory
+        self.tags = list()
+
+    def new(self, name, description, longdescription, location, starts, duration, tags, admissioncostperperson,
                  friwalkprovided, groupsuitable, bringfriends, isequipped, tenancy):
         self.name = name  # mandatory
         self.description = description  # mandatory
@@ -30,7 +34,7 @@ class Activity:
             location=self.location,
             starts=self.starts,
             duration=self.duration,
-            tags=self.tags,
+            tags=list(self.tags),
             admissioncostperperson=self.admissioncostperperson,
             friwalkprovided=self.friwalkprovided,
             groupsuitable=self.groupsuitable,
@@ -73,11 +77,16 @@ class Activity:
         return activity
 
 
+    def add_tags(self,new_tags):
+        for tag_id in new_tags:
+            self.tags.add(tag_id)
+
 if __name__ == "__main__":
 
     with open('activities.osql', 'a', newline='') as outfile:
-        for i in range(10):
-            activity = Activity.createRandomActivity()
+        for i in range(1):
+            a = Activity("")
+            activity = a.createRandomActivity()
             cmd = "INSERT INTO Activity CONTENT {0}".format(activity)
             print(cmd)
             outfile.write(cmd + ';\n')
