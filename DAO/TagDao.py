@@ -62,8 +62,14 @@ class TagDao:
         description_prescription = tag.__getattr__('description_prescription')
         domain = tag.__getattr__('domain')
         lang = tag.__getattr__('lang')
-        includes = tag.__getattr__('INCLUDES')
-        synonyms = tag.__getattr__('synonyms')
+        try:
+            includes = tag.__getattr__('INCLUDES')
+        except AttributeError:
+            includes = list()
+        try:
+            synonyms = tag.__getattr__('synonyms')
+        except AttributeError:
+            synonyms = list()
         response = Tag(label, description_activity, description_prescription, domain, lang, includes, synonyms)
         response.rid = tag._rid
         return response

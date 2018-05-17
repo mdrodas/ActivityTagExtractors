@@ -57,9 +57,9 @@ def create_activities():
     fileManager = FileManager()
     activityName = ""
     description = ""
-    location = "#57:0"  # existing dummy location
+    location = "#141:0"  # existing dummy location
     isEquiped = False  # assumption is False
-    tenancy = "#25:0"  # existing dummy tenancy
+    tenancy = "#113:0"  # existing dummy tenancy
     myFile = fileManager.readResource(cleanAllTagsName)
     for line in myFile[0:-2]:
         tags = list()
@@ -87,9 +87,9 @@ def update_activities():
     fileManager = FileManager()
     activityName = ""
     description = ""
-    location = "#57:0"  # existing dummy location
+    location = "#141:0"  # existing dummy location
     isEquiped = False  # assumption is False
-    tenancy = "#25:0"  # existing dummy tenancy
+    tenancy = "#113:0"  # existing dummy tenancy
 
     myFile = fileManager.readResource(cleanAllTagsName)
     for line in myFile[0:-2]:
@@ -113,7 +113,7 @@ def update_activities():
 
 
 if __name__ == "__main__":
-    create = True
+    create = False
     if (create):
         create_activities()
     else:
