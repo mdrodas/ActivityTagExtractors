@@ -60,7 +60,7 @@ def update_activities():
     activityDao = ActivityDao()
     tagDao = TagDao()
     all_activities = activityDao.getAll()
-
+    print("len: "+str(len(all_activities)))
     for activity in all_activities:
         similarities = list()
         for tag_id1 in activity.tags:

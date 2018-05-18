@@ -113,7 +113,7 @@ def update_activities():
 
 
 if __name__ == "__main__":
-    create = False
+    create = True
     if (create):
         create_activities()
     else:

@@ -9,7 +9,7 @@ class TagDao:
         self.connection = kb.getDB()
 
     def getAll(self):
-        query = "SELECT * FROM Tag"
+        query = "SELECT * FROM Tag limit -1"
         # print("TagDao.getAll: " + query)
         result = self.connection.query(query)
         response = list()

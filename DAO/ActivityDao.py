@@ -10,7 +10,7 @@ class ActivityDao:
 
     def has_tag(self, activity_id, tag_id):
         query = "select * from activity where @rid = {0} and tags contains (@rid = {1})".format(activity_id, tag_id)
-        print(query)
+        #print(query)
         result = self.connection.query(query)
         response = False
         if (result):
@@ -18,7 +18,7 @@ class ActivityDao:
         return response
 
     def getAll(self):
-        query = "SELECT * FROM Activity"
+        query = "SELECT * FROM activity limit -1"
         print(query)
         result = self.connection.query(query)
         response = list()
