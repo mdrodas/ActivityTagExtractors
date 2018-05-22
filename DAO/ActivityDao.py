@@ -26,6 +26,15 @@ class ActivityDao:
             response.append(self.to_activity(activity_record))
         return response
 
+    def getAll(self,limit):
+        query = "SELECT * FROM activity limit "+str(limit)
+        print(query)
+        result = self.connection.query(query)
+        response = list()
+        for activity_record in result:
+            response.append(self.to_activity(activity_record))
+        return response
+
     def exist(self, name):
         result = self.getByName(name)
         if (result):

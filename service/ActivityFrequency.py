@@ -1,23 +1,19 @@
 import operator
-from util.FileManager import FileManager
-from model.Activity import Activity
-from model.Tag import Tag
 from DAO.ActivityDao import ActivityDao
 from DAO.TagDao import TagDao
-from nltk.corpus import wordnet as wn
 
 
 def activities_frequency():
     activityDao = ActivityDao()
     tagDao = TagDao()
-    all_activities = activityDao.getAll()
+    all_activities = activityDao.getAll(-1)
     freq = dict()
-    print(len(all_activities))
+    total = 3000
 
     for activity in all_activities:
-        # similarities = list()
         # print("Activity: " + activity.name)
         for tag_id1 in activity.tags:
+            # total += len(activity.tags)
             tag = tagDao.getById(tag_id1)
             tagLabel = tag[0].label.replace(' ', '_')
             # print("Tag: " + tagLabel)
@@ -45,8 +41,14 @@ def activities_frequency():
                 value1 = value
                 c = 1
     summary1[value1] = c
+    sum = 0
+    print("total: " + str(total))
+
     for key1, value1 in summary1.items():
-        print("Frequency of Use: " + str(key1) + " - Amount of Tags: " + str(value1))
+        value2 = value1 / total * 100
+        sum += value2
+        print("Frequency of Use: " + str(key1) + " - Amount of Tags: " + str(value1) + " (" + str(value2) + "%)")
+    print("check 100%: " + str(sum))
 
 
 if __name__ == "__main__":

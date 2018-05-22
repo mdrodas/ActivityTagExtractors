@@ -5,36 +5,6 @@ from DAO.ActivityDao import ActivityDao
 from DAO.TagDao import TagDao
 from nltk.corpus import wordnet as wn
 
-
-def create_activity(name, description, location, isEquiped, tenancy, tags):
-    activity = Activity(name, description, "", location, "2018-01-01", 0, tags, 0,
-                        False, False, False, isEquiped, tenancy)
-    myDao = ActivityDao()
-    id = myDao.exist(name)
-    if (not id):
-        result = myDao.add(activity.toDict())
-        print("CREATE:", result[0])
-    else:
-        print("Activity Already Exist. Name:" + name + " ID:" + id)
-    return activity
-
-
-def update_activity(name, description, location, isEquiped, tenancy, tags):
-    activity = Activity(name, description, "", location, "2018-01-01", 0, tags, 0,
-                        False, False, False, isEquiped, tenancy)
-    myDao = ActivityDao()
-    activity_id = myDao.exist(name)
-    result = myDao.update(activity_id, activity.toDict())
-    print("Create/Update:", result[0])
-    return activity
-
-
-def activity_hastag(activity_id, tag_id):
-    myDao = ActivityDao()
-    result = myDao.has_tag(activity_id, tag_id)
-    return result
-
-
 def create_tag(taglabel):
     tagDao = TagDao()
     id = tagDao.exist(taglabel)
@@ -45,22 +15,51 @@ def create_tag(taglabel):
         id = created_tag[0].rid
     return id
 
+def check_synonyms_wordnet(activity, word2, threshold=0.0):
+    activityDao = ActivityDao()
+    word1 = activity.name
+    # syns1 = wn.synsets(word1)
+    syns2 = wn.synsets(word2)
+    tags_id = list()
+    for syn2 in syns2:  # different meanings of the tag
+        for synonym in syn2.lemmas(lang='eng'):  # synonyms of a meaning of a tag
+            for syn3 in wn.synsets(synonym.name()):  # different meanings of a synonym
+                distance = syn2.path_similarity(syn3)
+                if distance and distance > threshold:
+                    print("word1: " + word1 + "; word2: " + word2 + " (" + synonym.name() + ") -- syn3: " + str(
+                        syn3) + "; syn2: " + str(syn2) + "; dist: " + str(distance))
+
+                    tag_id2 = create_tag(str(syn3.lemmas()[0].name()))
+                    result = activityDao.has_tag(activity.rid, tag_id2)
+                    if (not result and tag_id2 not in tags_id):
+                        tags_id.append(tag_id2)
+    return tags_id
+
 
 def update_activities():
-    activity_tags = dict()
-    all_tags = dict()
-    cleanAllTagsName = "allTagsClean.txt"
-    fileManager = FileManager()
-    activityName = ""
-    description = ""
-    location = "#57:0"  # existing dummy location
-    isEquiped = False  # assumption is False
-    tenancy = "#25:0"  # existing dummy tenancy
+    activityDao = ActivityDao()
+    tagDao = TagDao()
+    all_activities = activityDao.getAll(-1)
+    threshold = 0.75
 
+    for activity in all_activities:
+        tags_ids = list()
+        for tag_id1 in activity.tags:
+            tag = tagDao.getById(tag_id1)
+            tagLabel = tag[0].label.replace(' ', '_')
+            tags_ids = tags_ids + check_synonyms_wordnet(activity, tagLabel, threshold)
+
+        print("new Tags Ids: " + str(tags_ids))
+        for new_tagid in tags_ids:
+            activity.tags.append(new_tagid)
+        activityDao.update(activity)
+
+
+def update_activities_old():
     activityDao = ActivityDao()
     tagDao = TagDao()
     all_activities = activityDao.getAll()
-    print("len: "+str(len(all_activities)))
+    print("len: " + str(len(all_activities)))
     for activity in all_activities:
         similarities = list()
         for tag_id1 in activity.tags:

@@ -8,6 +8,11 @@ class TagDao:
         kb = KnowledgeBase()
         self.connection = kb.getDB()
 
+    def count(self):
+        query = "SELECT count(*) FROM Tag"
+        result = self.connection.query(query)
+        return result
+
     def getAll(self):
         query = "SELECT * FROM Tag limit -1"
         # print("TagDao.getAll: " + query)
