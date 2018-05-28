@@ -13,8 +13,8 @@ class TagDao:
         result = self.connection.query(query)
         return result
 
-    def getAll(self):
-        query = "SELECT * FROM Tag limit -1"
+    def getAll(self, limit=-1):
+        query = "SELECT * FROM Tag limit " + str(limit)
         # print("TagDao.getAll: " + query)
         result = self.connection.query(query)
         response = list()

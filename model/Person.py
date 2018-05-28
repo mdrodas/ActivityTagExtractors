@@ -1,9 +1,8 @@
-
 class Person:
 
     def __init__(self, firstName, familyName, birthDate):
         self.rid = ""
-        self.new(firstName,familyName,birthDate,"","",0,"",list(""),"","User")
+        self.new(firstName, familyName, birthDate, "single", "", 0, "other", list(""), "", "user")
 
     def new(self, firstName, familyName, birthDate, civilStatus, completeName, education, gender, languages,
             phonenumber, role):
@@ -20,24 +19,24 @@ class Person:
 
     def toDict(self):
         person = dict(
-            firstName = self.firstName,  # mandatory
-            familyName = self.familyName,  # mandatory
-            birthDate = self.birthDate,  # mandatory
-            civilStatus = self.civilStatus, # #String
-            completeName = self.completeName,  # String
-            education = self.education,  # Integer
-            gender = self.gender,  # String
-            languages = self.languages,  # List of Strings
-            phonenumber = self.phonenumber,  # String
-            role = self.role,  # String
+            firstName=self.firstName,  # mandatory
+            familyName=self.familyName,  # mandatory
+            birthDate=self.birthDate,  # mandatory
+            civilStatus=self.civilStatus,  # #String
+            completeName=self.completeName,  # String
+            education=self.education,  # Integer
+            gender=self.gender,  # String
+            languages=self.languages,  # List of Strings
+            phonenumber=self.phonenumber,  # String
+            role=self.role,  # String
         )
         return person
 
     def toDictMandatory(self):
         person = dict(
-            firstName = self.firstName,  # mandatory
-            familyName = self.familyName,  # mandatory
-            birthDate = self.birthDate,  # mandatory
+            firstName=self.firstName,  # mandatory
+            familyName=self.familyName,  # mandatory
+            birthDate=self.birthDate,  # mandatory
         )
         return person
 
@@ -46,7 +45,7 @@ if __name__ == "__main__":
     directory = '../resources/model_examples/'
     with open(directory + 'Person.osql', 'a', newline='') as outfile:
         for i in range(1):
-            a = Person("name","lastname", "17/04/2018")
+            a = Person("name", "lastname", "2018-12-18")
             cmd = "INSERT INTO Person CONTENT {0}".format(a.toDict())
             print(cmd)
             outfile.write(cmd + ';\n')

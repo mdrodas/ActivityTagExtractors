@@ -79,7 +79,7 @@ class Activity:
 
     def add_tags(self, new_tags):
         for tag_id in new_tags:
-            self.tags.add(tag_id)
+            self.tags.append(tag_id)
 
 
 if __name__ == "__main__":
