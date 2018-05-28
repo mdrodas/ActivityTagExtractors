@@ -7,24 +7,25 @@ import loremipsum
 class Activity:
 
     def __init__(self, name):
+        self.rid = ""
         self.name = name  # mandatory
         self.tags = list()
 
     def new(self, name, description, longdescription, location, starts, duration, tags, admissioncostperperson,
-                 friwalkprovided, groupsuitable, bringfriends, isequipped, tenancy):
-        self.name = name  # mandatory
-        self.description = description  # mandatory
-        self.longdescription = longdescription
-        self.location = location  # mandatory
-        self.starts = starts
-        self.duration = duration
-        self.tags = tags
-        self.admissioncostperperson = admissioncostperperson
-        self.friwalkprovided = friwalkprovided
-        self.groupsuitable = groupsuitable
-        self.bringfriends = bringfriends
-        self.isequipped = isequipped  # Mandatory
-        self.tenancy = tenancy  # Mandatory
+            friwalkprovided, groupsuitable, bringfriends, isequipped, tenancy):
+        self.name = name  # mandatory, string
+        self.description = description  # mandatory, string
+        self.longdescription = longdescription  # string
+        self.location = location  # mandatory, Place(rid)
+        self.starts = starts  # Datetime
+        self.duration = duration  # Integer
+        self.tags = tags  # list of Tag(rid)
+        self.admissioncostperperson = admissioncostperperson  # decimal
+        self.friwalkprovided = friwalkprovided  # boolean
+        self.groupsuitable = groupsuitable  # boolean
+        self.bringfriends = bringfriends  # boolean
+        self.isequipped = isequipped  # Mandatory, boolean
+        self.tenancy = tenancy  # Mandatory, Tenancy(rid)
 
     def toDict(self):
         activity = dict(
@@ -76,14 +77,14 @@ class Activity:
         )
         return activity
 
-
-    def add_tags(self,new_tags):
+    def add_tags(self, new_tags):
         for tag_id in new_tags:
             self.tags.add(tag_id)
 
-if __name__ == "__main__":
 
-    with open('activities.osql', 'a', newline='') as outfile:
+if __name__ == "__main__":
+    directory = '../resources/model_examples/'
+    with open(directory + 'activities.osql', 'a', newline='') as outfile:
         for i in range(1):
             a = Activity("")
             activity = a.createRandomActivity()

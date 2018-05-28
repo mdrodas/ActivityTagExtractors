@@ -30,8 +30,8 @@ class Tag:
 
 
 if __name__ == "__main__":
-
-    with open('tags.osql', 'a', newline='') as outfile:
+    directory = '../resources/model_examples/'
+    with open(directory + 'tags.osql', 'a', newline='') as outfile:
         for i in range(10):
             activity = Tag.createRandomActivity()
             cmd = "INSERT INTO Tag CONTENT {0}".format(activity)
