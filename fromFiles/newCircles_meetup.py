@@ -18,13 +18,13 @@ def all_tags_frequency(fileManager, all_tags):
         fileManager.writeFile(keyValue)
 
 
-def print_users_tags(fileManager):
-    print("Results 01: UserProfiles. user - tag_1 tag_2 tag_n")
+def print_circles_tags(fileManager):
+    print("Results 01: Circles. circle - tag_1 tag_2 tag_n")
     i = 0
     size = 0
-    global users_tags
+    global circles_tags
 
-    for key, value in users_tags.items():
+    for key, value in circles_tags.items():
         freq_sorted = sorted(value.items(), key=operator.itemgetter(1), reverse=True)
         i += 1
         size += len(freq_sorted)
@@ -39,20 +39,20 @@ def print_users_tags(fileManager):
         # print(toPrint2)
         fileManager.writeFile(toPrint2)
 
-    average1 = "Average tags per activity:" + str(size / i)
+    average1 = "Average tags per circle:" + str(size / i)
     print(average1)
     fileManager.writeFile(average1)
 
 
 def process_line(line):
-    member_tag = line.split(',\"')
-    user_id = member_tag[2].lower().strip()
-    user_id = user_id.replace('"', '')
-    tag = member_tag[4].lower().strip()
+    circle_tag = line.split(',\"')
+    circle_name = circle_tag[4].lower().strip()
+    circle_name = circle_name.replace('"', '')
+    tag = circle_tag[2].lower().strip()
     tag = tag.replace('"','')
     tag = tag.replace('-', '_')
     tag = tag.replace(' ', '_')
-    return (user_id, tag)
+    return (circle_name, tag)
 
 
 def tag_count(tag):
@@ -63,47 +63,47 @@ def tag_count(tag):
         all_tags[tag] = 1
 
 
-def process_user_tags(user_id, tag):
-    global users_tags
+def process_circle_tags(circle_name, tag):
+    global circles_tags
     freq = dict()
     freq[tag] = 1;
-    if (user_id not in users_tags):
-        users_tags[user_id] = freq
+    if (circle_name not in circles_tags):
+        circles_tags[circle_name] = freq
     else:
-        freq2 = users_tags[user_id]
+        freq2 = circles_tags[circle_name]
         if (tag in freq2):
             freq2[tag] += 1
         else:
             freq2[tag] = 1
-        users_tags[user_id] = freq2
+        circles_tags[circle_name] = freq2
 
 
 if __name__ == "__main__":
-    users_tags = dict()
+    circles_tags = dict()
     all_tags = dict()
 
-    members_tags = "members.tags.csv"
-    clean_users_tags = "all_users_tags.txt"
-    tags_frequency = "users_tags_frequency.txt"
+    members_tags = "communities.tags.csv"
+    clean_circles_tags = "all_circles_tags.txt"
+    tags_frequency = "circle_tags_frequency.txt"
     in_directory = "../resources/dataset-meetup/"
     out_directory = "../resources/meetup/"
 
     fileManager = FileManager(in_directory)
     fileManager.new_in(in_directory, members_tags)
-    fileManager.new_out(out_directory, clean_users_tags)
+    fileManager.new_out(out_directory, clean_circles_tags)
     myFile = fileManager.readFile()
 
     for line in myFile:
         line2 = process_line(line)
-        user_id = line2[0]
+        circle_name = line2[0]
         tag = line2[1]
-        if (user_id == 'memberid'):
+        if (circle_name == 'community'):
             continue
 
         tag_count(tag)
-        process_user_tags(user_id, tag)
+        process_circle_tags(circle_name, tag)
 
-    print_users_tags(fileManager)
+    print_circles_tags(fileManager)
 
     fileManager.new_out(out_directory, tags_frequency)
     all_tags_frequency(fileManager, all_tags)
