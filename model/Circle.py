@@ -1,10 +1,3 @@
-from DAO.TenantDao import TenantDao
-from model.Address import Address
-from model.ContactInfo import ContactInfo
-from model.Person import Person
-from model.Profession import Profession
-
-
 class Circle:
 
     def __init__(self, name, tenancy):

@@ -1,4 +1,3 @@
-import operator
 from nltk.corpus import wordnet as wn
 from DAO.ActivityDao import ActivityDao
 from DAO.TagDao import TagDao

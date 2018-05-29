@@ -14,7 +14,7 @@ class ProfessionDao:
         return result
 
     def getAll(self, limit=-1):
-        query = "SELECT * FROM Profession limit "+str(limit)
+        query = "SELECT * FROM Profession limit " + str(limit)
         # print("ProfessionDao.getAll: " + query)
         result = self.connection.query(query)
         response = list()

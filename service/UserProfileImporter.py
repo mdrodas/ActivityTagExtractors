@@ -2,15 +2,12 @@ from util.FileManager import FileManager
 from model.UserProfile import UserProfile
 from model.Address import Address
 from model.ContactInfo import ContactInfo
-from model.MobilityRecord import MobilityRecord
 from model.Person import Person
 from model.Profession import Profession
-from model.Tenant import Tenant
 from model.Tag import Tag
 from DAO.UserProfileDao import UserProfileDao
 from DAO.TagDao import TagDao
 from DAO.TenantDao import TenantDao
-import json
 
 
 def build_user(screenname, tags):
@@ -44,7 +41,7 @@ def create_user(screenname, tags):
             result = myDao.add(user)
             print("CREATE:", str(result[0]))
         else:
-            print("TO_CREATE: " + user.screenname +"- tags: "+ str(list(user.preferences)))
+            print("TO_CREATE: " + user.screenname + "- tags: " + str(list(user.preferences)))
     else:
         user.rid = id
         print("UserProfile Already Exist. Name:" + screenname + " ID:" + id)

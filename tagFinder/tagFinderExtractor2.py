@@ -4,7 +4,6 @@ Implementation for tagFinder extractor using the service api/search using choppe
 # http://tagfinder.herokuapp.com/api/search?query=eating%20out&format=json_pretty&lang=en
 # http://tagfinder.herokuapp.com/api/terms?term=camping&format=json_pretty
 import requests
-import json
 
 useless_words = ['a', 'an', 'of', 'in', 'the', 'and', 'on', 'for', 'with', 'to']
 keys = ['leisure', 'amenity', 'tourism', 'sport', 'shop']

@@ -3,7 +3,6 @@ Implementation for tagFinder extractor using the service api/term using chopped 
 """
 # http://tagfinder.herokuapp.com/api/terms?term=camping&format=json_pretty
 import requests
-import json
 
 useless_words = ['a', 'an', 'of', 'in', 'the', 'and', 'on', 'for', 'with', 'to']
 keys = ['leisure', 'amenity', 'tourism', 'sport', 'shop']

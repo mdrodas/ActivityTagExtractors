@@ -1,5 +1,3 @@
-from util.FileManager import FileManager
-from model.Activity import Activity
 from model.Tag import Tag
 from DAO.ActivityDao import ActivityDao
 from DAO.TagDao import TagDao

@@ -1,9 +1,3 @@
-import datetime
-import random
-import radar
-import loremipsum
-
-
 class Profession:
 
     def __init__(self, jobtitle):

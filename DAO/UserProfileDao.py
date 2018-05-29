@@ -1,6 +1,6 @@
 from util.KnowledgeBase import KnowledgeBase
 from model.UserProfile import UserProfile
-from model.Profession import Profession
+
 
 
 class UserProfileDao:

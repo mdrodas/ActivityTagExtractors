@@ -3,7 +3,6 @@ Implementation for tagFinder extractor using the service api/search using full a
 """
 # http://tagfinder.herokuapp.com/api/search?query=eating%20out&format=json_pretty&lang=en
 import requests
-import json
 
 word = 'eating_out'
 word2 = 'running'

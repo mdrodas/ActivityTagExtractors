@@ -19,13 +19,13 @@ class Activity:
         self.location = location  # mandatory, Place(rid)
         self.starts = starts  # Datetime
         self.duration = duration  # Integer
-        self.tags = tags  # list of Tag(rid)
+        self.tags = tags  # list of Tags(rids)
         self.admissioncostperperson = admissioncostperperson  # decimal
         self.friwalkprovided = friwalkprovided  # boolean
         self.groupsuitable = groupsuitable  # boolean
         self.bringfriends = bringfriends  # boolean
         self.isequipped = isequipped  # Mandatory, boolean
-        self.tenancy = tenancy  # Mandatory, Tenancy(rid)
+        self.tenancy = tenancy  # Mandatory, Tenant(rid)
 
     def toDict(self):
         activity = dict(

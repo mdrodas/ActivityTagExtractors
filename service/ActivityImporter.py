@@ -3,7 +3,6 @@ from model.Activity import Activity
 from model.Tag import Tag
 from DAO.ActivityDao import ActivityDao
 from DAO.TagDao import TagDao
-import json
 
 
 def create_activity(name, description, location, isEquiped, tenancy, tags):
