@@ -6,12 +6,14 @@ import os
 import util.FileManager as FM
 
 if __name__ == "__main__":
-    manager = FM()
-    for root, dirs, files in os.walk("../resources/tagsOnly/", topdown=False):
+    tags_only = "../resources/tagsOnly/"
+    manager = FM(tags_only)
+    for root, dirs, files in os.walk(tags_only, topdown=False):
         activity_tags = dict()
         all_tags = dict()
         for fileName in files:
-            myFile = manager.readTagsOnly(fileName)
+            manager.new(manager.directory, fileName, "")
+            myFile = manager.readFile()
             # print('File: ' + fileName)
             for line in myFile:
 

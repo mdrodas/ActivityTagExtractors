@@ -12,7 +12,7 @@ def create_activity(name, description, location, isEquiped, tenancy, tags):
                  False, False, False, isEquiped, tenancy)
     myDao = ActivityDao()
     id = myDao.exist(name)
-    activity._rid = id
+    activity.rid = id
     if (not id):
         result = myDao.add(activity)
         # print("CREATE:", result[0])
@@ -55,12 +55,13 @@ def create_activities():
     all_tags = dict()
     cleanAllTagsName = "allTagsClean.txt"
     fileManager = FileManager()
+    fileManager.new(fileManager.directory, cleanAllTagsName, "")
     activityName = ""
     description = ""
     location = "#141:0"  # existing dummy location
     isEquiped = False  # assumption is False
     tenancy = "#113:0"  # existing dummy tenancy
-    myFile = fileManager.readResource(cleanAllTagsName)
+    myFile = fileManager.readFile()
     for line in myFile[0:-2]:
         tags = list()
         print(line)
@@ -85,13 +86,14 @@ def update_activities():
     all_tags = dict()
     cleanAllTagsName = "allTagsClean.txt"
     fileManager = FileManager()
+    fileManager.new(fileManager.directory, cleanAllTagsName, "")
     activityName = ""
     description = ""
     location = "#141:0"  # existing dummy location
     isEquiped = False  # assumption is False
     tenancy = "#113:0"  # existing dummy tenancy
 
-    myFile = fileManager.readResource(cleanAllTagsName)
+    myFile = fileManager.readFile()
     for line in myFile[0:-2]:
         tags = list()
         print(line)

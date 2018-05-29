@@ -2,36 +2,56 @@ import os
 
 
 class FileManager:
-    resources = "../resources/"
-    tagsOnly = resources + "tagsOnly/"
 
-    def readTagsOnly(self, filename):
+    def __init__(self, directory="../resources/"):
+        filename = "my_file.txt"
+        self.new_in(directory, filename)
+        self.new_out(directory, filename + ".out")
+
+    def new(self, directory, infilename, outfilename):
+        self.new_in(directory, infilename)
+        self.new_out(directory, outfilename)
+
+    def new_in(self, directory, infilename):
+        self.in_directory = directory
+        self.in_filename = infilename
+        self.path_in = self.in_directory + self.in_filename
+
+    def new_out(self, directory, outfilename):
+        self.out_directory = directory
+        self.out_filename = outfilename
+        self.path_out = self.out_directory + self.out_filename
+
+    def set_infilename(self, infilename):
+        self.in_filename = infilename
+        self.path_in = self.in_directory + self.in_filename
+
+    def set_outfilename(self, outfilename):
+        self.out_filename = outfilename
+        self.path_out = self.out_directory + self.out_filename
+
+    def readFile(self):
         response = []
-        with open(FileManager.tagsOnly + filename) as fp:
+        with open(self.path_in, encoding="utf8") as fp:
             for line in fp:
                 response.append(line.lower().strip('\n'))
         return response
 
-    def readResource(self, filename):
-        response = []
-        with open(FileManager.resources + filename) as fp:
-            for line in fp:
-                response.append(line.lower().strip('\n'))
-        return response
-
-    def writeProcessResources(self, outfilename, value):
-        fp = open(FileManager.resources + outfilename, "a+")
+    def writeFile(self, value):
+        fp = open(self.path_out, "a+")
         fp.write(value + "\n")
         fp.close()
 
-    def writeResources(self):
-        for root, dirs, files in os.walk(FileManager.tagsOnly, topdown=False):
+    def unify_resources(self, directory):
+        allTag_name = "allTags.txt"
+        for root, dirs, files in os.walk(directory, topdown=False):
             for inFileName in files:
-                FileManager.unifyResources(inFileName, "allTags.txt")
+                FileManager.unify_resource(inFileName, allTag_name)
 
-    def unifyResources(infilename, outfilename):
-        fp = open(FileManager.resources + outfilename, "a+")
-        myFile = FileManager.readResource(infilename)
+    def unify_resource(self, infilename, outfilename):
+        fr = FileManager()
+        fr.new_in(fr.directory, infilename)
+        fr.new_out(fr.directory, outfilename)
+        myFile = fr.readFile()
         toWrite = '\n'.join(myFile[1:]) + "\n"
-        fp.write(toWrite)
-        fp.close()
+        fr.writeFile(toWrite)

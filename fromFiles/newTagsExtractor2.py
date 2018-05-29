@@ -2,22 +2,22 @@
 Implementation for new tags extractor (crowded) using a list of files with the structure: _id; ratingTime; isDuplicate; keyword0; keyword1; keyword2; keyword3.
 """
 import operator
-import util.FileManager as FileManager
-
-
-def clean_wordList(a, b):
-    return list(set(a) - set(b))
-
+from util.FileManager import FileManager
 
 if __name__ == "__main__":
     activity_tags = dict()
     all_tags = dict()
     allTagsName = "allTags.txt"
-    cleanAllTagsName = "allTagsClean.txt"
-    tagsFrequencyName = "tagsFrequency.txt"
-    fileManager = FileManager()
+    cleanAllTagsName = "allTagsClean2.txt"
+    tagsFrequencyName = "tagsFrequency2.txt"
+    in_directory = "../resources/crowd/"
+    out_directory = "../resources/crowd/"
 
-    myFile = fileManager.readResource(allTagsName)
+    fileManager = FileManager()
+    fileManager.new_in(in_directory, allTagsName)
+    fileManager.new_out(out_directory, cleanAllTagsName)
+
+    myFile = fileManager.readFile()
     # print('File: ' + fileName)
     for line in myFile:
 
@@ -68,19 +68,20 @@ if __name__ == "__main__":
 
         toPrint2 = "\t".join(outLine)
         # print(toPrint2)
-        fileManager.writeProcessResources(cleanAllTagsName, toPrint2)
+        fileManager.writeFile(toPrint2)
 
     average1 = "Average tags per activity:" + str(size / i)
     # print(average1)
-    fileManager.writeProcessResources(cleanAllTagsName, average1)
+    fileManager.writeFile(average1)
 
     freq_sorted2 = sorted(all_tags.items(), key=operator.itemgetter(1), reverse=True)
     uniqueTagsLen = "Amount of unique tags:" + str(len(freq_sorted2))
     # print(uniqueTagsLen)
-    fileManager.writeProcessResources(cleanAllTagsName, uniqueTagsLen)
+    fileManager.writeFile(uniqueTagsLen)
 
     print("Results 02: Tag == frequency_used")
+    fileManager.set_outfilename(tagsFrequencyName)
     for key, value in freq_sorted2:
         keyValue = key + "=" + str(value)
         # print(keyValue)
-        fileManager.writeProcessResources(tagsFrequencyName, keyValue)
+        fileManager.writeFile(keyValue)
