@@ -45,7 +45,7 @@ def print_users_tags(fileManager):
 
 
 def process_line(line):
-    member_tag = line.split(',')
+    member_tag = line.split(',\"')
     user_id = member_tag[2].lower().strip()
     user_id = user_id.replace('"', '')
     tag = member_tag[4].lower().strip()

@@ -24,7 +24,7 @@ class UserProfile:
         self.tenancy = tenancy  # Mandatory Tenancy(rid)
 
     def toDict(self):
-        activity = dict(
+        user = dict(
             screenname=self.screenname,
             address=self.address,
             contactinfo=self.contactinfo,
@@ -35,15 +35,15 @@ class UserProfile:
             profession=self.profession,
             tenancy=self.tenancy,
         )
-        return activity
+        return user
 
     def toDictMandatory(self):
-        activity = dict(
+        user = dict(
             screenname=self.screenname,
             tenancy=self.tenancy,
             preferences=self.preferences,
         )
-        return activity
+        return user
 
     def createRandomUserProfile(self):
 

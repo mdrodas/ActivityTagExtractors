@@ -44,7 +44,7 @@ def create_user(screenname, tags):
             result = myDao.add(user)
             print("CREATE:", str(result[0]))
         else:
-            print("TO_CREATE: " + str(user.toDict()))
+            print("TO_CREATE: " + user.screenname +"- tags: "+ str(list(user.preferences)))
     else:
         user.rid = id
         print("UserProfile Already Exist. Name:" + screenname + " ID:" + id)
@@ -97,11 +97,11 @@ def create_users(create):
     for line in myFile[0:-2]:
 
         tags = list()
-        print(line)
+        # print(line)
         words = line.split('\t')
         screenname = "mup_"
         screenname += words[0].lower().strip()
-        length = len(words) - 1
+        length = len(words)
         for i in range(1, length):
             tag = words[i].lower().strip()
             id = create_tag(tag.replace('"', ''))
