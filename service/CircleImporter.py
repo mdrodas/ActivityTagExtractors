@@ -1,66 +1,66 @@
 from util.FileManager import FileManager
-from model.UserProfile import UserProfile
+from model.Circle import Circle
 from model.Address import Address
 from model.ContactInfo import ContactInfo
 from model.Person import Person
 from model.Profession import Profession
 from model.Tag import Tag
-from DAO.UserProfileDao import UserProfileDao
+from DAO.CircleDao import CircleDao
 from DAO.TagDao import TagDao
 from DAO.TenantDao import TenantDao
 
 
-def build_user(screenname, tags):
+def build_circle(name, tags):
     tenantdao = TenantDao()
     tenancy = tenantdao.getByName("Trento")
     if (tenancy):
-        userprofile = UserProfile(screenname, tenancy[0].rid)
+        circle = Circle(name, tenancy[0].rid)
         profession = Profession("")
-        userprofile.profession = profession.toDict()
+        circle.profession = profession.toDict()
         address = Address("")
-        userprofile.address = address.toDict()
-        person = Person(screenname, screenname + "_family", "1900-01-01")
-        userprofile.person = person.toDict()
+        circle.address = address.toDict()
+        person = Person(name, name + "_family", "1900-01-01")
+        circle.person = person.toDict()
         contact = ContactInfo("")
-        userprofile.contactinfo = contact.toDict()
-        userprofile.add_preferences(tags)
+        circle.contactinfo = contact.toDict()
+        circle.add_preferences(tags)
     else:
         raise ValueError('The Tenancy for Trento do not exist.')
 
-    return userprofile
+    return circle
 
 
-def create_user(screenname, tags):
+def create_circle(name, tags):
     global write_on_db
-    user = build_user(screenname, tags)
+    circle = build_circle(name, tags)
 
-    myDao = UserProfileDao()
-    id = myDao.exist(screenname)
+    myDao = CircleDao()
+    id = myDao.exist(name)
     if (not id):
         if (write_on_db):
-            result = myDao.add(user)
+            result = myDao.add(circle)
             print("CREATE:", str(result[0]))
         else:
-            print("TO_CREATE: " + user.screenname + "- tags: " + str(list(user.preferences)))
+            print("TO_CREATE: " + circle.name + "- tags: " + str(list(circle.preferences)))
     else:
-        user.rid = id
-        print("UserProfile Already Exist. Name:" + screenname + " ID:" + id)
-    return user
+        circle.rid = id
+        print("Circle Already Exist. Name:" + name + " ID:" + id)
+    return circle
 
 
-def update_user(screenname, tags):
-    user = build_user(screenname, tags)
-    myDao = UserProfileDao()
-    id = myDao.exist(screenname)
-    user.rid = id
-    result = myDao.update(user)
+def update_circle(name, tags):
+    circle = build_circle(name, tags)
+    myDao = CircleDao()
+    id = myDao.exist(name)
+    circle.rid = id
+    result = myDao.update(circle)
     print("Update: ", result[0])
-    return user
+    return circle
 
 
-def user_hastag(user_id, tag_id):
-    myDao = UserProfileDao()
-    result = myDao.has_tag(user_id, tag_id)
+def circle_hastag(circle_id, tag_id):
+    myDao = CircleDao()
+    result = myDao.has_tag(circle_id, tag_id)
     return result
 
 
@@ -69,7 +69,7 @@ def create_tag(taglabel):
     tagDao = TagDao()
     id = tagDao.exist(taglabel)
     if (not id):
-        tag = Tag(taglabel, "description_" + taglabel, "", "meetup_1", "en", list(), list())
+        tag = Tag(taglabel, "description_" + taglabel, "", "meetup_2", "en", list(), list())
         if (write_on_db):
             new_tag = tagDao.add(tag)
             # print(newTag)
@@ -79,14 +79,14 @@ def create_tag(taglabel):
     return id
 
 
-def create_users(create):
-    user_tags = dict()
+def create_circles(create):
+    circle_tags = dict()
     all_tags = dict()
     in_directory = "../resources/meetup/"
     if (create):
-        in_filename = "all_users_tags.txt"
+        in_filename = "all_circles_tags.txt"
     else:
-        in_filename = "all_users_tags.txt"
+        in_filename = "all_circles_tags.txt"
     fileManager = FileManager()
     fileManager.new_in(in_directory, in_filename)
 
@@ -96,8 +96,8 @@ def create_users(create):
         tags = list()
         # print(line)
         words = line.split('\t')
-        screenname = "mup_"
-        screenname += words[0].lower().strip()
+        name = ""
+        name += words[0].lower().strip()
         length = len(words)
         for i in range(1, length):
             tag = words[i].lower().strip()
@@ -107,12 +107,12 @@ def create_users(create):
             else:
                 print("error creating tag: ", tag)
         if (create):
-            user = create_user(screenname, tags)
+            circle = create_circle(name, tags)
         else:
-            user = update_user(screenname, tags)
+            circle = update_circle(name, tags)
 
 
 if __name__ == "__main__":
     create = True
     write_on_db = False
-    create_users(create)
+    create_circles(create)

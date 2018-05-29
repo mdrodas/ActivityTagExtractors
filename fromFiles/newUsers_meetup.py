@@ -1,5 +1,5 @@
 """
-Implementation for new tags extractor (crowded) using a list of files with the structure: _id; ratingTime; isDuplicate; keyword0; keyword1; keyword2; keyword3.
+Implementation for new tags extractor (meetup) using a list of files
 """
 import operator
 from util.FileManager import FileManager
@@ -23,13 +23,21 @@ def print_users_tags(fileManager):
     i = 0
     size = 0
     global users_tags
+    global all_tags
 
     for key, value in users_tags.items():
+        # new_value = dict()
+        # for key2, value2 in value.items():
+        #    new_value[key2] = all_tags[key2]
+        # freq_sorted0 = sorted(new_value.items(), key=operator.itemgetter(1), reverse=True)
+        # toPrint0 = str(key) + "-" + str(len(freq_sorted0)) + "=2= " + str(freq_sorted0)
+        # print(toPrint0)
+
         freq_sorted = sorted(value.items(), key=operator.itemgetter(1), reverse=True)
         i += 1
         size += len(freq_sorted)
-        toPrint = str(key) + "-" + str(len(freq_sorted)) + "== " + str(freq_sorted)
-        print(toPrint)
+        toPrint1 = str(key) + "-" + str(len(freq_sorted)) + "== " + str(freq_sorted)
+        print(toPrint1)
 
         outLine = [str(key)]
         for value2 in freq_sorted:
@@ -49,7 +57,7 @@ def process_line(line):
     user_id = member_tag[2].lower().strip()
     user_id = user_id.replace('"', '')
     tag = member_tag[4].lower().strip()
-    tag = tag.replace('"','')
+    tag = tag.replace('"', '')
     tag = tag.replace('-', '_')
     tag = tag.replace(' ', '_')
     return (user_id, tag)
@@ -87,7 +95,6 @@ if __name__ == "__main__":
     tags_frequency = "users_tags_frequency.txt"
     in_directory = "../resources/dataset-meetup/"
     out_directory = "../resources/meetup/"
-
     fileManager = FileManager(in_directory)
     fileManager.new_in(in_directory, members_tags)
     fileManager.new_out(out_directory, clean_users_tags)
