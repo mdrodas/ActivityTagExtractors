@@ -15,15 +15,7 @@ def build_circle(name, tags):
     tenancy = tenantdao.getByName("Trento")
     if (tenancy):
         circle = Circle(name, tenancy[0].rid)
-        profession = Profession("")
-        circle.profession = profession.toDict()
-        address = Address("")
-        circle.address = address.toDict()
-        person = Person(name, name + "_family", "1900-01-01")
-        circle.person = person.toDict()
-        contact = ContactInfo("")
-        circle.contactinfo = contact.toDict()
-        circle.add_preferences(tags)
+        circle.add_tags(tags)
     else:
         raise ValueError('The Tenancy for Trento do not exist.')
 
@@ -41,7 +33,7 @@ def create_circle(name, tags):
             result = myDao.add(circle)
             print("CREATE:", str(result[0]))
         else:
-            print("TO_CREATE: " + circle.name + "- tags: " + str(list(circle.preferences)))
+            print("TO_CREATE: " + circle.name + "- tags: " + str(list(circle.tags)))
     else:
         circle.rid = id
         print("Circle Already Exist. Name:" + name + " ID:" + id)
