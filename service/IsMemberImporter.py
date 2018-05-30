@@ -2,6 +2,7 @@ from util.FileManager import FileManager
 from model.Circle import Circle
 from model.Tag import Tag
 from DAO.CircleDao import CircleDao
+from DAO.UserProfileDao import UserProfileDao
 from DAO.TagDao import TagDao
 from DAO.TenantDao import TenantDao
 

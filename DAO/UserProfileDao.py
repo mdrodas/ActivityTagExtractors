@@ -2,7 +2,6 @@ from util.KnowledgeBase import KnowledgeBase
 from model.UserProfile import UserProfile
 
 
-
 class UserProfileDao:
 
     def __init__(self):
@@ -67,7 +66,8 @@ class UserProfileDao:
             response.append(self.to_UserProfile(user_record))
         return response
 
-    def to_UserProfile(self, user):
+    @staticmethod
+    def to_UserProfile(user):
         screenname = user.__getattr__('screenname')  # mandatory, string
         try:
             tenancy0 = user.__getattr__('tenancy')
@@ -116,6 +116,7 @@ class UserProfileDao:
 
         return new_user
 
+
 if __name__ == "__main__":
     myDao = UserProfileDao()
     user1 = UserProfile("Marcelo", "#25:0")  # tenancy #25:0
@@ -128,7 +129,7 @@ if __name__ == "__main__":
         result = myDao.getById(rid0)
         print("READ: {0} - {1}".format(result[0].rid, result[0].tenancy))
         print("++: {0} - {1} - {2} - {3} ".format(result[0].rid, result[0].screenname, str(result[0].preferences),
-                                                             result[0].tenancy))
+                                                  result[0].tenancy))
         print("UserProfile: " + str(result[0]))
         for tag in result[0].preferences:
             print("preferences: " + str(tag))

@@ -78,6 +78,11 @@ def create_tag(taglabel):
             id = taglabel
     return id
 
+def check_user(name):
+    groupname = "60+ happy hour"
+    in_directory = "../resources/meetup/"
+    in_filename = "all_users_tags.txt"
+    print()
 
 def create_users(create):
     user_tags = dict()
@@ -97,7 +102,8 @@ def create_users(create):
         # print(line)
         words = line.split('\t')
         screenname = "mup_"
-        screenname += words[0].lower().strip()
+        name = words[0].lower().strip()
+        screenname += name
         length = len(words)
         for i in range(1, length):
             tag = words[i].lower().strip().replace('"', '')

@@ -1,6 +1,7 @@
 from util.KnowledgeBase import KnowledgeBase
 from model.Circle import Circle
 from DAO.TagDao import TagDao
+from DAO.UserProfileDao import UserProfileDao
 
 class CircleDao:
 
@@ -16,6 +17,16 @@ class CircleDao:
         if (result):
             response = True
         return response
+
+    def get_members(self, circle_rid):
+        query = "SELECT in('IS_MEMBER').@rid as memberId FROM {0} UNWIND memberId".format(circle_rid)
+        print(query)
+        result = self.connection.query(query)
+        response = list()
+        for user_record in result:
+            response.append(UserProfileDao.to_UserProfile(user_record))
+        return response
+
 
     def getAll(self, limit=-1):
         query = "SELECT * FROM Circle limit " + str(limit)
