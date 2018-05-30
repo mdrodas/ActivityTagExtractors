@@ -37,7 +37,7 @@ def check_synonyms_wordnet(activity, word2, threshold=0.0):
 def update_activities():
     activityDao = ActivityDao()
     tagDao = TagDao()
-    all_activities = activityDao.getAll(-1)
+    all_activities = activityDao.getAll()
     threshold = 0.75
 
     for activity in all_activities:

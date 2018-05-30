@@ -8,7 +8,7 @@ class KnowledgeBase:
         self.port = 2424
         self.user = "admin"
         self.password = "admin"
-        self.DBName = "framework_test"
+        self.DBName = "framework_test2"
 
         self.db = pyorient.OrientDB(self.server, self.port)
         self.kb = self.db.db_open(self.DBName, self.user, self.password)

@@ -3,7 +3,7 @@ class MobilityRecord:
     def __init__(self, date):
         self.rid = ""
         if (not date):
-            date = "1900-01-01"
+            date = "2000-01-01"
         self.date = date # Date
 
     def toDict(self):

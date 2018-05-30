@@ -17,16 +17,7 @@ class ActivityDao:
             response = True
         return response
 
-    def getAll(self):
-        query = "SELECT * FROM activity limit -1"
-        print(query)
-        result = self.connection.query(query)
-        response = list()
-        for activity_record in result:
-            response.append(self.to_activity(activity_record))
-        return response
-
-    def getAll(self,limit):
+    def getAll(self,limit=-1):
         query = "SELECT * FROM activity limit "+str(limit)
         print(query)
         result = self.connection.query(query)
@@ -42,8 +33,8 @@ class ActivityDao:
         return result
 
     def getByName(self, name):
-        query = "SELECT * FROM Activity WHERE name = \"{0}\"".format(name.replace('"', ''))
-        # print(query)
+        query = "SELECT * FROM Activity WHERE name = \"{0}\"".format(name)
+        print(query)
         result = self.connection.query(query)
         response = list()
         for activity_record in result:

@@ -3,32 +3,43 @@ from model.Activity import Activity
 from model.Tag import Tag
 from DAO.ActivityDao import ActivityDao
 from DAO.TagDao import TagDao
+from DAO.TenantDao import TenantDao
 
 
-def create_activity(name, description, location, isEquiped, tenancy, tags):
+def create_activity(name, description, isEquiped, tags):
+    tenantdao = TenantDao()
+    tenant = tenantdao.getByName("Trento")
+    location = tenantdao.get_one_placeRid()
     activity = Activity(name)
-    activity.new(name, description, "", location, "2018-01-01", 0, tags, 0,
-                 False, False, False, isEquiped, tenancy)
-    myDao = ActivityDao()
-    id = myDao.exist(name)
-    activity.rid = id
-    if (not id):
-        result = myDao.add(activity)
-        # print("CREATE:", result[0])
-    else:
-        print("Activity Already Exist. Name:" + name + " ID:" + id)
+    if (tenant and location):
+        tenancy = tenant[0].rid
+        activity.new(name, description, "", location, "2000-01-01", 0, tags, 0.0,
+                     False, False, False, isEquiped, tenancy)
+        myDao = ActivityDao()
+        id = myDao.exist(name)
+        activity.rid = id
+        if (not id):
+            result = myDao.add(activity)
+            # print("CREATE:", result[0])
+        else:
+            print("Activity Already Exist. Name:" + name + " ID:" + id)
     return activity
 
 
-def update_activity(name, description, location, isEquiped, tenancy, tags):
+def update_activity(name, description, location, isEquiped,  tags):
+    tenantdao = TenantDao()
+    tenant = tenantdao.getByName("Trento")
+    location = tenantdao.get_one_placeRid()
     activity = Activity(name)
-    activity.new(name, description, "", location, "2018-01-01", 0, tags, 0,
-                 False, False, False, isEquiped, tenancy)
-    myDao = ActivityDao()
-    activity_id = myDao.exist(name)
-    activity.rid = activity_id
-    result = myDao.update(activity)
-    print("Create/Update:", result[0])
+    if (tenant and location):
+        tenancy = tenant[0].rid
+        activity.new(name, description, "", location, "2000-01-01", 0, tags, 0,
+                     False, False, False, isEquiped, tenancy)
+        myDao = ActivityDao()
+        activity_id = myDao.exist(name)
+        activity.rid = activity_id
+        result = myDao.update(activity)
+        print("Create/Update:", result[0])
     return activity
 
 
@@ -49,23 +60,22 @@ def create_tag(tag):
     return id
 
 
-def create_activities():
+def create_activities(create):
     activity_tags = dict()
     all_tags = dict()
     cleanAllTagsName = "allTagsClean.txt"
+    directory = "../resources/crowd/"
     fileManager = FileManager()
-    fileManager.new(fileManager.directory, cleanAllTagsName, "")
+    fileManager.new(directory, cleanAllTagsName, "")
     activityName = ""
     description = ""
-    location = "#141:0"  # existing dummy location
     isEquiped = False  # assumption is False
-    tenancy = "#113:0"  # existing dummy tenancy
     myFile = fileManager.readFile()
     for line in myFile[0:-2]:
         tags = list()
         print(line)
         words = line.split('\t')
-        activityName = words[0].lower().strip()
+        activityName = words[0].lower().strip().replace('"', '')
         description = "-".join(words[1:4])
         length = len(words) - 1
         for i in range(1, length):
@@ -76,46 +86,14 @@ def create_activities():
                 tags.append(id)
             else:
                 print("error creating tag: ", tag)
-        activity = create_activity(activityName, description, location, isEquiped, tenancy, tags)
-        # print(activity.toDictMandatory())
-
-
-def update_activities():
-    activity_tags = dict()
-    all_tags = dict()
-    cleanAllTagsName = "allTagsClean.txt"
-    fileManager = FileManager()
-    fileManager.new(fileManager.directory, cleanAllTagsName, "")
-    activityName = ""
-    description = ""
-    location = "#141:0"  # existing dummy location
-    isEquiped = False  # assumption is False
-    tenancy = "#113:0"  # existing dummy tenancy
-
-    myFile = fileManager.readFile()
-    for line in myFile[0:-2]:
-        tags = list()
-        print(line)
-        words = line.split('\t')
-        activityName = words[0].lower().strip()
-        description = "-".join(words[1:4])
-        length = len(words) - 1
-        for i in range(1, length):
-            tag = words[i].lower().strip()
-
-            id = create_tag(tag.replace('"', ''))
-            if (id):
-                tags.append(id)
-            else:
-                print("error creating tag: ", tag)
-
-        activity = update_activity(activityName, description, location, isEquiped, tenancy, tags)
+        if (create):
+            activity = create_activity(activityName, description, isEquiped, tags)
+        else:
+            activity = update_activity(activityName, description, isEquiped, tags)
         # print(activity.toDictMandatory())
 
 
 if __name__ == "__main__":
     create = True
     if (create):
-        create_activities()
-    else:
-        update_activities()
+        create_activities(create)

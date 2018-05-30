@@ -22,6 +22,15 @@ class TenantDao:
             response.append(self.to_tenant(tenant_record))
         return response
 
+    def get_one_placeRid(self, limit=1):
+        query = "SELECT * FROM Place limit " + str(limit)
+        # print("TenantDao.getAll: " + query)
+        result = self.connection.query(query)
+        response = ""
+        if result:
+            response = result[0]._rid
+        return response
+
     def exist(self, name):
         result = self.getByName(name.replace('"', ''))
         if (result):
@@ -29,7 +38,7 @@ class TenantDao:
         return result
 
     def getByName(self, name):
-        query = "SELECT * FROM Tenant WHERE name = \"{0}\"".format(name.replace('"', ''))
+        query = "SELECT * FROM Tenant WHERE name = \"{0}\"".format(name)
         # print(query)
         result = self.connection.query(query)
         response = list()

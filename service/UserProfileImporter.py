@@ -19,7 +19,7 @@ def build_user(screenname, tags):
         userprofile.profession = profession.toDict()
         address = Address("")
         userprofile.address = address.toDict()
-        person = Person(screenname, screenname + "_family", "1900-01-01")
+        person = Person(screenname, screenname + "_family", "2000-01-01")
         userprofile.person = person.toDict()
         contact = ContactInfo("")
         userprofile.contactinfo = contact.toDict()
@@ -39,7 +39,7 @@ def create_user(screenname, tags):
     if (not id):
         if (write_on_db):
             result = myDao.add(user)
-            print("CREATE:", str(result[0]))
+            print("CREATE: ", str(result[0].screenname + "- tags: " + str(list(result[0].preferences))))
         else:
             print("TO_CREATE: " + user.screenname + "- tags: " + str(list(user.preferences)))
     else:
@@ -68,7 +68,7 @@ def create_tag(taglabel):
     global write_on_db
     tagDao = TagDao()
     id = tagDao.exist(taglabel)
-    if (not id):
+    if (not id and taglabel):
         tag = Tag(taglabel, "description_" + taglabel, "", "meetup_1", "en", list(), list())
         if (write_on_db):
             new_tag = tagDao.add(tag)
@@ -100,8 +100,8 @@ def create_users(create):
         screenname += words[0].lower().strip()
         length = len(words)
         for i in range(1, length):
-            tag = words[i].lower().strip()
-            id = create_tag(tag.replace('"', ''))
+            tag = words[i].lower().strip().replace('"', '')
+            id = create_tag(tag)
             if (id):
                 tags.append(id)
             else:
@@ -114,5 +114,5 @@ def create_users(create):
 
 if __name__ == "__main__":
     create = True
-    write_on_db = False
+    write_on_db = True
     create_users(create)
