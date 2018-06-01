@@ -1,7 +1,9 @@
 from util.KnowledgeBase import KnowledgeBase
 from model.Circle import Circle
+from model.Is_Member import Is_Member
 from DAO.TagDao import TagDao
 from DAO.UserProfileDao import UserProfileDao
+
 
 class CircleDao:
 
@@ -18,6 +20,27 @@ class CircleDao:
             response = True
         return response
 
+    def set_member(self, is_member):
+        user_rid = is_member.inV
+        circle_rid = is_member.outV
+        query = "Create Edge IS_MEMBER FROM {0} TO {1} CONTENT {2}".format(user_rid, circle_rid,Is_Member.toDict())
+        print(query)
+        result = self.connection.query(query)
+        response = list()
+        for is_member_record in result:
+            response.append(self.to_Is_Member(is_member_record))
+        return response
+
+    def is_members(self, user_rid, circle_rid):
+        query = "SELECT inE('Circle').@rid as circleId, outE('UserProfile').@rid as userId FROM Is_Member where circleId = {0} and userId = {1}".format(
+            circle_rid, user_rid)
+        print(query)
+        result = self.connection.query(query)
+        response = list()
+        for is_member_record in result:
+            response.append(CircleDao.to_Is_Member(is_member_record))
+        return response
+
     def get_members(self, circle_rid):
         query = "SELECT in('IS_MEMBER').@rid as memberId FROM {0} UNWIND memberId".format(circle_rid)
         print(query)
@@ -26,7 +49,6 @@ class CircleDao:
         for user_record in result:
             response.append(UserProfileDao.to_UserProfile(user_record))
         return response
-
 
     def getAll(self, limit=-1):
         query = "SELECT * FROM Circle limit " + str(limit)
@@ -61,14 +83,14 @@ class CircleDao:
             response.append(self.to_Circle(circle_record))
         return response
 
-    def update(self, user):
-        cmd = "UPDATE Circle MERGE {1} WHERE @rid= {0} ".format(user.rid, user.toDict())
+    def update(self, circle):
+        cmd = "UPDATE Circle MERGE {1} WHERE @rid= {0} ".format(circle.rid, circle.toDict())
         print(cmd)
         result = self.connection.command(cmd)
         return result
 
-    def add(self, user):
-        cmd = "INSERT INTO Circle CONTENT {0}".format(user.toDict())
+    def add(self, circle):
+        cmd = "INSERT INTO Circle CONTENT {0}".format(circle.toDict())
         print(cmd)
         result = self.connection.command(cmd)
         response = list()
@@ -76,7 +98,21 @@ class CircleDao:
             response.append(self.to_Circle(circle_record))
         return response
 
-    def to_Circle(self, circle):
+    @staticmethod
+    def to_Is_Member(ismember):
+        inV = ismember.__getattr__('in')  # mandatory, string
+        outV = ismember.__getattr__('out')  # mandatory, string
+        rank = ismember.__getattr__('rank')  # mandatory, string
+        status = ismember.__getattr__('status')  # mandatory, string
+        timestamp = ismember.__getattr__('timestamp')  # mandatory, string
+        new_isMember = Is_Member(inV, outV)
+        new_isMember.rank = rank
+        new_isMember.status = status
+        new_isMember.timestamp = timestamp
+        return new_isMember
+
+    @staticmethod
+    def to_Circle(circle):
         name = circle.__getattr__('name')  # mandatory, string
         try:
             tenancy0 = circle.__getattr__('tenancy')
@@ -119,9 +155,8 @@ if __name__ == "__main__":
         tags2 = list()
         for tag in tags:
             tags2.append(tag.rid)
-        print("tags: "+str(tags2))
+        print("tags: " + str(tags2))
         circle.add_tags(tags2)
-
 
     result2 = myDao.add(circle)
     print("CREATE: {0} - {1}".format(result2[0].rid, result2[0].name))

@@ -1,5 +1,6 @@
 from util.FileManager import FileManager
 from model.Circle import Circle
+from model.Is_Member import Is_Member
 from model.Tag import Tag
 from DAO.CircleDao import CircleDao
 from DAO.UserProfileDao import UserProfileDao
@@ -7,49 +8,49 @@ from DAO.TagDao import TagDao
 from DAO.TenantDao import TenantDao
 
 
-def build_circle(name, tags):
+def build_ismember(name, tags):
     tenantdao = TenantDao()
     tenancy = tenantdao.getByName("Trento")
     if (tenancy):
-        circle = Circle(name, tenancy[0].rid)
-        circle.add_tags(tags)
+        ismember = Circle(name, tenancy[0].rid)
+        ismember.add_tags(tags)
     else:
         raise ValueError('The Tenancy for Trento do not exist.')
 
-    return circle
+    return ismember
 
 
-def create_circle(name, tags):
+def create_ismember(name, tags):
     global write_on_db
-    circle = build_circle(name, tags)
+    ismember = build_ismember(name, tags)
 
     myDao = CircleDao()
     id = myDao.exist(name)
     if (not id):
         if (write_on_db):
-            result = myDao.add(circle)
+            result = myDao.add(ismember)
             print("CREATE:", str(result[0]))
         else:
-            print("TO_CREATE: " + circle.name + "- tags: " + str(list(circle.tags)))
+            print("TO_CREATE: " + ismember.name + "- tags: " + str(list(ismember.tags)))
     else:
-        circle.rid = id
+        ismember.rid = id
         print("Circle Already Exist. Name:" + name + " ID:" + id)
-    return circle
+    return ismember
 
 
-def update_circle(name, tags):
-    circle = build_circle(name, tags)
+def update_ismember(name, tags):
+    ismember = build_ismember(name, tags)
     myDao = CircleDao()
     id = myDao.exist(name)
-    circle.rid = id
-    result = myDao.update(circle)
+    ismember.rid = id
+    result = myDao.update(ismember)
     print("Update: ", result[0])
-    return circle
+    return ismember
 
 
-def circle_hastag(circle_id, tag_id):
+def ismember_hastag(ismember_id, tag_id):
     myDao = CircleDao()
-    result = myDao.has_tag(circle_id, tag_id)
+    result = myDao.has_tag(ismember_id, tag_id)
     return result
 
 
@@ -68,14 +69,14 @@ def create_tag(taglabel):
     return id
 
 
-def create_circles(create):
-    circle_tags = dict()
+def create_ismembers(create):
+    ismember_tags = dict()
     all_tags = dict()
     in_directory = "../resources/meetup/"
     if (create):
-        in_filename = "all_circles_tags.txt"
+        in_filename = "all_ismembers_tags.txt"
     else:
-        in_filename = "all_circles_tags.txt"
+        in_filename = "all_ismembers_tags.txt"
     fileManager = FileManager()
     fileManager.new_in(in_directory, in_filename)
 
@@ -96,12 +97,12 @@ def create_circles(create):
             else:
                 print("error creating tag: ", tag)
         if (create):
-            circle = create_circle(name, tags)
+            ismember = create_ismember(name, tags)
         else:
-            circle = update_circle(name, tags)
+            ismember = update_ismember(name, tags)
 
 
 if __name__ == "__main__":
     create = True
     write_on_db = True
-    create_circles(create)
+    create_ismembers(create)
