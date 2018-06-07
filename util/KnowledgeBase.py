@@ -3,12 +3,12 @@ import pyorient
 
 class KnowledgeBase:
 
-    def __init__(self):
+    def __init__(self, DBName="framework_test4"):
         self.server = "localhost"
         self.port = 2424
         self.user = "admin"
         self.password = "admin"
-        self.DBName = "framework_test2"
+        self.DBName = DBName
 
         self.db = pyorient.OrientDB(self.server, self.port)
         self.kb = self.db.db_open(self.DBName, self.user, self.password)

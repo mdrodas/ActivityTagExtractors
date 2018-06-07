@@ -67,14 +67,15 @@ def create_tag(taglabel):
     return id
 
 
-def create_circles(create):
+def create_circles():
+    global create
     circle_tags = dict()
     all_tags = dict()
     in_directory = "../resources/meetup/"
     if (create):
-        in_filename = "all_circles_tags.txt"
+        in_filename = "all_circles_tags4.txt"
     else:
-        in_filename = "all_circles_tags.txt"
+        in_filename = "all_circles_tags4.txt"
     fileManager = FileManager()
     fileManager.new_in(in_directory, in_filename)
 
@@ -103,4 +104,4 @@ def create_circles(create):
 if __name__ == "__main__":
     create = True
     write_on_db = True
-    create_circles(create)
+    create_circles()

@@ -84,7 +84,8 @@ def check_user(name):
     in_filename = "all_users_tags.txt"
     print()
 
-def create_users(create):
+def create_users():
+    global create
     user_tags = dict()
     all_tags = dict()
     in_directory = "../resources/meetup/"
@@ -121,4 +122,4 @@ def create_users(create):
 if __name__ == "__main__":
     create = True
     write_on_db = True
-    create_users(create)
+    create_users()

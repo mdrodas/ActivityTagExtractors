@@ -30,9 +30,9 @@ class FileManager:
         self.out_filename = outfilename
         self.path_out = self.out_directory + self.out_filename
 
-    def readFile(self, original = False):
+    def readFile(self, original=False, encoding="cp1250"):
         response = []
-        with open(self.path_in, encoding="utf8") as fp:
+        with open(self.path_in, encoding=encoding) as fp:
             for line in fp:
                 if (original):
                     response.append(line.strip('\n'))

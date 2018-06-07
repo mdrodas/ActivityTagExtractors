@@ -32,7 +32,7 @@ class CircleDao:
         return response
 
     def get_is_member(self, circle_rid, user_rid):
-        query = "select @rid, in, out from IS_Member WHERE in = {0} AND out = {1}".format(circle_rid, user_rid)
+        query = "select @rid, in, out from Is_Member WHERE in = {0} AND out = {1}".format(circle_rid, user_rid)
         print(query)
         result = self.connection.query(query)
         response = list()
