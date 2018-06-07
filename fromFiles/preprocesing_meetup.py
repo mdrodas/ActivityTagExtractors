@@ -1,6 +1,6 @@
-from fromFiles.new_users_meetup import new_users_meetup
-from fromFiles.new_circles_meetup import new_circles_meetup
-from fromFiles.new_memberships_meetup import new_memberships_meetup
+from fromFiles.newUsers_meetup import new_users_meetup
+from fromFiles.newCircles_meetup import new_circles_meetup
+from fromFiles.newIs_Member_meetup import new_memberships_meetup
 
 if __name__ == "__main__":
     post_id = "3.txt"
