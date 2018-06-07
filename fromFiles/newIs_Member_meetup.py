@@ -137,7 +137,7 @@ if __name__ == "__main__":
 
     new_members_tags = "new_members.communities.txt"
     members_tags = "members.communities.csv"
-    clean_circles_tags = "all_is_member_tags2.txt"
+    clean_circles_tags = "all_is_member.txt"
     is_member_frequency = "is_member_frequency2.txt"
     in_directory = "../resources/dataset-meetup/"
     out_directory = "../resources/meetup/"

@@ -26,10 +26,7 @@ def create_ismembers():
     ismember_tags = dict()
     all_tags = dict()
     in_directory = "../resources/meetup/"
-    if (create):
-        in_filename = "all_is_member_tags.txt"
-    else:
-        in_filename = "all_is_member_tags.txt"
+    in_filename = "all_is_member.txt"
     fileManager = FileManager()
     fileManager.new_in(in_directory, in_filename)
 
