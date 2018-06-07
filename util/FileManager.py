@@ -30,15 +30,18 @@ class FileManager:
         self.out_filename = outfilename
         self.path_out = self.out_directory + self.out_filename
 
-    def readFile(self):
+    def readFile(self, original = False):
         response = []
         with open(self.path_in, encoding="utf8") as fp:
             for line in fp:
-                response.append(line.lower().strip('\n'))
+                if (original):
+                    response.append(line.strip('\n'))
+                else:
+                    response.append(line.lower().strip('\n'))
         return response
 
-    def writeFile(self, value):
-        fp = open(self.path_out, "a+")
+    def writeFile(self, value, mode="a+"):
+        fp = open(self.path_out, mode)
         fp.write(value + "\n")
         fp.close()
 
