@@ -29,7 +29,6 @@ class Is_Member:
         self.inV = inV
         self.outV = outV
 
-
 if __name__ == "__main__":
     directory = '../resources/model_examples/'
     with open(directory + 'Is_Member.osql', 'a', newline='') as outfile:

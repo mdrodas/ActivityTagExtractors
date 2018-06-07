@@ -21,19 +21,18 @@ class CircleDao:
         return response
 
     def set_member(self, is_member):
-        user_rid = is_member.inV
-        circle_rid = is_member.outV
-        query = "Create Edge IS_MEMBER FROM {0} TO {1} CONTENT {2}".format(user_rid, circle_rid,Is_Member.toDict())
+        user_rid = is_member.outV
+        circle_rid = is_member.inV
+        query = "Create Edge IS_MEMBER FROM {0} TO {1} CONTENT {2}".format(user_rid, circle_rid, is_member.toDict())
         print(query)
-        result = self.connection.query(query)
+        result = self.connection.command(query)
         response = list()
         for is_member_record in result:
             response.append(self.to_Is_Member(is_member_record))
         return response
 
-    def is_members(self, user_rid, circle_rid):
-        query = "SELECT inE('Circle').@rid as circleId, outE('UserProfile').@rid as userId FROM Is_Member where circleId = {0} and userId = {1}".format(
-            circle_rid, user_rid)
+    def get_is_member(self, circle_rid, user_rid):
+        query = "select @rid, in, out from IS_Member WHERE in = {0} AND out = {1}".format(circle_rid, user_rid)
         print(query)
         result = self.connection.query(query)
         response = list()
@@ -106,6 +105,7 @@ class CircleDao:
         status = ismember.__getattr__('status')  # mandatory, string
         timestamp = ismember.__getattr__('timestamp')  # mandatory, string
         new_isMember = Is_Member(inV, outV)
+        new_isMember.rid = ismember._rid
         new_isMember.rank = rank
         new_isMember.status = status
         new_isMember.timestamp = timestamp
