@@ -31,18 +31,25 @@ class CircleDao:
             response.append(self.to_Is_Member(is_member_record))
         return response
 
+    def update_is_member(self, ismember):
+        cmd = "UPDATE Is_Member MERGE {1} WHERE @rid= {0} ".format(ismember.rid, ismember.toDict())
+        # print(cmd)
+        result = self.connection.command(cmd)
+        return result
+
     def get_is_member(self, circle_rid, user_rid):
-        query = "select @rid, in, out from Is_Member WHERE in = {0} AND out = {1}".format(circle_rid, user_rid)
-        print(query)
+        query = "select * from Is_Member WHERE in = {0} AND out = {1}".format(circle_rid, user_rid)
+        # print(query)
         result = self.connection.query(query)
         response = list()
         for is_member_record in result:
             response.append(CircleDao.to_Is_Member(is_member_record))
         return response
 
-    def get_members(self, circle_rid):
-        query = "SELECT in('IS_MEMBER').@rid as memberId FROM {0} UNWIND memberId".format(circle_rid)
-        print(query)
+    def get_members(self, circle_rid, limit=-1):
+        query = "select expand(memberId) from (SELECT In('IS_MEMBER').@rid as memberId FROM {0} UNWIND memberId) limit {1}".format(
+            circle_rid, limit)
+        # print(query)
         result = self.connection.query(query)
         response = list()
         for user_record in result:
@@ -100,9 +107,11 @@ class CircleDao:
     @staticmethod
     def to_Is_Member(ismember):
         inV = ismember.__getattr__('in')  # mandatory, string
+        # inV = ismember._in  # mandatory, string
         outV = ismember.__getattr__('out')  # mandatory, string
-        rank = ismember.__getattr__('rank')  # mandatory, string
+        # outV = ismember._out  # mandatory, string
         status = ismember.__getattr__('status')  # mandatory, string
+        rank = ismember.__getattr__('rank')  # mandatory, string
         timestamp = ismember.__getattr__('timestamp')  # mandatory, string
         new_isMember = Is_Member(inV, outV)
         new_isMember.rid = ismember._rid

@@ -7,7 +7,7 @@ from util.FileManager import FileManager
 
 class new_users_meetup:
 
-    def all_tags_frequency(fileManager, all_tags):
+    def all_tags_frequency(self, fileManager, all_tags):
         freq_sorted2 = sorted(all_tags.items(), key=operator.itemgetter(1), reverse=True)
         uniqueTagsLen = "Amount of unique tags:" + str(len(freq_sorted2))
         print(uniqueTagsLen)
@@ -19,7 +19,7 @@ class new_users_meetup:
             # print(keyValue)
             fileManager.writeFile(keyValue)
 
-    def print_users_tags(fileManager):
+    def print_users_tags(self, fileManager):
         print("Results 01: UserProfiles. user - tag_1 tag_2 tag_n")
         i = 0
         size = 0
@@ -52,7 +52,7 @@ class new_users_meetup:
         print(average1)
         fileManager.writeFile(average1)
 
-    def process_line(line):
+    def process_line(self, line):
         member_tag = line.split(',\"')
         user_id = member_tag[2].lower().strip()
         user_id = user_id.replace('"', '')
@@ -62,14 +62,14 @@ class new_users_meetup:
         tag = tag.replace(' ', '_')
         return (user_id, tag)
 
-    def tag_count(tag):
+    def tag_count(self, tag):
         global all_tags
         if (tag in all_tags):
             all_tags[tag] += 1
         else:
             all_tags[tag] = 1
 
-    def process_user_tags(user_id, tag):
+    def process_user_tags(self, user_id, tag):
         global users_tags
         freq = dict()
         freq[tag] = 1;
@@ -84,8 +84,6 @@ class new_users_meetup:
             users_tags[user_id] = freq2
 
     def preprocessing_UserProfile(self, post="2.txt"):
-        users_tags = dict()
-        all_tags = dict()
 
         members_tags = "members.tags.csv"
         clean_users_tags = "all_users_tags" + post
@@ -112,6 +110,9 @@ class new_users_meetup:
         fileManager.new_out(out_directory, tags_frequency)
         self.all_tags_frequency(fileManager, all_tags)
 
+
+users_tags = dict()
+all_tags = dict()
 
 if __name__ == "__main__":
     new_users_meetup.preprocessing_UserProfile()

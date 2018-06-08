@@ -96,6 +96,7 @@ class UserProfileDao:
         try:
             preferences = user.__getattr__('preferences')  # list of Tags
         except AttributeError:
+            print("Opss...")
             preferences = list("")
         try:
             prescriptions = user.__getattr__('prescriptions')  # list of Tags

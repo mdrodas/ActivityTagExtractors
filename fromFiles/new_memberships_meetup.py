@@ -12,10 +12,13 @@ from model.ContactInfo import ContactInfo
 from model.Person import Person
 from model.Profession import Profession
 
+circle_members = dict()
+all_users = dict()
+
 
 class new_memberships_meetup:
 
-    def build_user(screenname, tags):
+    def build_user(self, screenname, tags):
         tenantdao = TenantDao()
         tenancy = tenantdao.getByName("Trento")
         if (tenancy):
@@ -34,7 +37,7 @@ class new_memberships_meetup:
 
         return userprofile
 
-    def all_users_frequency(fileManager, all_tags):
+    def all_users_frequency(self, fileManager, all_tags):
         freq_sorted2 = sorted(all_tags.items(), key=operator.itemgetter(1), reverse=True)
         uniqueTagsLen = "Amount of unique Circles:" + str(len(freq_sorted2))
         print(uniqueTagsLen)
@@ -46,7 +49,7 @@ class new_memberships_meetup:
             # print(keyValue)
             fileManager.writeFile(keyValue)
 
-    def print_circle_members(fileManager):
+    def print_circle_members(self, fileManager):
         print("Results 01: Members. circle_id - user_id_1 user_id_2 user_id_n")
         i = 0
         size = 0
@@ -71,26 +74,29 @@ class new_memberships_meetup:
             print(toPrint2)
             fileManager.writeFile(toPrint2)
 
-        average1 = "Average users per circle:" + str(size / i)
-        print(average1)
-        fileManager.writeFile(average1)
+        if (i > 0):
+            average1 = "Average users per circle:" + str(size / i)
+            print(average1)
+            fileManager.writeFile(average1)
+        else:
+            print("PROBLEMS: " + size)
 
     # "","gmemid","member","chapterId","membershipURL","memid","name","role","url"
-    def process_line(line):
+    def process_line(self, line):
         fields = line.split(',\"')
         circle_name = fields[6].lower().strip().replace('"', '').replace('\\', '\\\\')
         user_id = fields[5].lower().strip().replace('"', '')
         user_name = fields[2].lower().strip().replace('"', '')
         return (user_id, user_name, circle_name)
 
-    def user_count(user_id):
+    def user_count(self, user_id):
         global all_users
         if (user_id in all_users):
             all_users[user_id] += 1
         else:
             all_users[user_id] = 1
 
-    def is_member(user_name, circle_name):
+    def is_member(self, user_name, circle_name):
         userdao = UserProfileDao()
         circledao = CircleDao()
         user = userdao.getByScreenname(user_name)
@@ -118,7 +124,7 @@ class new_memberships_meetup:
         # else:
         # print("Something is wrong: " + str(ismember))
 
-    def save_new(user_id, circle_name):
+    def save_new(self, user_id, circle_name):
         out_directory = "../resources/meetup/"
         new_members_tags = "new_members.communities4.txt"
         fileManager = FileManager()
@@ -126,8 +132,6 @@ class new_memberships_meetup:
         fileManager.writeFile("\t".join([user_id, circle_name]))
 
     def preprocessing_is_member(self, post="2.txt"):
-        circle_members = dict()
-        all_users = dict()
 
         new_members_tags = "new_members.communities" + post
         members_tags = "members.communities.csv"
@@ -163,4 +167,5 @@ class new_memberships_meetup:
 
 
 if __name__ == "__main__":
-    new_memberships_meetup.preprocessing_is_member()
+    app = new_memberships_meetup()
+    app.preprocessing_is_member("4.txt")

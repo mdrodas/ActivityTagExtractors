@@ -3,7 +3,7 @@ import pyorient
 
 class KnowledgeBase:
 
-    def __init__(self, DBName="framework_test4"):
+    def __init__(self, DBName="framework_test2"):
         self.server = "localhost"
         self.port = 2424
         self.user = "admin"

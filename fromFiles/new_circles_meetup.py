@@ -7,7 +7,7 @@ from util.FileManager import FileManager
 
 class new_circles_meetup:
 
-    def all_tags_frequency(fileManager, all_tags):
+    def all_tags_frequency(self, fileManager, all_tags):
         freq_sorted2 = sorted(all_tags.items(), key=operator.itemgetter(1), reverse=True)
         uniqueTagsLen = "Amount of unique tags:" + str(len(freq_sorted2))
         print(uniqueTagsLen)
@@ -19,7 +19,7 @@ class new_circles_meetup:
             # print(keyValue)
             fileManager.writeFile(keyValue)
 
-    def print_circles_tags(fileManager):
+    def print_circles_tags(self, fileManager):
         print("Results 01: Circles. circle - tag_1 tag_2 tag_n")
         i = 0
         size = 0
@@ -48,7 +48,7 @@ class new_circles_meetup:
         print(average1)
         fileManager.writeFile(average1)
 
-    def process_line(line):
+    def process_line(self, line):
         circle_tag = line.split(',\"')
         circle_name = circle_tag[4].lower().strip()
         circle_name = circle_name.replace('"', '')
@@ -58,14 +58,14 @@ class new_circles_meetup:
         tag = tag.replace(' ', '_')
         return (circle_name, tag)
 
-    def tag_count(tag):
+    def tag_count(self, tag):
         global all_tags
         if (tag in all_tags):
             all_tags[tag] += 1
         else:
             all_tags[tag] = 1
 
-    def process_circle_tags(circle_name, tag):
+    def process_circle_tags(self, circle_name, tag):
         global circles_tags
         # freq = dict()
         # freq[tag] = 1;
@@ -76,8 +76,6 @@ class new_circles_meetup:
                 circles_tags[circle_name].append(tag)
 
     def preprocessing_circles(self, post="2.txt"):
-        circles_tags = dict()
-        all_tags = dict()
 
         members_tags = "communities.tags.csv"
         clean_circles_tags = "all_circles_tags" + post
@@ -106,5 +104,7 @@ class new_circles_meetup:
         self.all_tags_frequency(fileManager, all_tags)
 
 
+circles_tags = dict()
+all_tags = dict()
 if __name__ == "__main__":
     new_circles_meetup.preprocessing_circles()
