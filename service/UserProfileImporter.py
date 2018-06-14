@@ -165,6 +165,11 @@ def print_circle_users_membership():
     cicles_len = len(all_circles)
     base = 0
     all_percentage = 0
+    all_circle_size = 0
+    min_circle = ""
+    min_percentage = 0
+    max_circle = ""
+    max_percentage = 0
 
     for circle in all_circles:
         circle_rid = circle.rid
@@ -172,6 +177,7 @@ def print_circle_users_membership():
         users = myDao.get_members(circle_rid)
         users_len = len(users)
         base = circle_tags_len * users_len
+        all_circle_size += users_len
         rank = 0.0
         for user in users:
             user_rid = user.rid
@@ -182,10 +188,31 @@ def print_circle_users_membership():
             percentage = 0
         else:
             percentage = rank / base * 100
+
+        if not min_circle:
+            min_circle = circle.name
+            min_percentage = percentage
+
+        if min_percentage > percentage:
+            min_percentage = percentage
+            min_circle = circle.name
+
+        if not max_circle:
+            max_circle = circle.name
+            max_percentage = percentage
+
+        if max_percentage < percentage:
+            max_percentage = percentage
+            max_circle = circle.name
+
         print("rid, circle_size, percentage_overlap_tags")
         print("circle: " + circle.rid + "(" + str(users_len) + ") percentage: " + str(percentage))
         all_percentage += percentage
-    print("Average: "+ str(all_percentage/cicles_len))
+    print("Average User-Circle-Tags Overlapping : " + str(all_percentage / cicles_len))
+    print("Min Circle Percentage: " + str(min_percentage) + " Circle:" + min_circle)
+    print("Max Circle Percentage: " + str(max_percentage) + " Circle:" + max_circle)
+    print("Average circle size: " + str(all_circle_size / cicles_len))
+
 
 def create_users():
     global create
