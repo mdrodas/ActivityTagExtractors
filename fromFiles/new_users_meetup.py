@@ -37,7 +37,7 @@ class new_users_meetup:
             freq_sorted = sorted(value.items(), key=operator.itemgetter(1), reverse=True)
             i += 1
             size += len(freq_sorted)
-            toPrint1 = str(key) + "-" + str(len(freq_sorted)) + "== " + str(freq_sorted)
+            toPrint1 = "U- " + str(key) + "-" + str(len(freq_sorted)) + "== " + str(freq_sorted)
             print(toPrint1)
 
             outLine = [str(key)]

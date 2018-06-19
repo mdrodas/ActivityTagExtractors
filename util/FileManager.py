@@ -30,7 +30,7 @@ class FileManager:
         self.out_filename = outfilename
         self.path_out = self.out_directory + self.out_filename
 
-    def readFile(self, original=False, encoding="cp1250"):
+    def readFile(self, original=False, encoding='utf8'): #cp1250
         response = []
         with open(self.path_in, encoding=encoding) as fp:
             for line in fp:
@@ -42,7 +42,8 @@ class FileManager:
 
     def writeFile(self, value, mode="a+"):
         fp = open(self.path_out, mode)
-        fp.write(value + "\n")
+        line = value
+        fp.write(line + "\n")
         fp.close()
 
     def unify_resources(self, directory):

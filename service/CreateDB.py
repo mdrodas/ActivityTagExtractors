@@ -1,3 +1,17 @@
+"""
+Creates a new database in OrientDB. It execute 3 schemma definitions:
+- schema_original.osql. The original version of the Database.
+- schema_additions_framework.osql. The extended version for the framework.
+- tenant.osql. The insertion of the Trento tenancy.
+- places.osql. The insertion of italian places.
+
+Input:
+- server
+- db_name
+- user
+- password
+
+"""
 from util.FileManager import FileManager
 import pyorient
 import subprocess
@@ -5,7 +19,7 @@ import logging
 
 
 def db_create_orientdb(server, name, user, passw):
-    #server = 'localhost'
+    # server = 'localhost'
     port = 2424
     client = pyorient.OrientDB(server, port)
     session_id = client.connect(user, passw)
@@ -31,7 +45,7 @@ def change_connect(server, db_name, user, passw, directory, in_filename, out_fil
     myFile = fileManager.readFile(True)
     first = True
     for line in myFile:
-        #print("what? " + line)
+        # print("what? " + line)
         if line.find("CONNECT remote:") != -1:
             if (first):
                 fileManager.writeFile(my_connect, "w+")
@@ -87,7 +101,7 @@ def populate_place(directory, in_filename, out_filename):
 
 if __name__ == "__main__":
     server = "127.0.0.1"
-    db_name = 'framework_test4'
+    db_name = 'framework_test10'
     user = "admin"
     passw = "admin"
 
@@ -97,11 +111,14 @@ if __name__ == "__main__":
     directory2 = 'C:\\Users\\mdrodas\\PycharmProjects\\TagBuilder1\\resources\\orientdb\\data\\Trento\\'
     file_schema = 'schema_original.osql'
     file_schema2 = 'schema_original2.osql'
+    file_framework = 'schema_additions_framework.osql'
+    file_framework2 = 'schema_additions_framework2.osql'
     file_tenant = 'tenant.osql'
     file_tenant2 = 'tenant2.osql'
     file_place = 'places.osql'
     file_place2 = 'places2.osql'
     if (create):
         create_db(directory1, file_schema, file_schema2)
+        create_db(directory1, file_framework, file_framework2)
         populate_tenant(directory1, file_tenant, file_tenant2)
         populate_place(directory2, file_place, file_place2)

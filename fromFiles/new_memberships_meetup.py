@@ -133,7 +133,7 @@ class new_memberships_meetup:
 
     def preprocessing_is_member(self, post="2.txt"):
 
-        new_members_tags = "new_members.communities" + post
+        # new_members_tags = "new_members.communities" + post
         members_tags = "members.communities.csv"
         clean_circles_tags = "all_is_member" + post
         is_member_frequency = "is_member_frequency" + post
@@ -145,8 +145,6 @@ class new_memberships_meetup:
         fileManager.new_out(out_directory, clean_circles_tags)
         myFile = fileManager.readFile(True, "utf-8")
         i = 0
-        # 0:1000000
-        # 1000000:0
         for line in myFile:
             line2 = self.process_line(line)
             user_id = line2[0]

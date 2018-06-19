@@ -37,7 +37,7 @@ class new_circles_meetup:
                 outLine_freq[tag] = all_tags[tag]
 
             freq_sorted = sorted(outLine_freq.items(), key=operator.itemgetter(1), reverse=True)
-            toPrint = str(circle_name) + "-" + str(len(circle_tags)) + "== " + str(freq_sorted)
+            toPrint = "C- " + str(circle_name) + "-" + str(len(circle_tags)) + "== " + str(freq_sorted)
             print(toPrint)
 
             toPrint2 = "\t".join(outLine)
@@ -86,7 +86,7 @@ class new_circles_meetup:
         fileManager = FileManager(in_directory)
         fileManager.new_in(in_directory, members_tags)
         fileManager.new_out(out_directory, clean_circles_tags)
-        myFile = fileManager.readFile()
+        myFile = fileManager.readFile('utf-8')
 
         for line in myFile:
             line2 = self.process_line(line)
