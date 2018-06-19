@@ -12,9 +12,6 @@ from model.ContactInfo import ContactInfo
 from model.Person import Person
 from model.Profession import Profession
 
-circle_members = dict()
-all_users = dict()
-
 
 class new_memberships_meetup:
 
@@ -43,14 +40,14 @@ class new_memberships_meetup:
         print(uniqueTagsLen)
         fileManager.writeFile(uniqueTagsLen)
 
-        print("Results 02: Tag == frequency_used")
+        # print("Results 02: Tag == frequency_used")
         for key, value in freq_sorted2:
             keyValue = key + "=" + str(value)
             # print(keyValue)
             fileManager.writeFile(keyValue)
 
     def print_circle_members(self, fileManager):
-        print("Results 01: Members. circle_id - user_id_1 user_id_2 user_id_n")
+        # print("Results 01: Members. circle_id - user_id_1 user_id_2 user_id_n")
         i = 0
         size = 0
         global circle_members
@@ -67,11 +64,12 @@ class new_memberships_meetup:
                 # outLine_freq[user_id] = all_users[user_id]
 
             # freq_sorted = sorted(outLine_freq.items(), key=operator.itemgetter(1), reverse=True)
-            # toPrint = str(circle_id) + "-" + str(len(members)) + "== " + str(freq_sorted)
-            # print(toPrint)
+            if (i % 1000) == 0:
+                toPrint = "IM-" + str(i) + "=" + str(circle_id) + "-" + str(len(members))
+                print(toPrint)
 
             toPrint2 = "\t".join(outLine)
-            print(toPrint2)
+            # print(toPrint2)
             fileManager.writeFile(toPrint2)
 
         if (i > 0):
@@ -115,7 +113,7 @@ class new_memberships_meetup:
         if (ismember[0] and ismember[1]):
             user_id = ismember[0]
             circle_id = ismember[1]
-            print("great! circle:" + circle_id + "- user:" + user_id)
+            # print("great! circle:" + circle_id + "- user:" + user_id)
             if (circle_id not in circle_members):
                 circle_members[circle_id] = [user_id]
             else:
@@ -163,6 +161,9 @@ class new_memberships_meetup:
         fileManager.new_out(out_directory, is_member_frequency)
         self.all_users_frequency(fileManager, all_users)
 
+
+circle_members = dict()
+all_users = dict()
 
 if __name__ == "__main__":
     app = new_memberships_meetup()

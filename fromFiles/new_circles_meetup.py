@@ -13,14 +13,14 @@ class new_circles_meetup:
         print(uniqueTagsLen)
         fileManager.writeFile(uniqueTagsLen)
 
-        print("Results 02: Tag == frequency_used")
+        # print("Results 02: Tag == frequency_used")
         for key, value in freq_sorted2:
             keyValue = key + "=" + str(value)
             # print(keyValue)
             fileManager.writeFile(keyValue)
 
     def print_circles_tags(self, fileManager):
-        print("Results 01: Circles. circle - tag_1 tag_2 tag_n")
+        # print("Results 01: Circles. circle - tag_1 tag_2 tag_n")
         i = 0
         size = 0
         global circles_tags
@@ -37,8 +37,9 @@ class new_circles_meetup:
                 outLine_freq[tag] = all_tags[tag]
 
             freq_sorted = sorted(outLine_freq.items(), key=operator.itemgetter(1), reverse=True)
-            toPrint = "C- " + str(circle_name) + "-" + str(len(circle_tags)) + "== " + str(freq_sorted)
-            print(toPrint)
+            if (i % 10) == 0:
+                toPrint = "C-" + str(i) + "=" + str(circle_name) + "-" + str(len(circle_tags)) + "== " + str(freq_sorted)
+                print(toPrint)
 
             toPrint2 = "\t".join(outLine)
             # print(toPrint2)
@@ -106,5 +107,6 @@ class new_circles_meetup:
 
 circles_tags = dict()
 all_tags = dict()
+
 if __name__ == "__main__":
     new_circles_meetup.preprocessing_circles()

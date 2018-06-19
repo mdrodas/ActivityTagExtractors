@@ -13,14 +13,14 @@ class new_users_meetup:
         print(uniqueTagsLen)
         fileManager.writeFile(uniqueTagsLen)
 
-        print("Results 02: Tag == frequency_used")
+        # print("Results 02: Tag == frequency_used")
         for key, value in freq_sorted2:
             keyValue = key + "=" + str(value)
             # print(keyValue)
             fileManager.writeFile(keyValue)
 
     def print_users_tags(self, fileManager):
-        print("Results 01: UserProfiles. user - tag_1 tag_2 tag_n")
+        # print("Results 01: UserProfiles. user - tag_1 tag_2 tag_n")
         i = 0
         size = 0
         global users_tags
@@ -37,8 +37,9 @@ class new_users_meetup:
             freq_sorted = sorted(value.items(), key=operator.itemgetter(1), reverse=True)
             i += 1
             size += len(freq_sorted)
-            toPrint1 = "U- " + str(key) + "-" + str(len(freq_sorted)) + "== " + str(freq_sorted)
-            print(toPrint1)
+            if (i % 100) == 0:
+                toPrint1 = "U-" + str(i) + "=" + str(key) + "-" + str(len(freq_sorted)) + "== " + str(freq_sorted)
+                print(toPrint1)
 
             outLine = [str(key)]
             for value2 in freq_sorted:
@@ -49,8 +50,8 @@ class new_users_meetup:
             fileManager.writeFile(toPrint2)
 
         average1 = "Average tags per activity:" + str(size / i)
-        print(average1)
-        fileManager.writeFile(average1)
+        # print(average1)
+        # fileManager.writeFile(average1)
 
     def process_line(self, line):
         member_tag = line.split(',\"')
@@ -105,7 +106,7 @@ class new_users_meetup:
             self.tag_count(tag)
             self.process_user_tags(user_id, tag)
 
-            self.print_users_tags(fileManager)
+        self.print_users_tags(fileManager)
 
         fileManager.new_out(out_directory, tags_frequency)
         self.all_tags_frequency(fileManager, all_tags)
