@@ -1,6 +1,7 @@
 """
 Implementation for new tags extractor (meetup) using a list of files.
 """
+import datetime
 import operator
 from util.FileManager import FileManager
 
@@ -109,4 +110,12 @@ circles_tags = dict()
 all_tags = dict()
 
 if __name__ == "__main__":
-    new_circles_meetup.preprocessing_circles()
+    post_id = "10.txt"
+    t1 = datetime.datetime.now()
+    print("Circles BEGIN.")
+    circles = new_circles_meetup()
+    circles.preprocessing_circles(post_id)
+    t2 = datetime.datetime.now()
+    print("Circles FINISHED.")
+    time1 = t2 - t1
+    print("Time Is_Member: " + str(time1))

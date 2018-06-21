@@ -76,7 +76,7 @@ class CircleImporter:
         fileManager = FileManager()
         fileManager.new_in(in_directory, in_filename)
 
-        myFile = fileManager.readFile()
+        myFile = fileManager.readFile(True, 'cp1250')
         for line in myFile[0:-2]:
 
             tags = list()

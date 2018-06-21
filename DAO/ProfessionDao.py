@@ -4,8 +4,8 @@ from model.Profession import Profession
 
 class ProfessionDao:
 
-    def __init__(self):
-        kb = KnowledgeBase()
+    def __init__(self, DBName="framework_test10"):
+        kb = KnowledgeBase(DBName)
         self.connection = kb.getDB()
 
     def count(self):

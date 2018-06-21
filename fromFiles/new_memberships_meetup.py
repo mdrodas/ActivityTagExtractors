@@ -2,6 +2,7 @@
 Implementation for new tags extractor (meetup) using a list of files.
 """
 import operator
+import datetime
 from util.FileManager import FileManager
 from DAO.CircleDao import CircleDao
 from DAO.UserProfileDao import UserProfileDao
@@ -64,7 +65,7 @@ class new_memberships_meetup:
                 # outLine_freq[user_id] = all_users[user_id]
 
             # freq_sorted = sorted(outLine_freq.items(), key=operator.itemgetter(1), reverse=True)
-            if (i % 1000) == 0:
+            if (i % 1) == 0:
                 toPrint = "IM-" + str(i) + "=" + str(circle_id) + "-" + str(len(members))
                 print(toPrint)
 
@@ -113,7 +114,7 @@ class new_memberships_meetup:
         if (ismember[0] and ismember[1]):
             user_id = ismember[0]
             circle_id = ismember[1]
-            # print("great! circle:" + circle_id + "- user:" + user_id)
+            print("great! circle:" + circle_id + "- user:" + user_id)
             if (circle_id not in circle_members):
                 circle_members[circle_id] = [user_id]
             else:
@@ -166,5 +167,12 @@ circle_members = dict()
 all_users = dict()
 
 if __name__ == "__main__":
-    app = new_memberships_meetup()
-    app.preprocessing_is_member("4.txt")
+    post_id = "10.txt"
+    t1 = datetime.datetime.now()
+    print("Is_Member BEGIN.")
+    members = new_memberships_meetup()
+    members.preprocessing_is_member(post_id)
+    t2 = datetime.datetime.now()
+    print("Is_Member FINISHED.")
+    time1 = t2 - t1
+    print("Time Is_Member: " + str(time1))

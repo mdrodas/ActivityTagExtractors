@@ -4,21 +4,21 @@ from model.Activity import Activity
 
 class ActivityDao:
 
-    def __init__(self):
-        kb = KnowledgeBase()
+    def __init__(self, DBName="framework_test10"):
+        kb = KnowledgeBase(DBName)
         self.connection = kb.getDB()
 
     def has_tag(self, activity_id, tag_id):
         query = "select * from activity where @rid = {0} and tags contains (@rid = {1})".format(activity_id, tag_id)
-        #print(query)
+        # print(query)
         result = self.connection.query(query)
         response = False
         if (result):
             response = True
         return response
 
-    def getAll(self,limit=-1):
-        query = "SELECT * FROM activity limit "+str(limit)
+    def getAll(self, limit=-1):
+        query = "SELECT * FROM activity limit " + str(limit)
         print(query)
         result = self.connection.query(query)
         response = list()
@@ -72,17 +72,17 @@ class ActivityDao:
         new_activity.name = activity.__getattr__('name')  # mandatory, string
         new_activity.description = activity.__getattr__('description')  # mandatory, string
         new_activity.longdescription = activity.__getattr__('longdescription')  # string
-        new_activity.location = "#"+activity.__getattr__('location').get()  # mandatory, Place
+        new_activity.location = "#" + activity.__getattr__('location').get()  # mandatory, Place
         new_activity.starts = str(activity.__getattr__('starts'))  # date
         new_activity.duration = activity.__getattr__('duration')  # integer
-        for internal_tag in activity.__getattr__('tags'): # list of rids
-            new_activity.tags.append("#"+internal_tag.get())
-        new_activity.admissioncostperperson = float(activity.__getattr__('admissioncostperperson')) # float
+        for internal_tag in activity.__getattr__('tags'):  # list of rids
+            new_activity.tags.append("#" + internal_tag.get())
+        new_activity.admissioncostperperson = float(activity.__getattr__('admissioncostperperson'))  # float
         new_activity.friwalkprovided = activity.__getattr__('friwalkprovided')  # boolean
         new_activity.groupsuitable = activity.__getattr__('groupsuitable')  # boolean
         new_activity.bringfriends = activity.__getattr__('bringfriends')  # boolean
         new_activity.isequipped = activity.__getattr__('isequipped')  # Mandatory, boolean
-        new_activity.tenancy = "#"+activity.__getattr__('tenancy').get()  # Mandatory, Tenant
+        new_activity.tenancy = "#" + activity.__getattr__('tenancy').get()  # Mandatory, Tenant
         return new_activity
 
 
@@ -99,7 +99,7 @@ if __name__ == "__main__":
         result = myDao.getById(rid0)
         print("READ: {0} - {1}".format(result[0].rid, result[0].tenancy))
         print("++: {0} - {1} - {2} - {3} - {4} - {5}".format(result[0].rid, result[0].name, result[0].location,
-              result[0].tags, result[0].starts, result[0].tenancy))
+                                                             result[0].tags, result[0].starts, result[0].tenancy))
         print("ACTIVITY: " + str(result[0]))
         for tag in result[0].tags:
             print("TAG: " + tag)
