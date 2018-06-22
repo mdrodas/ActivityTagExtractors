@@ -34,21 +34,21 @@ class UserProfileImporter:
 
         return userprofile
 
-    def create_user(self, screenname, tags):
+    def create_user(self, id, screenname, tags):
         global write_on_db
-        user = self.build_user(screenname, tags)
+        user = UserProfile(screenname, "")
 
-        myDao = UserProfileDao()
-        id = myDao.exist(screenname)
         if (not id):
             if (write_on_db):
+                user = self.build_user(screenname, tags)
+                myDao = UserProfileDao()
                 result = myDao.add(user)
                 print("CREATE: ", str(result[0].screenname + "- tags: " + str(list(result[0].preferences))))
             else:
-                print("TO_CREATE: " + user.screenname + "- tags: " + str(list(user.preferences)))
+                print("TO_CREATE: " + screenname + "- tags: " + str(list(tags)))
         else:
             user.rid = id
-            print("UserProfile Already Exist. Name:" + screenname + " ID:" + id)
+            print("** UserProfile Already Exist. Name:" + screenname + " ID:" + id)
         return user
 
     def update_user(self, screenname, tags):
@@ -228,16 +228,23 @@ class UserProfileImporter:
             screenname = "mup_"
             name = words[0].lower().strip()
             screenname += name
+
+            myDao = UserProfileDao()
+            id = myDao.exist(screenname)
+            if (id):
+                continue
+
             length = len(words)
             for i in range(1, length):
                 tag = words[i].lower().strip().replace('"', '')
-                id = self.create_tag(tag)
-                if (id):
-                    tags.append(id)
+                tag_id = self.create_tag(tag)
+                if (tag_id):
+                    tags.append(tag_id)
                 else:
                     print("error creating tag: ", tag)
+
             if (create):
-                user = self.create_user(screenname, tags)
+                user = self.create_user(id, screenname, tags)
             else:
                 user = self.update_user(screenname, tags)
 

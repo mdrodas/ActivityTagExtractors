@@ -39,7 +39,8 @@ class new_circles_meetup:
 
             freq_sorted = sorted(outLine_freq.items(), key=operator.itemgetter(1), reverse=True)
             if (i % 10) == 0:
-                toPrint = "C-" + str(i) + "=" + str(circle_name) + "-" + str(len(circle_tags)) + "== " + str(freq_sorted)
+                toPrint = "C-" + str(i) + "=" + str(circle_name) + "-" + str(len(circle_tags)) + "== " + str(
+                    freq_sorted)
                 print(toPrint)
 
             toPrint2 = "\t".join(outLine)

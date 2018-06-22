@@ -23,11 +23,12 @@ from service.UserProfileImporter import UserProfileImporter
 from service.CircleImporter import CircleImporter
 from service.IsMemberImporter import IsMemberImporter
 
+
 def populate_users_circles(post_id):
     t1 = datetime.datetime.now()
     print("Starting Procesing...")
-    circles = CircleImporter()
-    circles.create_circles(post_id)
+    # circles = CircleImporter()
+    # circles.create_circles(post_id)
     t2 = datetime.datetime.now()
     time1 = t2 - t1
     print("Time Circles: " + str(time1))
@@ -48,6 +49,7 @@ def populate_is_members(post_id):
     time3 = t4 - t3
     print("Time Is_Member: " + str(time3))
     print("Is_Member FINISHED.")
+
 
 if __name__ == "__main__":
     post_id = "10.txt"

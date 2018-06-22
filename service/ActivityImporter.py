@@ -26,7 +26,7 @@ def create_activity(name, description, isEquiped, tags):
     return activity
 
 
-def update_activity(name, description, location, isEquiped,  tags):
+def update_activity(name, description, location, isEquiped, tags):
     tenantdao = TenantDao()
     tenant = tenantdao.getByName("Trento")
     location = tenantdao.get_one_placeRid()

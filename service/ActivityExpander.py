@@ -3,6 +3,7 @@ from DAO.ActivityDao import ActivityDao
 from DAO.TagDao import TagDao
 from nltk.corpus import wordnet as wn
 
+
 def create_tag(taglabel):
     tagDao = TagDao()
     id = tagDao.exist(taglabel)
@@ -12,6 +13,7 @@ def create_tag(taglabel):
         print(created_tag[0])
         id = created_tag[0].rid
     return id
+
 
 def check_synonyms_wordnet(activity, word2, threshold=0.0):
     activityDao = ActivityDao()

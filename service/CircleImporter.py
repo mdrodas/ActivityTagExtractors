@@ -19,18 +19,18 @@ class CircleImporter:
 
         return circle
 
-    def create_circle(self, name, tags):
+    def create_circle(self, id, name, tags):
         global write_on_db
-        circle = self.build_circle(name, tags)
+        circle = Circle(name, "")
 
-        myDao = CircleDao()
-        id = myDao.exist(name)
         if (not id):
             if (write_on_db):
+                circle = self.build_circle(name, tags)
+                myDao = CircleDao()
                 result = myDao.add(circle)
                 print("CREATE:", str(result[0]))
             else:
-                print("TO_CREATE: " + circle.name + "- tags: " + str(list(circle.tags)))
+                print("TO_CREATE: " + name + "- tags: " + str(list(tags)))
         else:
             circle.rid = id
             print("Circle Already Exist. Name:" + name + " ID:" + id)
@@ -84,6 +84,12 @@ class CircleImporter:
             words = line.split('\t')
             name = ""
             name += words[0].lower().strip()
+
+            myDao = CircleDao()
+            id = myDao.exist(name)
+            if (id):
+                continue
+
             length = len(words)
             for i in range(1, length):
                 tag = words[i].lower().strip()
@@ -93,7 +99,7 @@ class CircleImporter:
                 else:
                     print("error creating tag: ", tag)
             if (create):
-                circle = self.create_circle(name, tags)
+                circle = self.create_circle(id, name, tags)
             else:
                 circle = self.update_circle(name, tags)
 
