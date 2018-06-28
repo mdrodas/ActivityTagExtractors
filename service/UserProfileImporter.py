@@ -228,10 +228,12 @@ class UserProfileImporter:
             screenname = "mup_"
             name = words[0].lower().strip()
             screenname += name
-
+            t1 = datetime.datetime.now()
             myDao = UserProfileDao()
             id = myDao.exist(screenname)
+            t2 = datetime.datetime.now()
             if (id):
+                print("time: "+(str(t2-t1)))
                 continue
 
             length = len(words)
