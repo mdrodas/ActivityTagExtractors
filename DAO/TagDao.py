@@ -4,8 +4,8 @@ from model.Tag import Tag
 
 class TagDao:
 
-    def __init__(self, DBName="framework_test10"):
-        kb = KnowledgeBase(DBName)
+    def __init__(self, baseConnection):
+        kb = baseConnection
         self.connection = kb.getDB()
 
     def count(self):
@@ -61,7 +61,8 @@ class TagDao:
             response.append(self.to_tag(tag_record))
         return response
 
-    def to_tag(self, tag):
+    @staticmethod
+    def to_tag(tag):
         label = tag.__getattr__('label')
         description_activity = tag.__getattr__('description_activity')
         description_prescription = tag.__getattr__('description_prescription')

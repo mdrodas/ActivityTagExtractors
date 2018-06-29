@@ -4,12 +4,16 @@ from model.Tag import Tag
 from DAO.CircleDao import CircleDao
 from DAO.TagDao import TagDao
 from DAO.TenantDao import TenantDao
+from util.KnowledgeBase import KnowledgeBase
 
 
 class CircleImporter:
 
+    def __init__(self, DBName = "framework_test10"):
+        self.kb = KnowledgeBase(DBName)
+
     def build_circle(self, name, tags):
-        tenantdao = TenantDao()
+        tenantdao = TenantDao(self.kb)
         tenancy = tenantdao.getByName("Trento")
         if (tenancy):
             circle = Circle(name, tenancy[0].rid)
@@ -26,7 +30,7 @@ class CircleImporter:
         if (not id):
             if (write_on_db):
                 circle = self.build_circle(name, tags)
-                myDao = CircleDao()
+                myDao = CircleDao(self.kb)
                 result = myDao.add(circle)
                 print("CREATE:", str(result[0]))
             else:
@@ -38,7 +42,7 @@ class CircleImporter:
 
     def update_circle(self, name, tags):
         circle = self.build_circle(name, tags)
-        myDao = CircleDao()
+        myDao = CircleDao(self.kb)
         id = myDao.exist(name)
         circle.rid = id
         result = myDao.update(circle)
@@ -46,13 +50,13 @@ class CircleImporter:
         return circle
 
     def circle_hastag(self, circle_id, tag_id):
-        myDao = CircleDao()
+        myDao = CircleDao(self.kb)
         result = myDao.has_tag(circle_id, tag_id)
         return result
 
     def create_tag(self, taglabel):
         global write_on_db
-        tagDao = TagDao()
+        tagDao = TagDao(self.kb)
         id = tagDao.exist(taglabel)
         if (not id):
             tag = Tag(taglabel, "description_" + taglabel, "", "meetup_2", "en", list(), list())
@@ -85,7 +89,7 @@ class CircleImporter:
             name = ""
             name += words[0].lower().strip()
 
-            myDao = CircleDao()
+            myDao = CircleDao(self.kb)
             id = myDao.exist(name)
             if (id):
                 continue

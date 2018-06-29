@@ -11,12 +11,16 @@ from DAO.UserProfileDao import UserProfileDao
 from DAO.CircleDao import CircleDao
 from DAO.TagDao import TagDao
 from DAO.TenantDao import TenantDao
+from util.KnowledgeBase import KnowledgeBase
 
 
 class UserProfileImporter:
 
+    def __init__(self, DBName = "framework_test10"):
+        self.kb = KnowledgeBase(DBName)
+
     def build_user(self, screenname, tags):
-        tenantdao = TenantDao()
+        tenantdao = TenantDao(self.kb)
         tenancy = tenantdao.getByName("Trento")
         if (tenancy):
             userprofile = UserProfile(screenname, tenancy[0].rid)
@@ -41,9 +45,12 @@ class UserProfileImporter:
         if (not id):
             if (write_on_db):
                 user = self.build_user(screenname, tags)
-                myDao = UserProfileDao()
+                myDao = UserProfileDao(self.kb)
+                t1 = datetime.datetime.now()
                 result = myDao.add(user)
                 print("CREATE: ", str(result[0].screenname + "- tags: " + str(list(result[0].preferences))))
+                t2 = datetime.datetime.now()
+                print("time create tag: " + (str(t2 - t1)))
             else:
                 print("TO_CREATE: " + screenname + "- tags: " + str(list(tags)))
         else:
@@ -53,7 +60,7 @@ class UserProfileImporter:
 
     def update_user(self, screenname, tags):
         user = self.build_user(screenname, tags)
-        myDao = UserProfileDao()
+        myDao = UserProfileDao(self.kb)
         id = myDao.exist(screenname)
         user.rid = id
         result = myDao.update(user)
@@ -61,13 +68,13 @@ class UserProfileImporter:
         return user
 
     def user_hastag(self, user_id, tag_id):
-        myDao = UserProfileDao()
+        myDao = UserProfileDao(self.kb)
         result = myDao.has_tag(user_id, tag_id)
         return result
 
     def create_tag(self, taglabel):
         global write_on_db
-        tagDao = TagDao()
+        tagDao = TagDao(self.kb)
         id = tagDao.exist(taglabel)
         if (not id and taglabel):
             tag = Tag(taglabel, "description_" + taglabel, "", "meetup_1", "en", list(), list())
@@ -83,8 +90,8 @@ class UserProfileImporter:
         groupname = "60+ happy hour"
         in_directory = "../resources/meetup/"
         in_filename = "all_users_tags.txt"
-        myDao = UserProfileDao()
-        tagDao = TagDao()
+        myDao = UserProfileDao(self.kb)
+        tagDao = TagDao(self.kb)
         all_users = myDao.getAll()
         tags = dict()
         for user in all_users:
@@ -100,8 +107,8 @@ class UserProfileImporter:
         groupname = "60+ happy hour"
         in_directory = "../resources/meetup/"
         in_filename = "all_users_tags.txt"
-        myDao = CircleDao()
-        tagDao = TagDao()
+        myDao = CircleDao(self.kb)
+        tagDao = TagDao(self.kb)
         all_circles = myDao.getAll()
         tags = dict()
         for circle in all_circles:
@@ -127,8 +134,8 @@ class UserProfileImporter:
             print("K: " + key + " V: " + str(value))
 
     def check_circle_users(self):
-        myDao = CircleDao()
-        tagDao = TagDao()
+        myDao = CircleDao(self.kb)
+        tagDao = TagDao(self.kb)
         all_circles = myDao.getAll()
 
         for circle in all_circles:
@@ -153,8 +160,8 @@ class UserProfileImporter:
                             break
 
     def print_circle_users_membership(self):
-        myDao = CircleDao()
-        tagDao = TagDao()
+        myDao = CircleDao(self.kb)
+        tagDao = TagDao(self.kb)
         all_circles = myDao.getAll()
         cicles_len = len(all_circles)
         base = 0
@@ -220,7 +227,7 @@ class UserProfileImporter:
         fileManager.new_in(in_directory, in_filename)
 
         myFile = fileManager.readFile()
-        for line in myFile[0:-2]:
+        for line in myFile[4770:-2]:
 
             tags = list()
             # print(line)
@@ -229,14 +236,15 @@ class UserProfileImporter:
             name = words[0].lower().strip()
             screenname += name
             t1 = datetime.datetime.now()
-            myDao = UserProfileDao()
+            myDao = UserProfileDao(self.kb)
             id = myDao.exist(screenname)
             t2 = datetime.datetime.now()
             if (id):
-                print("time: "+(str(t2-t1)))
+                print("time: " + (str(t2 - t1)))
                 continue
 
             length = len(words)
+            tt1 = datetime.datetime.now()
             for i in range(1, length):
                 tag = words[i].lower().strip().replace('"', '')
                 tag_id = self.create_tag(tag)
@@ -245,8 +253,13 @@ class UserProfileImporter:
                 else:
                     print("error creating tag: ", tag)
 
+            tt2 = datetime.datetime.now()
+            print("time tags: (" + str(length) + ") =" + (str(tt2 - tt1)))
             if (create):
+                tc1 = datetime.datetime.now()
                 user = self.create_user(id, screenname, tags)
+                tc2 = datetime.datetime.now()
+                print("time create user: " + (str(tc2 - tc1)))
             else:
                 user = self.update_user(screenname, tags)
 

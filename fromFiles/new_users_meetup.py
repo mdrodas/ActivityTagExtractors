@@ -101,7 +101,7 @@ class new_users_meetup:
             line2 = self.process_line(line)
             user_id = line2[0]
             tag = line2[1]
-            if (user_id == 'memberid'):
+            if user_id == 'memberid':
                 continue
 
             self.tag_count(tag)

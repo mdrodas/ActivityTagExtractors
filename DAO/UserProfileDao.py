@@ -4,8 +4,8 @@ from model.UserProfile import UserProfile
 
 class UserProfileDao:
 
-    def __init__(self, DBName="framework_test10"):
-        kb = KnowledgeBase(DBName)
+    def __init__(self, baseConnection):
+        kb = baseConnection
         self.connection = kb.getDB()
 
     def has_tag(self, user_id, tag_id):
