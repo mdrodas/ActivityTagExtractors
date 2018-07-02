@@ -27,7 +27,7 @@ from util.KnowledgeBase import KnowledgeBase
 
 class PopulateDB:
 
-    def populate_users_circles(post_id):
+    def populate_users_circles(self, post_id):
         t1 = datetime.datetime.now()
         print("Starting Procesing...")
         circles = CircleImporter()
@@ -44,7 +44,7 @@ class PopulateDB:
         print("UserProfiles FINISHED.")
 
 
-    def populate_is_members(post_id):
+    def populate_is_members(self, post_id):
         t3 = datetime.datetime.now()
         members = IsMemberImporter()
         members.create_ismembers(post_id)

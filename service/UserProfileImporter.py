@@ -227,7 +227,7 @@ class UserProfileImporter:
         fileManager.new_in(in_directory, in_filename)
 
         myFile = fileManager.readFile()
-        for line in myFile[4770:-2]:
+        for line in myFile[0:-2]:
 
             tags = list()
             # print(line)
