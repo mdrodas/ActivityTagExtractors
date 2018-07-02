@@ -12,12 +12,16 @@ from model.Address import Address
 from model.ContactInfo import ContactInfo
 from model.Person import Person
 from model.Profession import Profession
+from util.KnowledgeBase import KnowledgeBase
 
 
 class new_memberships_meetup:
 
+    def __init__(self, DBName = "framework_test10"):
+        self.kb = KnowledgeBase(DBName)
+
     def build_user(self, screenname, tags):
-        tenantdao = TenantDao()
+        tenantdao = TenantDao(self.kb)
         tenancy = tenantdao.getByName("Trento")
         if (tenancy):
             userprofile = UserProfile(screenname, tenancy[0].rid)
@@ -96,8 +100,8 @@ class new_memberships_meetup:
             all_users[user_id] = 1
 
     def is_member(self, user_name, circle_name):
-        userdao = UserProfileDao()
-        circledao = CircleDao()
+        userdao = UserProfileDao(self.kb)
+        circledao = CircleDao(self.kb)
         user = userdao.getByScreenname(user_name)
         circle = circledao.getByName(circle_name)
         response = ("", "")

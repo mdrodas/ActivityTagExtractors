@@ -1,13 +1,17 @@
 from util.FileManager import FileManager
 from model.Is_Member import Is_Member
 from DAO.CircleDao import CircleDao
+from util.KnowledgeBase import KnowledgeBase
 
 
 class IsMemberImporter:
 
+    def __init__(self, DBName="framework_test10"):
+        self.kb = KnowledgeBase(DBName)
+
     def create_ismember(self, circle_rid, users):
         global write_on_db
-        myDao = CircleDao()
+        myDao = CircleDao(self.kb)
 
         for user_rid in users:
             ismember = myDao.get_is_member(circle_rid, user_rid)

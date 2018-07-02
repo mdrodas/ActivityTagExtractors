@@ -58,4 +58,4 @@ if __name__ == "__main__":
     post_id = "10.txt"
     app = PopulateDB()
     app.populate_users_circles(post_id)
-    # populate_is_members(post_id)
+    app.populate_is_members(post_id)
