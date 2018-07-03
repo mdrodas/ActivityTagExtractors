@@ -8,8 +8,8 @@ from DAO.TagDao import TagDao
 
 class TagsImporter:
 
-    def __init__(self, DBName = "framework_test10"):
-        self.kb = KnowledgeBase(DBName)
+    def __init__(self):
+        self.kb = KnowledgeBase()
 
     def create_tag(self, taglabel):
         t0 = datetime.datetime.now()

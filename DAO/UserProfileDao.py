@@ -1,4 +1,3 @@
-from util.KnowledgeBase import KnowledgeBase
 from model.UserProfile import UserProfile
 
 
@@ -44,7 +43,7 @@ class UserProfileDao:
 
     def getById(self, id):
         query = "SELECT * FROM UserProfile WHERE @rid = {0}".format(id)
-        print(query)
+        # print(query)
         result = self.connection.query(query)
         response = list()
         for user_record in result:
@@ -53,13 +52,13 @@ class UserProfileDao:
 
     def update(self, user):
         cmd = "UPDATE UserProfile MERGE {1} WHERE @rid= {0} ".format(user.rid, user.toDict())
-        print(cmd)
+        # print(cmd)
         result = self.connection.command(cmd)
         return result
 
     def add(self, user):
         cmd = "INSERT INTO UserProfile CONTENT {0}".format(user.toDict())
-        print(cmd)
+        # print(cmd)
         result = self.connection.command(cmd)
         response = list()
         for user_record in result:

@@ -9,8 +9,8 @@ from util.KnowledgeBase import KnowledgeBase
 
 class CircleImporter:
 
-    def __init__(self, DBName = "framework_test10"):
-        self.kb = KnowledgeBase(DBName)
+    def __init__(self):
+        self.kb = KnowledgeBase()
 
     def build_circle(self, name, tags):
         tenantdao = TenantDao(self.kb)

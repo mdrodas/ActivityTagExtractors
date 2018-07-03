@@ -1,4 +1,3 @@
-from util.KnowledgeBase import KnowledgeBase
 from model.Tag import Tag
 
 

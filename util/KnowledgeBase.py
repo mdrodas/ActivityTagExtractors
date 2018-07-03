@@ -3,12 +3,8 @@ import pyorient
 
 class KnowledgeBase:
 
-    def __init__(self, DBName="framework_test10"):
-        self.server = "localhost"
-        self.port = 2424
-        self.user = "admin"
-        self.password = "admin"
-        self.DBName = DBName
+    def __init__(self):
+        self.read_knowledge_base()
 
         self.db = pyorient.OrientDB(self.server, self.port)
         self.kb = self.db.db_open(self.DBName, self.user, self.password)
@@ -41,6 +37,24 @@ class KnowledgeBase:
         result = db.query(clusterid_query)
 
         return result[0].oRecordData['clusterIds']
+
+    def read_knowledge_base(self):
+        encoding = 'utf8'
+        path_in = "../resources/knowledgeBase.properties"
+        with open(path_in, encoding=encoding) as fp:
+            self.port = 2424
+            for line in fp:
+                new_line = line.strip('\n').split('=')
+                if (new_line[0] == "knowledgebase.server"):
+                    self.server = new_line[1]
+                if (new_line[0] == "knowledgebase.db"):
+                    self.DBName = new_line[1]
+                if (new_line[0] == "knowledgebase.user"):
+                    self.user = new_line[1]
+                if (new_line[0] == "knowledgebase.pass"):
+                    self.password = new_line[1]
+                if (new_line[0] == "knowledgebase.maxconnectionattempts"):
+                    self.max_connections = new_line[1]
 
 
 if __name__ == "__main__":

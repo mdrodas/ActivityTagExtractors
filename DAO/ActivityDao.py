@@ -1,4 +1,3 @@
-from util.KnowledgeBase import KnowledgeBase
 from model.Activity import Activity
 
 
@@ -19,7 +18,7 @@ class ActivityDao:
 
     def getAll(self, limit=-1):
         query = "SELECT * FROM activity limit " + str(limit)
-        print(query)
+        # print(query)
         result = self.connection.query(query)
         response = list()
         for activity_record in result:
@@ -34,7 +33,7 @@ class ActivityDao:
 
     def getByName(self, name):
         query = "SELECT * FROM Activity WHERE name = \"{0}\"".format(name)
-        print(query)
+        # print(query)
         result = self.connection.query(query)
         response = list()
         for activity_record in result:
@@ -43,7 +42,7 @@ class ActivityDao:
 
     def getById(self, id):
         query = "SELECT * FROM Activity WHERE @rid = {0}".format(id)
-        print(query)
+        # print(query)
         result = self.connection.query(query)
         response = list()
         for activity_record in result:
@@ -52,14 +51,13 @@ class ActivityDao:
 
     def update(self, activity):
         cmd = "UPDATE Activity MERGE {1} WHERE @rid= {0} ".format(activity.rid, activity.toDict())
-        print(cmd)
+        # print(cmd)
         result = self.connection.command(cmd)
         return result
 
     def add(self, activity):
-
         cmd = "INSERT INTO Activity CONTENT {0}".format(activity.toDict())
-        print(cmd)
+        # print(cmd)
         result = self.connection.command(cmd)
         response = list()
         for activity_record in result:

@@ -1,4 +1,3 @@
-from util.KnowledgeBase import KnowledgeBase
 from model.Circle import Circle
 from model.Is_Member import Is_Member
 from DAO.TagDao import TagDao
@@ -24,7 +23,7 @@ class CircleDao:
         user_rid = is_member.outV
         circle_rid = is_member.inV
         query = "Create Edge IS_MEMBER FROM {0} TO {1} CONTENT {2}".format(user_rid, circle_rid, is_member.toDict())
-        print(query)
+        # print(query)
         result = self.connection.command(query)
         response = list()
         for is_member_record in result:
@@ -58,7 +57,7 @@ class CircleDao:
 
     def getAll(self, limit=-1):
         query = "SELECT * FROM Circle limit " + str(limit)
-        print(query)
+        # print(query)
         result = self.connection.query(query)
         response = list()
         for circle_record in result:
@@ -82,7 +81,7 @@ class CircleDao:
 
     def getById(self, id):
         query = "SELECT * FROM Circle WHERE @rid = {0}".format(id)
-        print(query)
+        # print(query)
         result = self.connection.query(query)
         response = list()
         for circle_record in result:
@@ -91,13 +90,13 @@ class CircleDao:
 
     def update(self, circle):
         cmd = "UPDATE Circle MERGE {1} WHERE @rid= {0} ".format(circle.rid, circle.toDict())
-        print(cmd)
+        # print(cmd)
         result = self.connection.command(cmd)
         return result
 
     def add(self, circle):
         cmd = "INSERT INTO Circle CONTENT {0}".format(circle.toDict())
-        print(cmd)
+        # print(cmd)
         result = self.connection.command(cmd)
         response = list()
         for circle_record in result:

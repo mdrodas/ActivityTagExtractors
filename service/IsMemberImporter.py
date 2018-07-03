@@ -6,8 +6,8 @@ from util.KnowledgeBase import KnowledgeBase
 
 class IsMemberImporter:
 
-    def __init__(self, DBName="framework_test10"):
-        self.kb = KnowledgeBase(DBName)
+    def __init__(self):
+        self.kb = KnowledgeBase()
 
     def create_ismember(self, circle_rid, users):
         global write_on_db

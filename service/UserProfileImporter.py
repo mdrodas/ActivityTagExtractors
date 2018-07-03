@@ -16,8 +16,8 @@ from util.KnowledgeBase import KnowledgeBase
 
 class UserProfileImporter:
 
-    def __init__(self, DBName = "framework_test10"):
-        self.kb = KnowledgeBase(DBName)
+    def __init__(self):
+        self.kb = KnowledgeBase()
 
     def build_user(self, screenname, tags):
         tenantdao = TenantDao(self.kb)
@@ -153,7 +153,7 @@ class UserProfileImporter:
                     for user_tag in user_tags:
                         if str(circle_tag) == str(user_tag):
                             # real_tag = tagDao.getById(tag)[0].label
-                            print("circle: " + circle_rid + " user: " + user_rid)
+                            # print("circle: " + circle_rid + " user: " + user_rid)
                             ismember = myDao.get_is_member(circle_rid, user_rid)
                             ismember[0].rank += 1.0
                             myDao.update_is_member(ismember[0])
@@ -270,6 +270,6 @@ write_on_db = True
 if __name__ == "__main__":
     app = UserProfileImporter()
     # app.create_users()
-    # app.check_all()
-    # app.check_circle_users()
+    app.check_all()
+    app.check_circle_users()
     app.print_circle_users_membership()
