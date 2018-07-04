@@ -1,3 +1,5 @@
+import datetime
+
 from model.Tag import Tag
 from DAO.ActivityDao import ActivityDao
 from DAO.TagDao import TagDao
@@ -92,4 +94,8 @@ class ActivityExpander:
 
 if __name__ == "__main__":
     app = ActivityExpander()
+    t1 = datetime.datetime.now()
     app.update_activities()
+    t2 = datetime.datetime.now()
+    time1 = t2 - t1
+    print("Time Activity Importer: " + str(time1))

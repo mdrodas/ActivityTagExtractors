@@ -1,3 +1,5 @@
+import datetime
+
 from util.FileManager import FileManager
 from model.Activity import Activity
 from model.Tag import Tag
@@ -103,4 +105,8 @@ if __name__ == "__main__":
     create = True
     app = ActivityImporter()
     if (create):
+        t1 = datetime.datetime.now()
         app.create_activities(create)
+        t2 = datetime.datetime.now()
+        time1 = t2 - t1
+        print("Time Activity Importer: " + str(time1))

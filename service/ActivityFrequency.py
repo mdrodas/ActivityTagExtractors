@@ -1,3 +1,4 @@
+import datetime
 import operator
 from DAO.ActivityDao import ActivityDao
 from DAO.TagDao import TagDao
@@ -59,4 +60,8 @@ class ActivityFrequency:
 
 if __name__ == "__main__":
     app = ActivityFrequency()
+    t1 = datetime.datetime.now()
     app.activities_frequency()
+    t2 = datetime.datetime.now()
+    time1 = t2 - t1
+    print("Time Activity Importer: " + str(time1))
