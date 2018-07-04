@@ -64,4 +64,4 @@ if __name__ == "__main__":
     app.activities_frequency()
     t2 = datetime.datetime.now()
     time1 = t2 - t1
-    print("Time Activity Importer: " + str(time1))
+    print("Time Activity Frequency: " + str(time1))
